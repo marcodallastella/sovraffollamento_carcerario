@@ -16,7 +16,8 @@
       <div class="hero-body has-text-centered">
         <div class="">
           <p class="title is-1" style="color: white">Today in Italy there are <span class="difference"
-              style="color: rgb(12, 12, 219)"></span> inmates over the system's capacity. But the situation is probably worse.
+              style="color: rgb(12, 12, 219)"></span> inmates over the system's capacity. But the situation is probably
+            worse.
           </p>
           <br>
           <p class="subtitle is-4">An ongoing monitoring project about Italy's growing problem with prison overcrowding.
@@ -44,30 +45,67 @@
   <section class="section is-text">
     <div class="container">
       <p>Currently in Italy there are <span class="difference"></span> more inmates than what the system is designed to
-        host. Still, the situation is probably worse as the official regular capacity of <span class="capacity"></span> places does not account of 
+        host. Still, the situation is probably worse as the official regular capacity of <span class="capacity"></span>
+        places does not account of
         missing spots.</p>
 
       <p>
-        After consulting the numbers from the Ministry of Justice, I noticed that - despite OpenData initiatives - the ministry's data is provided in a format that is not particularly convenient. Associations that deal with the rights of detainees - such as Antigone - are therefore forced into tedious data collection work, sometimes manual, which leaves a lot of room for errors and consumes many resources and time. To address this issue, I initiated a project to collect and systematize the data made available by the Ministry in order to make them more useful to those who need them. All the numbers included on the current page are automatically updated every 15th of the month. The methodology and data collected so far are freely accessible on <a href="https://www.github.io">GitHub.</a></p>
+        After consulting the numbers from the Ministry of Justice, I noticed that - despite OpenData initiatives - the
+        ministry's data is provided in a format that is not particularly convenient. Associations that deal with the
+        rights of detainees - such as Antigone - are therefore forced into tedious data collection work, sometimes
+        manual, which leaves a lot of room for errors and consumes many resources and time. To address this issue, I
+        initiated a project to collect and systematize the data made available by the Ministry in order to make them
+        more useful to those who need them. All the numbers included on the current page are automatically updated every
+        15th of the month. The methodology and data collected so far are freely accessible on <a
+          href="https://www.github.io">GitHub.</a></p>
       <div class="container">
         <p class="title is-2">Prison overcrowding, where do we stand compared to the regulatory capacity</p>
-        <p> After a sharp reduction due to anti-COVID measures, the numbers of people deprived of their liberty in Italy have returned to pre-pandemic levels.</p>
+        <p> After a sharp reduction due to anti-COVID measures, the numbers of people deprived of their liberty in Italy
+          have returned to pre-pandemic levels.</p>
   </section>
   <section class="is-chart is-centered">
     <div id="chart-wrapper">
       <div id="chart"></div>
       <p class="source">Source: Elaboration on data from the Italian Ministry of Justice</p>
     </div>
-    </div>
+
   </section>
   <section class="section is-text">
     <div class="container">
-      <p>These situation hints towards a situation of absolute emergency for Italian prisons. On average, across all detention cetners there are <span class="rate"></span> inmates for every regular spot. However, this situation is probably an optimistic estimate.</p> 
-      <p>The Italian Ministry of Justice publishes monthly bulletins containing information regarding the presence of inmatess inside the about 189 detention centers across the country. However, data regarding the actual capacity of detention centers is not provided with the same times.</p>
-      <p>The most recent </p>
+      <p>These situation hints towards a situation of absolute emergency for Italian prisons. On average, across all
+        detention cetners there are <span class="rate"></span> inmates for every regular spot. However, this situation
+        is probably an optimistic estimate.</p>
+      <p class="title is-2">Regular Capacity is not Real Capacity</p>
+      <p>The Italian Ministry of Justice publishes monthly bulletins containing information regarding the presence of
+        inmatess inside the about 189 detention centers across the country. However, data regarding the actual capacity
+        of detention centers is not provided with the same times.</p>
+      <p>The most recent data containing information about the actual capacity from detention centers is from <span
+          class="date_real"></span>. In that moment in time there were <span class="capacity_real"></span> avilable
+        spaces in the Italian detention system. That means that <spanc class="difference_institutes"></spanc> places
+        that were supposed to be available, were not. That is approximately one  every <span class="ratio"></span> spots.
+    </div>
+  </section>
+  <section class="is-chart is-centered">
+    <div id="chart-wrapper">
+      <div id="squares"></div>
     </div>
   </section>
 
-  <script src="src/totals.js"></script>
+    <section class="section is-text">
+      <div class="container">
+        =
+        <p class="title is-2">While the general situation is bad, some dentention centers live emergency situations.</p>
+        <p>The Italian Ministry of Justice publishes monthly bulletins containing information regarding the presence of
+          inmatess inside the about 189 detention centers across the country. However, data regarding the actual capacity
+          of detention centers is not provided with the same times.</p>
+        <p>The most recent data containing information about the actual capacity from detention centers is from <span
+            class="date_real"></span>. In that moment in time there were <span class="capacity_real"></span> avilable
+          spaces in the Italian detention system. That means that <spanc class="difference_institutes"></spanc> places
+          that were supposed to be available, were not. <span class="capacity_official"></span>
+      </div>
+    </section>
+
+    <script src="src/totals.js"></script>
+    <script src="src/istituti.js"></script>
 
 </body>

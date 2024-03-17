@@ -1,3 +1,5 @@
+function createLineChart() {
+
 let margin = {
   top: 20,
   right: 100,
@@ -238,3 +240,7 @@ let updateSize = () => {
 
 // Add resize event listener to window
 window.addEventListener('resize', updateSize);
+
+}
+
+createLineChart()
