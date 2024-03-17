@@ -50,10 +50,10 @@ let lastDataPoint;
 
 
 // Read the data
-d3.csv("https://raw.githubusercontent.com/marcodallastella/schiacciati/main/outputs/clean/occupancy_rate_total.csv",
+d3.csv("https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/viz/bollettini_mensili_totali.csv",
   // When reading the csv, I must format variables:
   function (d) {
-    return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.inmates_total, capacity: d.capacity, rate: d.rate }
+    return { date: d3.timeParse("%Y-%m-%d")(d.dati_aggiornati_al), value: d.detenuti_totale, capacity: d.capienza_regolamentare, rate: d.tasso_affollamento }
   },
   // Now I can use this dataset:
   function (dataSet) {
@@ -146,6 +146,14 @@ d3.csv("https://raw.githubusercontent.com/marcodallastella/schiacciati/main/outp
 
     // Get most recent capacity
     let capacity = lastDataPoint.capacity;
+    
+    // Get most recent rate
+    let rate = lastDataPoint.rate;
+    let rate_els = document.getElementsByClassName("rate");
+    for (let i = 0; i < rate_els.length; i++) {
+      rate_els[i].textContent = rate;
+    }
+
     // Calculate the difference
     let difference = lastDataPoint.value - lastDataPoint.capacity;
 

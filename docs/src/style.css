@@ -24,8 +24,8 @@
 .is-text {
     font-family: 'Serif';
     font-size: 2.5vh;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 18vw;
+    margin-right: 18vw;
 }
 
 .is-text p {
@@ -33,8 +33,8 @@
 }
 
 .is-chart{
-    margin-left: 13vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 24vw;
     /* background-color: aqua; */
 }
 
