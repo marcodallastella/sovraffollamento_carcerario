@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schiacciati</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <section class="hero is-medium">
+    <div class="container">
+      <div class="hero-body has-text-centered">
+        <div class="">
+          <p class="title is-1" style="color: white">Today in Italy there are <span class="difference"
+              style="color: rgb(12, 12, 219)"></span> inmates over the system's capacity. But the situation is probably worse.
+          </p>
+          <br>
+          <p class="subtitle is-4">An ongoing monitoring project about Italy's growing problem with prison overcrowding.
+          </p>
+          <br>
+          <p class="subtitle is-5" style="color: white">by <a href="marcodallastella.github.io">Marco Dalla Stella</a>
+          </p>
+          <br>
+          <p class="subtitle is-6" style="font-family: sans-serif; color: white">Last update: <span
+              id="lastUpdate"></span>
+          </p>
+          <div class="columns is-centered">
+            <div class="column is-mobile is-narrow">
+              <p class="subtitle is-6"><a href="marcodallastella.github.io">View data on GitHub</a></p>
+            </div>
+            <div class="column is-mobile is-narrow">
+              <p class="subtitle is-6"><a href="https://www.buymeacoffee.com/marcodallastella">Buy Me a Coffee</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-text">
+    <div class="container">
+      <p>Currently in Italy there are <span class="difference"></span> more inmates than what the system is designed to
+        host. Still, the situation is probably worse as the official regular capacity of <span class="capacity"></span> does not account of 
+        missing spots.</p>
+
+      <p>Dopo aver consultato i numeri del Ministero della Giustizia, ho notato che - con buona pace delle iniziative di
+        OpenData - i dati del Ministero vengono forniti in un formato non particolarmente comodo. Associazioni che si
+        occupano dei diritti dei detenuti - come Antigone - si trovano quindi costrette a un tedioso lavoro di raccolta
+        dati, talvolta manuale, che lascia molto spazio a errori e consuma molte risorse e tempo.</p>
+      <p>Per rimediare a questo problema, ho avviato un progetto per raccogliere e sistematizzare i dati messi a
+        disposizione dal Ministero in modo da renderli più utili a chi ne avesse bisogno. Tutti i numeri compresi nella
+        pagina presente sono aggiornati in automatico ogni 15 del mese. Metodologia e dati raccolti finora sono
+        consultabili liberamente su <a href="https://www.github.io">GitHub</a></p>
+      <div class="container">
+        <p class="title is-2">Sovraffollamento carcerario, dove siamo rispetto alla capienza regolamentare.</p>
+        <p>Dopo una forte riduzione dovuta alle misure anti-COVID, i numeri delle persone private della libertà in
+          Italia
+          sono tornate ai livelli pre-pandemia.</p>
+  </section>
+  <section class="is-chart is-centered">
+    <div id="chart-wrapper">
+      <div id="chart"></div>
+      <p class="source">Source: Elaboration on data from the Italian Ministry of Justice</p>
+    </div>
+    </div>
+  </section>
+  <section class="section is-text">
+    <div class="container">
+      <p>blablablablalb blablal blabababa babablablablabla babla bl a</p>
+    </div>
+  </section>
+
+  <script src="src/totals.js"></script>
+
+</body>

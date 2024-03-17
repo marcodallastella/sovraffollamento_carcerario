@@ -1,0 +1,191 @@
+﻿id_istituto,nome_istituto,tipo_istituto,dati_aggiornati_al,posti_regolamentari,posti_non_disponibili,totale_detenuti,direttore_nome,direttore_cognome,direttore_ruolo,asl,responsabile_asl_nome,responsabile_asl_cognome,polizia_penitenziaria_effettivi,polizia penitenziairia_previsti,amministrativi_effettivi,amministrativi - previsti,educatori_effettivi,educatori_previsti,personale_polizia_penitenziaria_aggiornato_al,personale_amministrativo_aggiornato_al,data_extracted_on
+MII179988,Reggio Calabria Arghillà,Casa circondariale,06/06/2023,302,1,400,Marianna,Stendardo,Titolare,5 Reggio Calabria,Luciano,Lucania,134,160,11,32,5,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172610,Brescia Verziano,Casa di reclusione,06/06/2023,71,0,118,NA,NA,NA,Spedali Civili di Brescia,Luigi,Leone,78,96,2,0,1,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172827,Bergamo,Casa circondariale,06/06/2023,319,1,538,Antonina,D'Onofrio,Titolare,Bergamo,Giampietro,Gregis,204,243,15,23,6,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172320,Busto Arsizio,Casa circondariale,06/06/2023,240,16,412,Maria,Pitaniello,Titolare,Busto Arsizio,Ezia,Iorio,187,217,16,21,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173712,Como,Casa circondariale,06/06/2023,226,0,407,Fabrizio,Rinaldi,Titolare,Como,Giuseppe,Carrano,188,236,14,23,1,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173747,Cremona,Casa circondariale,06/06/2023,394,11,457,Rossella,Padula,Titolare,CREMONA,Rossano,Botto,168,223,13,23,3,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177436,Lecco,Casa circondariale,06/06/2023,53,2,71,Luisa,Mattina,Titolare,Ospedale Lecco,Vaira,Libera Maria,39,42,6,14,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178027,Lodi,Casa circondariale,06/06/2023,45,0,77,Annalaura,Confuorto,Titolare,Lodi,Concettina,Varango,41,45,10,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178072,Mantova,Casa circondariale,06/06/2023,97,0,140,Metella Romana,Pasquini Peruzzi,Titolare,ASST Mantova,Laura,Mannarini,72,80,11,18,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178659,Monza,Casa circondariale,06/06/2023,411,0,665,Cosima,Buccoliero,Titolare,Monza,Libera Maria,Vaira,285,321,20,29,6,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179237,Opera,Casa di reclusione - Iª casa,06/06/2023,918,11,1311,Silvio,Di Gregorio,Titolare,Azienda Ospedaliera San Paolo Milano,Silvia,Cornalba,537,696,39,52,16,22,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII182910,Pavia,Casa circondariale,06/06/2023,516,7,621,Stefania,Mussio,Titolare,A.S.S.T. Pavia - U.O. Sanità Penitenziaria,Davide,BROGLIA,210,285,18,26,6,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181346,Sondrio,Casa circondariale,06/06/2023,26,0,34,Vittoria,Maugeri,Titolare,ASST Valtellina e Alto Lario,Marina,Casian,27,28,2,11,0,1,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181703,Varese,Casa circondariale,06/06/2023,53,0,99,Carla,Santandrea,Titolare,Azienda Ospedaliera,Domenico,Capaccioni,54,67,6,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181924,Vigevano,Casa di reclusione,06/06/2023,242,0,392,Rosalia,Marino,Titolare,PAVIA,Fabio,Canegalli,204,240,14,22,4,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179733,Voghera,Casa circondariale - Nuovo Complesso,06/06/2023,341,14,360,Davide,Pisapia,Titolare,NA,NA,NA,197,252,9,21,2,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173311,Catanzaro,Casa circondariale - Ugo Caridi,06/06/2023,682,28,653,Patrizia,Delfino,Titolare,Azienda Sanitaria Provinciale di Catanzaro,Giulio,Di Mizio,370,470,27,37,7,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173324,Crotone,Casa circondariale,06/06/2023,99,0,143,Mariastella,Fedele,Titolare,ASP 202,Giuseppe,Varrina,65,85,12,18,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177996,Locri,Casa circondariale,06/06/2023,89,0,121,Valentina,Galati,Titolare,ASP 5 - Reggio Calabria,Severo,Gaetano,74,85,11,15,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179342,Palmi,Casa circondariale - Filippo Salsone,06/06/2023,141,0,163,Caterina,Arrotta,Reggente,10,Agesilao,Luppino,108,145,12,18,2,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179353,Paola,Casa circondariale,06/06/2023,181,21,197,Emilia,Boccagna,Titolare,paola,Pierpaolo,Greco,102,127,15,19,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180415,Rossano,Casa di reclusione - Nuovo Complesso,06/06/2023,263,4,315,Luigi,Spetrillo,Titolare,ASP Cosenza,Dr.Giovanni,Fraia,111,153,20,23,6,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181908,Vibo Valentia,Casa circondariale - Nuovo Complesso,06/06/2023,406,1,418,Angela,Marcello,Titolare,Azienda sanitaria provinciale di Vibo,Alfonso,Luciano,176,246,23,26,5,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII159053,Ariano Irpino,Casa circondariale - Pasquale Campanello,06/06/2023,276,48,237,Mariarosaria,Casaburo,Titolare,Avellino,Anna,Pugliese,138,165,15,21,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172187,Aversa,Casa di reclusione - Filippo Saporito,06/06/2023,248,20,226,Stella,Scialpi,Titolare,Caserta,Luigi,Franzese,144,107,26,25,5,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173101,Carinola,Casa di reclusione - Gian Battista Novelli,06/06/2023,551,76,386,Carlo,Brunetti,Titolare,CE2,Tommaso,Castiello,167,154,19,28,4,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173784,Eboli,Casa di reclusione,06/06/2023,54,0,42,Concetta,Felaco,Titolare,SALERNO,Virgilia,Guerriero,28,27,10,14,0,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172580,Bolzano,Casa circondariale,06/06/2023,88,0,123,Giovangiuseppe,Monti,Titolare,Alto Adige,Paolo,Conci,62,75,5,20,1,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176719,Gorizia,Casa circondariale - Angiolo Bigazzi,06/06/2023,53,0,66,Caterina,Leva,Titolare,ASS 2 Isontina,Marcella,Bernardi,45,42,6,12,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180426,Salerno,Casa circondariale - Antonio Caputo,06/06/2023,395,12,510,Gabriella,Niccoli,Titolare,Salerno,Antonio Maria,Pagano,225,243,30,31,8,9,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181079,Sant'Angelo dei Lombardi,"Casa di reclusione - Famiglietti, Forgetta, Bartolo",06/06/2023,124,0,174,Marianna,Adanti,Titolare,Avellino,Anna,Pugliese,101,95,11,18,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181691,Vallo della Lucania,Casa circondariale,06/06/2023,40,0,52,Caterina,Sergio,Titolare,A 3,Adamo,Maiese,35,26,5,13,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179290,Padova,Casa circondariale,06/06/2023,188,2,132,Anastasio,Morante,Titolare,6 EUGANEA,Felice Alfonso,Nava,130,139,16,19,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180487,Santa Maria Capua Vetere,Casa circondariale - Francesco Uccella,06/06/2023,818,101,870,Donatella Filomena,Rotundo,Titolare,Caserta Distretto Sanitario 21,Palmiero,Nicola,479,470,39,42,10,13,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179913,Pordenone,Casa circondariale,06/06/2023,38,18,34,Leandro Salvatore,Lamonaca,Titolare,ASS 6 Friuli occidentale,Michele,Minuzzo,41,53,10,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180424,Rovigo,Casa circondariale,06/06/2023,211,6,229,Mattia,Arba,Titolare,ULSS5 Polesana,Raffaele,Geraci,122,123,12,19,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII159065,Ascoli Piceno,Casa circondariale,06/06/2023,103,25,95,Daniela,Valentini,Titolare,Marche 5,Giovanna,Picciotti,134,162,16,16,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173237,Castelfranco Emilia,Casa di reclusione,06/06/2023,191,42,83,Maria,Martone,Titolare,Modena,Stefano,Petrella,65,63,14,16,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII174501,Fermo,Casa di reclusione,06/06/2023,41,0,56,Serena,Stoico,Titolare,ASUR Area Vasta n.4,Gianfilippo,Pistolesi,45,49,11,15,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181645,Treviso,Casa circondariale,06/06/2023,138,0,214,Alberto,Quagliotto,Titolare,ULSS N 2 Marca Trevigiana,Massimo,Fornaini,136,165,13,17,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176424,Fossombrone,Casa di reclusione,06/06/2023,185,81,94,Daniela,Minelli,Titolare,Areavasta1 Pesaro Urbino,Pierluigi,Fraternali,87,129,14,19,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181661,Trieste,Casa circondariale - Ernesto Mari,06/06/2023,150,0,202,Graziano,Pujia,Titolare,ASUGI,Franca,Masala,118,143,18,20,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181672,Udine,Casa circondariale - Antonio Santoro,06/06/2023,86,0,141,Tiziana,Paolini,Titolare,A.S.S. Friuli Centrale n. 4,Luigi,Canciani,87,115,13,17,2,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179818,Pesaro,Casa circondariale,06/06/2023,153,26,217,Annalisa,Gasparro,Titolare,1 Pesaro,Pierluigi,Fraternali,142,188,14,18,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181863,Venezia Santa Maria Maggiore,Casa circondariale,06/06/2023,159,0,222,Enrico,Farina,Titolare,ULSS 3 Serenissima,Vincenzo,De Nardo,151,174,16,18,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181847,Venezia Giudecca,Casa di reclusione femminile,06/06/2023,112,0,80,Mariagrazia Felicita,Bregoli,Titolare,3 Serenissima,Vincenzo,De Nardo,105,135,12,20,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181891,Verona,Casa circondariale - Montorio,06/06/2023,335,8,526,Francesca,Gioieni,Titolare,ULSS 6 - Scaligera,Gabriella,Trenchi,312,380,20,26,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII182440,Avezzano,Casa circondariale,06/06/2023,53,0,48,Maria Celeste,D'Orazio,Titolare,Asl 1 Abruzzo Avezzano-Sulmona-L'Aquila,Fausto,Frabotta,29,43,7,12,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173088,Campobasso,Casa circondariale,06/06/2023,106,11,126,NA,NA,NA,Campobasso,Pasquale,Del Greco,96,112,11,14,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII157783,Alba,Casa di reclusione - Giuseppe Montalto,06/06/2023,138,93,39,Nicola,Pangallo,Titolare,CN2 Alba-Bra,Paolo,Lo Russo,93,105,10,14,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173114,Cassino,Casa circondariale,06/06/2023,203,73,167,Francesco,Cocco,Titolare,Frosinone,Giovanni,Mazzetti,112,162,18,18,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173364,Chieti,Casa circondariale,06/06/2023,79,0,104,Franco,Pettinelli,Titolare,02,Giulia,COSCIONE,87,84,14,15,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII159069,Asti,Casa di reclusione,06/06/2023,205,0,278,Giuseppina,Piscioneri,Titolare,Asti,Rosario,Ruta,155,186,9,22,2,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173688,Civitavecchia Giuseppe Passerini,Casa di reclusione,06/06/2023,144,0,77,Patrizia,Bravetti,Titolare,RMF,Gaetano,Ciranni,47,56,9,0,0,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173356,Chiavari,Casa di reclusione,06/06/2023,52,0,55,Darlene,Perna,Titolare,ASL 4 Chiavarese,Giovanni Battista,Andreoli,46,57,9,13,3,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176437,Frosinone,Casa circondariale - Giuseppe Pagliei,06/06/2023,513,24,468,Teresa,Mascolo,Titolare,Ditretto B,Francesco,Carrano,251,296,25,30,5,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173764,Cuneo,Casa circondariale,06/06/2023,433,53,315,Domenico,Minervini,Titolare,CN1,Pasquale,Clemeno,150,202,13,21,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181636,Trento,Casa circondariale - Spini di Gardolo,06/06/2023,420,5,344,Anna Rita,Nuzzaci,Titolare,Trento,Chiara,MAzzetti,175,227,16,27,3,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172814,Brissogne - Aosta,Casa circondariale,06/06/2023,181,4,126,Velia,Nobile Mattei,Titolare,NA,NA,NA,123,158,6,15,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176759,Isernia,Casa circondariale,06/06/2023,50,0,59,Maria Antonietta,Lauria,Titolare,Campobasso,Marcello,Baldo,43,40,9,10,3,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176414,Fossano,Casa di reclusione,06/06/2023,136,0,86,Assuntina,Di Rienzo,Titolare,ASL CN1,Besnik,Pjeternikaj,64,83,10,16,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177134,L'Aquila,Casa circondariale,06/06/2023,232,9,169,Barbara,Lenzini,Titolare,1 Avezzano Sulmona L'Aquila,Fausto,Frabotta,142,165,20,20,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176703,Genova Pontedecimo,Casa circondariale,06/06/2023,96,2,144,Paola,Penco,Titolare,3 Genovese,Maurizio,Cechini,132,142,9,16,1,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177107,Lanciano,Casa circondariale,06/06/2023,226,0,248,Mario Giuseppe,Silla,Titolare,Vasto-Lanciano-Chieti,Nicola,CAPRARO,114,157,15,18,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177323,Larino,Casa circondariale,06/06/2023,119,0,142,Antonella,De Paola,Titolare,ASREM Campobasso,Lucia,SCARDERA,108,133,15,16,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176749,Imperia,Casa circondariale,06/06/2023,53,0,69,Caterina,Tancredi,Titolare,n. 1 Imperiese,Renata,Ghizzoni,49,67,10,13,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176781,Ivrea,Casa circondariale,06/06/2023,195,4,213,Alessia,Aguglia,Titolare,NA,NA,NA,173,182,11,20,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179331,Paliano,Casa di reclusione,06/06/2023,156,3,65,Anna,Angeletti,Titolare,FROSINONE,Enzo,Gentile,61,68,17,14,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176788,La Spezia,Casa circondariale,06/06/2023,151,32,168,Maria Cristina,Bigi,Titolare,5 La Spezia,Pier Marco,Passani,119,146,13,17,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178700,Novara,Casa circondariale,06/06/2023,158,3,189,NA,NA,NA,Novara 13,Gianni,Valzer,154,195,7,16,0,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII169535,Rieti,Casa circondariale - Nuovo Complesso,06/06/2023,295,6,326,Chiara,Pellegrini,Titolare,Rieti,Giulia,Carocci,118,176,21,23,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180401,Roma Regina Coeli,Casa circondariale,06/06/2023,628,0,992,Claudia,Clementi,Titolare,RmA,Luigi,Persico,380,516,34,48,7,11,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180437,Saluzzo,Casa di reclusione - Rodolfo Morandi,06/06/2023,441,0,354,Luisa,Pesante,Titolare,CN1 CUNEO,Mitu,Igor,185,231,14,24,7,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180380,Roma Rebibbia,Casa di reclusione,06/06/2023,445,128,300,Maria Donata,Iannantuono,Titolare,Rm2,Pierino,Cimino,135,196,21,29,4,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180356,Roma Rebibbia IIIª casa,Casa circondariale,06/06/2023,172,40,71,Vera,Poggetti,Titolare,Rm2,Antonio,Chiaccio,34,51,13,15,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180348,Roma Rebibbia femminile,Casa circondariale - Germana Stefanini,06/06/2023,275,7,333,Nadia,Fontana,Titolare,NA,NA,NA,185,227,24,26,5,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181870,Verbania,Casa circondariale,06/06/2023,53,2,69,Claudia,Piscione Kivel Mazuy,Titolare,VCO 14,Maria,Uzzeni,41,51,6,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181880,Vercelli,Casa circondariale,06/06/2023,231,31,288,Giovanni,Rempiccia,Titolare,Vercelli,Marilena,Vallero,155,199,8,18,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179299,Padova Nuovo Complesso,Casa di reclusione,06/06/2023,438,0,616,Claudio,Mazzeo,Titolare,6 veneto,Alfonso Felice,Nava,309,389,23,30,7,11,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181371,Sulmona,Casa di reclusione,06/06/2023,334,8,441,Stefano Luca Antonino,Liberatore,Titolare,Sulmona,Fabio,Federico,225,267,20,30,3,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181820,Vasto,Casa di lavoro,06/06/2023,197,52,92,Giuseppina,Ruggero,Titolare,Chieti Lanciano - Vasto,Doralice,Di Fabio,62,99,15,19,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181839,Velletri,Casa circondariale,06/06/2023,412,0,567,Anna Rita,Gentile,Titolare,RM 6,Emanuela,Falconi,196,277,20,32,2,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181424,Torino,Casa circondariale - Lorusso Cutugno,06/06/2023,1118,25,1389,Elena,Lombardi Vallauri,Titolare,TO 2,Roberto,Testi,693,894,43,53,15,18,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181934,Viterbo,Casa circondariale - Nuovo Complesso,06/06/2023,440,35,586,Annamaria,Dello Preite,Titolare,Viterbo,Giulio,Starnini,252,343,28,33,6,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158919,"Alessandria Cantiello, Gaeta",Casa circondariale,06/06/2023,233,0,180,Maria Isabella,De Gennaro,Titolare,AL,Roberto,Stura,133,171,10,33,2,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179995,Reggio Calabria Giuseppe Panzera,Casa circondariale,06/06/2023,186,8,225,Roberta,Velletri,Titolare,5 Reggio Calabria,Luciano,Lucania,163,190,22,0,4,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158924,Alessandria San Michele,Casa di reclusione,06/06/2023,265,8,282,NA,NA,NA,AL,Roberto,STURA,176,207,12,0,3,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172277,Altamura,Casa di reclusione,06/06/2023,52,1,84,NA,NA,NA,Bari,Giuseppe,D'Auria,43,0,5,0,1,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158948,Arezzo,Casa circondariale,06/06/2023,108,84,37,Alessandro,Monacelli,Titolare,toscana sudest,Mateo,Ameglio,33,47,12,15,1,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181678,Bari,Casa circondariale - Francesco Rucci,06/06/2023,294,36,461,Valeria,Pire',Titolare,Bari,Nicola,Buovino,226,276,25,26,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII174720,Firenze Sollicciano,Casa circondariale,06/06/2023,502,88,475,Antonella,Tuoni,Titolare,Firenze,Marco,Salvadori,434,566,26,34,8,11,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172623,Brindisi,Casa circondariale,06/06/2023,120,0,196,Valentina,Meo Evoli,Titolare,Brindisi,Michele,Morgillo,128,126,19,18,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176743,Grosseto,Casa circondariale,06/06/2023,15,0,33,Maria Teresa,Iuliano,Titolare,9 Grosseto,Paolo,Pedicelli,34,37,10,12,1,1,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176375,Foggia,Casa circondariale,06/06/2023,364,19,615,Giulia,Magliulo,Titolare,FOGGIA 3,Luciano,D'Amito,250,261,25,29,5,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177498,Livorno Gorgona,Casa di reclusione,06/06/2023,89,0,69,NA,NA,NA,6,Renzo,Cantini Salaris,0,0,4,0,1,0,NA,31/01/2024,2024-03-15 21:12:12
+MII177463,Livorno,Casa circondariale,06/06/2023,391,191,309,Giuseppe,Renna,Titolare,6,Giovanna,Bellini,232,279,26,35,8,9,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178045,Lucera,Casa circondariale,06/06/2023,137,0,142,Immacolata,Mannarella,Titolare,Foggia 3,Paolo,De Luca,75,79,15,17,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178035,Lucca,Casa circondariale,06/06/2023,63,23,78,Santina,Savoca,Titolare,Lucca,RENATO,COLOMBAI,70,93,9,14,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178124,Matera,Casa circondariale,06/06/2023,132,0,175,Rosa,Musicco,Titolare,Matera,ROCCO,PASCIUCCO,88,131,15,15,4,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178141,Melfi,Casa circondariale,06/06/2023,126,0,191,Anna Maria Rosaria,Petraccone,Titolare,Venosa,Grazia,Ciriello,125,139,9,16,1,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179938,Potenza,Casa circondariale - Antonio Santoro,06/06/2023,120,73,71,Paolo,Pastena,Titolare,ASP Potenza,Giuseppina,Ammirati,113,122,16,17,4,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179280,Orvieto,Casa di reclusione,06/06/2023,97,5,102,Annunziata,Passannante,Titolare,2 Terni,Gianpaolo,Piunno,48,61,22,21,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180476,San Severo,Casa circondariale,06/06/2023,61,0,89,Patrizia,Andrianello,Titolare,FG/01,Matteo,Coccia,43,49,7,10,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181377,Taranto,Casa circondariale - Carmelo Magli,06/06/2023,500,13,785,Luciano,Mellone,Titolare,ASL TA,Fernanda,Gentile,313,277,23,31,5,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181434,Trani,Casa circondariale,06/06/2023,447,146,391,Giuseppe,Altomare,Titolare,Bat,Nicola,Riefolo,192,211,26,26,5,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII182919,Pisa,Casa circondariale,06/06/2023,197,10,265,Giuseppe,Renna,Reggente,USL5 PISA,BIANCA MARIA,MELIS,192,221,19,20,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181681,Turi,Casa di reclusione,06/06/2023,107,0,147,Nicoletta,Siliberti,Titolare,NA,NA,NA,82,77,15,14,0,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179896,Pistoia,Casa circondariale,06/06/2023,76,0,65,Loredana,Stefanelli,Titolare,Toscana Centro,Domenico,Cerullo,56,66,13,14,4,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158935,Alghero,Casa di reclusione - Giuseppe Tomasiello,06/06/2023,156,0,112,Tullia,Carra,Titolare,numero 1,Walter,Sarais,73,90,12,16,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179958,Prato,Casa circondariale,06/06/2023,589,0,503,Domenico,Ciaburri,Titolare,n 4 Prato,Antonella,Mnfredi,238,310,29,35,8,9,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158945,Arbus,Casa di reclusione - località Is Arenas,06/06/2023,176,50,79,Maria Teresa,Errico,Titolare,n.6,Aldo,Casadio,63,88,9,20,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180458,San Gimignano,Casa di reclusione,06/06/2023,243,0,313,Maria Grazia,Giampiccolo,Titolare,7,Ameglio,Mateo,192,229,11,21,5,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181115,Siena,Casa circondariale,06/06/2023,58,0,74,Marco,Grasselli,Titolare,SIENA,Ameglio,Mateo,41,50,7,13,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181358,Spoleto,Casa di reclusione,06/06/2023,460,0,445,Bernardina,Di Mario,Titolare,Umbria 2 - Spoleto,Simonetta,Antinarelli,235,281,29,31,9,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172835,Cagliari Uta,Casa circondariale - Ettore Scalas,06/06/2023,561,0,572,Pietro,Borruto,Titolare,ATS Sardegna,Luciano,Fei,315,421,32,41,12,12,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158910,Agrigento,Casa circondariale - Pasquale Di Lorenzo,06/06/2023,283,8,321,Anna,Puci,Titolare,ASP 1 AGRIGENTO,GIUSEPPE,MANCUSO,229,236,20,23,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177118,Lanusei,Casa circondariale - San Daniele,06/06/2023,33,0,25,Maria Anna,Madeddu,Titolare,ATS Sardegna ASSL Lanusei,Roberto,Marcialis,34,42,6,9,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179224,Nuoro,Casa circondariale,06/06/2023,378,99,205,Maria Anna,Madeddu,Reggente,Nuoro,Giovanni,Fancello,153,205,15,22,6,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172222,Barcellona Pozzo di Gotto,Casa circondariale - Vittorio Madia,06/06/2023,414,100,206,Romina,Taiani,Titolare,Messina,Tommaso,Bucca,138,166,26,26,8,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178003,Onanì,Casa di reclusione - Onanì-Mamone,06/06/2023,292,108,139,Vincenzo,Lamonaca,Titolare,N. 3 Nuoro,Giovanni,Fancello,85,116,13,24,7,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179274,Oristano,Casa di reclusione - Salvatore Soro,06/06/2023,267,0,256,Elisa,Milanesi,Titolare,n.5,Daniela,Faa,158,211,16,22,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181091,Sassari,Casa circondariale - Giovanni Bacchiddu,06/06/2023,454,14,442,Marco,Porcu,Reggente,ATS Sardegna,Giampiero,Carboni,282,400,21,32,5,9,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181385,Tempio Pausania,Casa di reclusione - Paolo Pittalis,06/06/2023,170,0,172,Veronica,Proietti,Titolare,TEMPIO/OLBIA 2,Manconi,Anna,111,161,12,19,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178148,Messina,Casa circondariale,06/06/2023,302,85,215,Angela,Sciavicco,Titolare,NA,NA,NA,224,247,21,22,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179965,Ragusa,Casa circondariale,06/06/2023,196,0,179,Santo,Mortillaro,Titolare,7,giuseppe,cappello,85,91,18,18,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181109,Sciacca,Casa circondariale,06/06/2023,73,34,35,Marilena,Scaravilli,Titolare,ASP N1 AGRIGENTO SCIACCA,Fabio,Segreto,50,48,12,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178666,Napoli Poggioreale,Casa circondariale - Giuseppe Salvia,06/06/2023,1639,146,2051,Carlo,Berdini,Titolare,Napoli 1,Vincenzo Maria,Irollo,696,911,70,63,20,24,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178672,Napoli Secondigliano,Casa circondariale - Pasquale Mandato,06/06/2023,1077,31,1260,Giulia,Russo,Titolare,Napoli 1 centro,Francesco,Maffettone,1047,1080,56,56,16,18,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180370,Roma Rebibbia Nuovo Complesso,Casa circondariale - Raffaele Cinotti,06/06/2023,1178,103,1525,Rosella,Santoro,Titolare,RmB,Pierino,Cimino,684,851,59,58,12,16,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172592,Brescia Canton Monbello,Casa circondariale - Nerio Fischione,06/06/2023,185,0,330,Francesca Paola,Lucrezi,Titolare,A.S.S.T. SPEDALI CIVILI,Fabio,Roda,186,227,15,30,5,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158895,Milano San Vittore,Casa circondariale - Francesco Di Cataldo,06/06/2023,707,255,896,Giacinto,Siciliano,Titolare,Milano,Ruggiero,Giuliani,572,780,36,45,15,14,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178501,Milano San Vittore femminile,Casa circondariale - Francesco Di Cataldo,06/06/2023,46,1,77,NA,NA,NA,MILANO,Ruggero,Giuliani,0,0,0,0,0,0,NA,NA,2024-03-15 21:12:12
+MII176771,Isili,Casa di reclusione,06/06/2023,130,23,79,Vincenzo,Lamonaca,Reggente,8 CAGLIARI,Carlo,Trogu,66,81,13,20,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII174825,Firenze Mario Gozzini,Casa circondariale,06/06/2023,92,14,70,NA,NA,NA,10,Marco,Salvatori,44,51,16,16,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179781,Perugia,Casa circondariale - Nuovo complesso penitenziario Capanne,06/06/2023,363,35,365,Antonella,Grella,Titolare,Umbria 1,Alessandro,Lucarini,204,248,22,27,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179932,Porto Azzurro,Casa di reclusione - Pasquale De Santis,06/06/2023,334,13,311,Martina,Carducci,Titolare,6 - Livorno,Federica,ONETTO,159,205,15,26,2,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181407,Terni,Casa circondariale,06/06/2023,422,0,518,Luca,Sardella,Titolare,Umbria n. 2,Antonio,Marozzo,195,241,25,25,6,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180465,Sanremo,Casa di reclusione - Nuovo Complesso,06/06/2023,223,0,277,Maria Cristina,Marre' Brunenghi,Titolare,ASL N. 1 IMPERIESE,Rosella,Stagnaro,162,201,12,19,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158944,Ancona Barcaglione,Casa di reclusione,06/06/2023,100,0,99,NA,NA,NA,Ancona,Franco,Dolcini,55,67,7,0,2,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158941,Ancona Montacuto,Casa circondariale,06/06/2023,256,0,308,Manuela,Ceresani,Titolare,Asur Marche Area Vasta 2,Enrico,Boario,125,176,16,31,4,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172011,Avellino,Casa circondariale - Antimo Graziano Bellizzi,06/06/2023,507,36,501,Rita,Romano,Titolare,Avellino,Carmine,Urciuoli,295,297,27,34,8,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181392,Teramo,Casa circondariale,06/06/2023,255,0,398,Lucia,Di Feliciantonio,Titolare,Teramo,Massimo,Forlini,163,216,18,21,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177332,Latina,Casa circondariale,06/06/2023,77,1,123,Pia Paola,Palmeri,Titolare,LT Distretto 2,Antonio,Ciurleo,120,132,18,17,5,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181918,Vicenza,Casa circondariale - Filippo Del Papa,06/06/2023,276,7,365,Luciana,Traetta,Titolare,N.8 Berica,Stefano,Tolio,182,187,14,20,4,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178085,Massa,Casa di reclusione,06/06/2023,174,2,225,Antonella,Venturi,Titolare,1,Anna,Santinami,122,139,15,24,4,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178115,Massa Marittima,Casa circondariale,06/06/2023,48,0,31,Maria Cristina,Morrone,Titolare,Grosseto,Fabio,Falorni,29,37,7,14,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177420,Lecce,Casa circondariale - Nuovo Complesso,06/06/2023,798,25,1097,Mariateresa,Susca,Titolare,Lecce,Alessandra,Moscatello,607,581,47,44,13,13,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179830,Pescara,Casa circondariale,06/06/2023,276,0,362,Armanda,Rossi,Titolare,PESCARA,Giulio,CALELLA,118,167,25,22,6,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179945,Pozzuoli,Casa circondariale femminile,06/06/2023,98,0,157,Maria Luisa,Palma,Titolare,ASL NA2 NORD,Biagio,Fulco,138,135,22,21,2,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177346,Laureana di Borrello,Casa di reclusione - Luigi Daga,06/06/2023,37,0,49,Caterina,Arrotta,Titolare,5,Antonio,Morabito Loprete,32,37,8,13,0,1,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181440,Trani femminile,Casa di reclusione,06/06/2023,32,0,40,NA,NA,NA,Bat,Nicola,Cecca,0,0,0,0,0,0,NA,NA,2024-03-15 21:12:12
+MII159314,Augusta,Casa di reclusione,06/06/2023,364,24,487,Angela,Lantieri,Titolare,Asp Asp n-8 Siracusa,Walter,Terranova,165,251,23,29,7,9,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173006,Caltagirone,Casa circondariale,06/06/2023,541,164,401,Giorgia Antonia,Gruttadauria,Titolare,Catania,Giovanni,Cavallaro,169,201,20,23,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173259,Castelvetrano,Casa circondariale,06/06/2023,44,0,59,Giulia,Bruno,Titolare,NA,NA,NA,54,55,10,12,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173285,Catania Bicocca,Casa circondariale,06/06/2023,136,0,199,Giuseppe,Russo,Titolare,Catania,Alfio,Trovato,198,201,19,19,3,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173301,Catania Piazza Lanza,Casa circondariale,06/06/2023,279,0,332,Nunziella,Di Fazio,Titolare,ASP3,Maurizio,Mentesana,235,347,23,25,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173813,Enna,Casa circondariale - Luigi Bodenza,06/06/2023,169,0,200,Gabriella,Di Franco,Titolare,ASP 4 ENNA,De Rose,Ezio,111,113,15,18,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173994,Favignana,Casa di reclusione - Giuseppe Barraco,06/06/2023,89,6,80,Angela,Russo,Titolare,NA,NA,NA,60,81,8,14,1,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176451,Gela,Casa circondariale,06/06/2023,48,1,61,Walter,Bressi,Titolare,Caltanissetta,Gabrielle,Roccia,58,52,8,11,1,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176714,Giarre,Casa circondariale,06/06/2023,58,0,72,Milena,Mormina,Titolare,3,Sebastano,Russo,35,34,14,12,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178681,Noto,Casa di reclusione - Attilio Bonincontro,06/06/2023,176,0,154,Elisabetta,Zito,Titolare,NA,NA,NA,73,88,22,19,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179324,Palermo Ucciardone,Casa di reclusione - Calogero Di Bona,06/06/2023,571,37,402,Fabio,Prestopino,Titolare,6,PIPPO,PULIAFITO,271,367,34,39,10,13,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179306,Palermo Pagliarelli,Casa circondariale - Antonio Lorusso,06/06/2023,1164,9,1305,Maria Luisa,Malato,Titolare,Asp Palermo,Fabrizio,Scalici,661,727,43,51,17,17,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179856,Piazza Armerina,Casa circondariale,06/06/2023,49,1,65,Donata,Posante,Titolare,4 Enna,Serafino,Di Gregorio,42,45,9,12,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180451,San Cataldo,Casa di reclusione,06/06/2023,135,10,97,Marilena,Lo Faro,Titolare,Caltanissetta - Non ancora attuato il passaggio dellassistenza sanitaria penitenziaria al Servizio sanitario nazionale,Maurizio,Grimaldi,67,61,18,14,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181401,Termini Imerese,Casa circondariale - Antonino Burrafato,,,,,NA,NA,NA,ASP 6 Distretto 37,Antonino,Provenza,,,,,,,NA,NA,2024-03-15 21:12:12
+MII181625,Trapani,Casa circondariale - Pietro Cerulli,06/06/2023,567,43,524,Margherita,Gennai,Titolare,ASP N. 9,TIZIANA,SARDO,258,300,25,25,7,7,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII159060,Arienzo,Casa circondariale - Gennaro De Angelis,06/06/2023,58,0,69,Annalaura,De Fusco,Titolare,Caserta,Giuseppe,Nese,50,49,12,13,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172332,Biella,Casa circondariale,06/06/2023,395,25,320,Ignazio,Santoro,Titolare,12,Erica,PIZZATO,168,207,9,26,3,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179876,Volterra,Casa di reclusione,06/06/2023,189,0,183,Valentina,Bruno,Titolare,Toscana Nord Ovest,Lisa,Perugino,69,83,12,19,2,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172208,Civitavecchia Nuovo Complesso,Casa circondariale,06/06/2023,357,46,501,Daniele,De Maggio,Titolare,RM 4,Pierluigi,Cervellini,224,282,22,35,8,8,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII177384,Lauro,Istituto custodia attenuata per madri,06/06/2023,50,0,11,NA,NA,NA,Avellino,Giancarlo,Iaccheo,0,0,5,0,1,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181417,Tolmezzo,Casa circondariale,06/06/2023,149,0,176,Irene,Iannucci,Titolare,n. 3 Alto Friuli - Collinare - medio Friuli,Sara,Mentil,170,218,7,19,2,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173063,Caltanissetta,Casa circondariale,06/06/2023,180,1,221,Giovanna,Maltese Puccia,Titolare,Azienda Sanitaria Provinciale n. 2,Carmelo,Abate,150,148,20,20,4,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII158901,Belluno,Casa circondariale,06/06/2023,90,18,88,Lara,Rampin,Titolare,n.1 Belluno,Marco,Cristofoletti,81,95,8,14,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172344,Bollate,Casa di reclusione - IIª casa,06/06/2023,1267,0,1282,Giorgio,Leggieri,Titolare,Milano,Roberto,Danese,440,516,36,55,20,22,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173341,Cosenza,Casa circondariale - Sergio Cosmai,06/06/2023,218,0,275,Maria Luisa,Mendicino,Titolare,ASP CS,Gabriele,Scolati,133,169,21,20,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII173265,Castrovillari,Casa circondariale - Rosa Sisca,06/06/2023,122,48,102,Giuseppe,Carra',Titolare,Cosenza,Francesco,Montilli,96,124,12,15,2,2,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII160204,Benevento,Casa circondariale,06/06/2023,261,3,358,Gianfranco,Marcello,Titolare,Benevento 1,Gennaro,Leone,234,244,29,23,5,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII152284,Genova Marassi,Casa circondariale,06/06/2023,532,0,694,Tullia,Ardito,Titolare,ASL,Maurizio,Cechini,325,381,25,35,8,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII176403,Forlì,Casa circondariale,06/06/2023,144,4,146,Carmela,De Lorenzo,Titolare,Romagna,Alfonso,Casadei,96,132,13,18,3,4,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII182339,Reggio Emilia,Istituti di pena - casa circondariale e di reclusione,06/06/2023,292,4,368,Lucia,Monastero,Titolare,Reggio Emilia,Angela,Panebianco,197,240,21,22,3,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII180001,Rimini,Casa circondariale,06/06/2023,118,0,132,Palma,Mercurio,Titolare,Rimini,Stefano,Melandri,113,150,13,17,2,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII174686,Ferrara,Casa circondariale - Costantino Satta,06/06/2023,244,0,368,Maria Nicoletta,Toscani,Titolare,ASL Ferrara,Fabio,Ferraresi,168,212,17,19,5,5,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179842,Piacenza,Casa circondariale - San Lazzaro,06/06/2023,416,1,359,Maria Gabriella,Lusi,Titolare,Piacenza,Alberto,Gandolfi,218,250,18,26,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII172508,Bologna,Casa circondariale - Rocco D'Amato,06/06/2023,502,28,778,Rosa Alba,Casella,Titolare,Bologna,Roberto,Ragazzi,430,541,25,35,8,10,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179981,Ravenna,Casa circondariale,06/06/2023,49,0,75,Stefano,Di Lena,Titolare,Romagna,Maurizio,Serra,66,83,15,14,4,3,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII179364,Parma,Casa di reclusione,06/06/2023,655,39,660,Valerio,Pappalardo,Titolare,PARMA,Choroma,FAISSAL,365,462,2,0,0,0,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII178638,Modena,Casa circondariale,06/06/2023,372,0,469,Orazio,Sorrentini,Titolare,MODENA,Stefano,Petrella,219,257,19,27,4,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
+MII181125,Siracusa,Casa circondariale,06/06/2023,545,1,619,Aldo,Tiralongo,Titolare,NA,NA,NA,235,250,22,27,5,6,31/01/2024,31/01/2024,2024-03-15 21:12:12
