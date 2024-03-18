@@ -1,10 +1,10 @@
 function createLineChart() {
 
 let margin = {
-  top: 20,
-  right: 100,
-  bottom: 30,
-  left: 70
+  top: 5,
+  right: 110,
+  bottom: 14,
+  left: 120
 };
 
 

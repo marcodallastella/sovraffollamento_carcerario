@@ -1,11 +1,11 @@
-function createBarChart() {
+function createSquares() {
 
 
   let margin = {
     top: 20,
-    right: 20,
+    right: 120,
     bottom: 20,
-    left: 20
+    left: 250
   };
 
 
@@ -134,14 +134,14 @@ function createBarChart() {
 
       // Add the squares to the legend
       legend.append('rect')
-        .attr('x', width - 18)
+        .attr('x', width - 90)
         .attr('width', 18)
         .attr('height', 18)
         .style('fill', d => d.color);
 
       // Add the explanations to the legend
       legend.append('text')
-        .attr('x', width - 24)
+        .attr('x', width - 100)
         .attr('y', 10) // Change this to adjust the y position of the text
         .attr('dy', '.35em')
         .style('text-anchor', 'end')
@@ -151,4 +151,4 @@ function createBarChart() {
 
 }
 
-createBarChart()
+createSquares()
