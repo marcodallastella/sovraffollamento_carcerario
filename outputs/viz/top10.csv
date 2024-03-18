@@ -1,0 +1,11 @@
+﻿prison_id,institute_name,institute_type,posti_regolamentari,posti_non_disponibili,totale_detenuti,dati_aggiornati_al,posti_effettivi,rate
+MII176743,Grosseto,Casa circondariale,15,0,33,06/06/2023,15,2.2
+MII158895,Milano San Vittore,Casa circondariale - Francesco Di Cataldo,707,255,896,06/06/2023,452,1.98
+MII178035,Lucca,Casa circondariale,63,23,78,06/06/2023,40,1.95
+MII181703,Varese,Casa circondariale,53,0,99,06/06/2023,53,1.87
+MII172320,Busto Arsizio,Casa circondariale,240,16,412,06/06/2023,224,1.84
+MII173712,Como,Casa circondariale,226,0,407,06/06/2023,226,1.8
+MII181678,Bari,Casa circondariale - Francesco Rucci,294,36,461,06/06/2023,258,1.79
+MII172592,Brescia Canton Monbello,Casa circondariale - Nerio Fischione,185,0,330,06/06/2023,185,1.78
+MII176375,Foggia,Casa circondariale,364,19,615,06/06/2023,345,1.78
+MII179818,Pesaro,Casa circondariale,153,26,217,06/06/2023,127,1.71
