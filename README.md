@@ -8,7 +8,7 @@ This repository contains all the data and notebooks for the project "Schiacciati
 \
 The project aims to report on the problem of prison overcrowding in Italy, collecting government data about Italian prisons' capacity and actual detainees over the years. In particular, it was developed in support of the great work being done by the [Associazione Antigone](https://www.antigone.it/), the main Italian organization defending the rights of people deprived of their liberty.\
 \
-I used this project also to practice different scraping techniques, as well as some data visualization. [Here](https://marcodallastella.github.io/schiacciati/) you can find the final website (it's in Italian, but there's not so much text).
+I used this project also to practice different scraping techniques, as well as some data visualization. [Here](https://marcodallastella.github.io/prison_overcrowding/) you can find the final website (it's in Italian, but there's not so much text).
 
 ## Notebooks
 
