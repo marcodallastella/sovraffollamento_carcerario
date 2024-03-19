@@ -87,7 +87,7 @@ d3.csv("https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/m
     svg.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", '#EC1330')
+      .attr("stroke", '#691A09')
       .attr("stroke-width", 1.5)
       .attr("d", line)
       .attr("class", "line-path");
@@ -102,7 +102,7 @@ d3.csv("https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/m
     svg.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", 'blue')
+      .attr("stroke", '#140eb5')
       .attr("stroke-width", 1.5)
       .attr("d", line2)
       .attr("class", "line-path2");
