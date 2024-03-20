@@ -225,10 +225,6 @@ function createLineChart() {
     }
   );
 
-
-
   };
-
-
-
-createLineChart()
+  
+  createLineChart()
