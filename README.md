@@ -12,8 +12,11 @@ I used this project to practice with different scraping techniques, as well as s
 ## Data
 
 The main datasets are two:
-1. [bollettini mensili](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/bollettini_mensili_data.csv)
-2. [istituti penitenziari](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/istituti_penitenziari_data.csv)
+1. [bollettini mensili](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/bollettini_mensili_data.csv) \
+Contains data about regular capacity, total of inmates, total of women, total of foreign born inmates for each detention center since January 2017.
+
+3. [istituti penitenziari](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/istituti_penitenziari_data.csv) \
+Contains more granular data for each detention center, starting in June 2023 (updated less frequently than monthly bulletines). Data include regular and actual presence of penitentiary police officials, administrative staff and educators as well as regular capacity, missing spots and number of inmates.
 
 ## Notebooks
 
