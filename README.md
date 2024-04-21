@@ -5,11 +5,15 @@ Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
 ## Intro
 
-This repository contains all the data and notebooks for the project "Schiacciati" (literally: squeezed, but also crushed).\
+The project aims to report on the problem of prison overcrowding in Italy, collecting government data about Italian prisons' capacity and actual detainees over the years. It was developed in support of the great work being done by the [Associazione Antigone](https://www.antigone.it/), the main Italian organization defending the rights of people deprived of their liberty, with the scope of supporting them with the drafting of their 20th annual report.\
 \
-The project aims to report on the problem of prison overcrowding in Italy, collecting government data about Italian prisons' capacity and actual detainees over the years. In particular, it was developed in support of the great work being done by the [Associazione Antigone](https://www.antigone.it/), the main Italian organization defending the rights of people deprived of their liberty.\
-\
-I used this project also to practice different scraping techniques, as well as some data visualization. [Here](https://marcodallastella.github.io/prison_overcrowding/) you can find the final website (it's in Italian, but there's not so much text).
+I used this project to practice with different scraping techniques, as well as some data visualization. [Here](https://marcodallastella.github.io/prison_overcrowding/) you can find a small website where I collected the main findings. (it's in Italian, but there's not so much text).
+
+## Data
+
+The main datasets are two:
+1. [bollettini mensili](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/bollettini_mensili_data.csv)
+2. [istituti penitenziari](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/istituti_penitenziari_data.csv)
 
 ## Notebooks
 
