@@ -1,7 +1,7 @@
 # Monitoring Prison Overcrowding in Italy
 
-Author: Marco Dalla Stella
-Contact: [mailto:md3934@columbia.edu](md3934@columbia.edu)
+Author: Marco Dalla Stella \
+Contact: (mailto:md3934@columbia.edu)[md3934@columbia.edu]
 
 ## Intro
 
