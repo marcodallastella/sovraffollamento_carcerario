@@ -21,10 +21,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Scrape institutes info
-        run: jupyter nbconvert --to notebook --execute "1_scraper_institutes_info.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_scraper_institutes_info.ipynb"
 
       - name: Scrape institutes data
-        run: jupyter nbconvert --to notebook --execute "2_scraper_institutes_data.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/2_scraper_institutes_data.ipynb"
         
       - name: Commit and push changes
         run: |
