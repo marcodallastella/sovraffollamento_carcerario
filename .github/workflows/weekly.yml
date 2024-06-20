@@ -23,7 +23,7 @@ jobs:
       - name: Scrape institutes info
         run: jupyter nbconvert --to notebook --execute "1_scraper_institutes_info.ipynb"
 
-      - name: Scrape institutes info
+      - name: Scrape institutes data
         run: jupyter nbconvert --to notebook --execute "2_scraper_institutes_data.ipynb"
         
       - name: Commit and push changes
