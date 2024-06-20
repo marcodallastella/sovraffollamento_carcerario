@@ -3,7 +3,7 @@ name: weekly
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 12 * * MON *' # Run weekly
+    - cron: '0 0 1 * *' # Run weekly
 
 jobs:
   data_processing:
