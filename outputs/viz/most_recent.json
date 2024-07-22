@@ -194,6 +194,7 @@
 {"id":"MII181346","nome":"Sondrio","tipo":"Casa circondariale","posti_regolamentari":26,"posti_non_disponibili":0,"posti_occupati":28,"posti_aggiornati_al":"17\/06\/2024","posti_reali":26,"tasso_occupazione":1.08}
 {"id":"MII179733","nome":"Voghera","tipo":"Casa circondariale -\u00a0Nuovo Complesso","posti_regolamentari":341,"posti_non_disponibili":0,"posti_occupati":367,"posti_aggiornati_al":"17\/06\/2024","posti_reali":341,"tasso_occupazione":1.08}
 {"id":"MII173088","nome":"Campobasso","tipo":"Casa circondariale","posti_regolamentari":106,"posti_non_disponibili":12,"posti_occupati":152,"posti_aggiornati_al":"17\/06\/2024","posti_reali":94,"tasso_occupazione":1.62}
+{"id":"MII173114","nome":"Cassino","tipo":"Casa circondariale","posti_regolamentari":200,"posti_non_disponibili":73,"posti_occupati":208,"posti_aggiornati_al":"17\/06\/2024","posti_reali":127,"tasso_occupazione":1.64}
 {"id":"MII176781","nome":"Ivrea","tipo":"Casa circondariale","posti_regolamentari":195,"posti_non_disponibili":14,"posti_occupati":251,"posti_aggiornati_al":"17\/06\/2024","posti_reali":181,"tasso_occupazione":1.39}
 {"id":"MII180348","nome":"Roma Rebibbia femminile","tipo":"Casa circondariale -\u00a0Germana Stefanini","posti_regolamentari":272,"posti_non_disponibili":14,"posti_occupati":355,"posti_aggiornati_al":"17\/06\/2024","posti_reali":258,"tasso_occupazione":1.38}
 {"id":"MII158924","nome":"Alessandria San Michele","tipo":"Casa di reclusione","posti_regolamentari":265,"posti_non_disponibili":2,"posti_occupati":358,"posti_aggiornati_al":"17\/06\/2024","posti_reali":263,"tasso_occupazione":1.36}
@@ -208,4 +209,5 @@
 {"id":"MII173994","nome":"Favignana","tipo":"Casa di reclusione -\u00a0Giuseppe Barraco","posti_regolamentari":89,"posti_non_disponibili":3,"posti_occupati":107,"posti_aggiornati_al":"17\/06\/2024","posti_reali":86,"tasso_occupazione":1.24}
 {"id":"MII178681","nome":"Noto","tipo":"Casa di reclusione -\u00a0Attilio Bonincontro","posti_regolamentari":176,"posti_non_disponibili":0,"posti_occupati":146,"posti_aggiornati_al":"17\/06\/2024","posti_reali":176,"tasso_occupazione":0.83}
 {"id":"MII177384","nome":"Lauro","tipo":"Istituto custodia attenuata per madri","posti_regolamentari":50,"posti_non_disponibili":0,"posti_occupati":38,"posti_aggiornati_al":"17\/06\/2024","posti_reali":50,"tasso_occupazione":0.76}
+{"id":"MII179364","nome":"Parma","tipo":"Casa di reclusione","posti_regolamentari":655,"posti_non_disponibili":27,"posti_occupati":698,"posti_aggiornati_al":"17\/06\/2024","posti_reali":628,"tasso_occupazione":1.11}
 {"id":"MII181125","nome":"Siracusa","tipo":"Casa circondariale","posti_regolamentari":545,"posti_non_disponibili":0,"posti_occupati":669,"posti_aggiornati_al":"17\/06\/2024","posti_reali":545,"tasso_occupazione":1.23}
