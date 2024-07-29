@@ -190,6 +190,7 @@
 {"id":"MII178035","nome":"Lucca","tipo":"Casa circondariale","posti_regolamentari":63,"posti_non_disponibili":22,"posti_occupati":68,"posti_aggiornati_al":"17\/06\/2024","posti_reali":41,"tasso_occupazione":1.66}
 {"id":"MII181392","nome":"Teramo","tipo":"Casa circondariale","posti_regolamentari":255,"posti_non_disponibili":0,"posti_occupati":390,"posti_aggiornati_al":"17\/06\/2024","posti_reali":255,"tasso_occupazione":1.53}
 {"id":"MII179364","nome":"Parma","tipo":"Casa di reclusione","posti_regolamentari":655,"posti_non_disponibili":27,"posti_occupati":698,"posti_aggiornati_al":"17\/06\/2024","posti_reali":628,"tasso_occupazione":1.11}
+{"id":"MII179364","nome":"Parma","tipo":"Casa di reclusione","posti_regolamentari":655,"posti_non_disponibili":27,"posti_occupati":698,"posti_aggiornati_al":"17\/06\/2024","posti_reali":628,"tasso_occupazione":1.11}
 {"id":"MII172610","nome":"Brescia Verziano","tipo":"Casa di reclusione","posti_regolamentari":71,"posti_non_disponibili":0,"posti_occupati":123,"posti_aggiornati_al":"17\/06\/2024","posti_reali":71,"tasso_occupazione":1.73}
 {"id":"MII181346","nome":"Sondrio","tipo":"Casa circondariale","posti_regolamentari":26,"posti_non_disponibili":0,"posti_occupati":28,"posti_aggiornati_al":"17\/06\/2024","posti_reali":26,"tasso_occupazione":1.08}
 {"id":"MII179733","nome":"Voghera","tipo":"Casa circondariale -\u00a0Nuovo Complesso","posti_regolamentari":341,"posti_non_disponibili":0,"posti_occupati":367,"posti_aggiornati_al":"17\/06\/2024","posti_reali":341,"tasso_occupazione":1.08}
