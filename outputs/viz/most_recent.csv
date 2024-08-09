@@ -1,194 +1,191 @@
 ﻿id,nome,tipo,posti_regolamentari,posti_non_disponibili,posti_occupati,posti_aggiornati_al,posti_reali,tasso_occupazione
-MII179988,Reggio Calabria Arghillà,Casa circondariale,294,0,353,17/06/2024,294,1.2
-MII172610,Brescia Verziano,Casa di reclusione,71,0,123,17/06/2024,71,1.73
-MII172320,Busto Arsizio,Casa circondariale,240,11,440,17/06/2024,229,1.92
-MII173712,Como,Casa circondariale,226,0,433,17/06/2024,226,1.92
-MII173747,Cremona,Casa circondariale,394,10,577,17/06/2024,384,1.5
-MII177436,Lecco,Casa circondariale,53,0,71,17/06/2024,53,1.34
-MII178027,Lodi,Casa circondariale,45,0,81,17/06/2024,45,1.8
-MII178072,Mantova,Casa circondariale,97,3,148,17/06/2024,94,1.57
-MII178659,Monza,Casa circondariale,411,1,696,17/06/2024,410,1.7
-MII179237,Opera,Casa di reclusione - Iª casa,918,11,1291,17/06/2024,907,1.42
-MII182910,Pavia,Casa circondariale,515,25,684,17/06/2024,490,1.4
-MII181346,Sondrio,Casa circondariale,26,0,28,17/06/2024,26,1.08
-MII181703,Varese,Casa circondariale,53,0,100,17/06/2024,53,1.89
-MII181924,Vigevano,Casa di reclusione,242,13,345,17/06/2024,229,1.51
-MII173311,Catanzaro,Casa circondariale - Ugo Caridi,682,47,654,17/06/2024,635,1.03
-MII173324,Crotone,Casa circondariale,99,0,142,17/06/2024,99,1.43
-MII177996,Locri,Casa circondariale,86,0,134,17/06/2024,86,1.56
-MII179342,Palmi,Casa circondariale - Filippo Salsone,141,0,179,17/06/2024,141,1.27
-MII179353,Paola,Casa circondariale,181,27,193,17/06/2024,154,1.25
-MII180415,Rossano,Casa di reclusione - Nuovo Complesso,263,3,315,17/06/2024,260,1.21
-MII181908,Vibo Valentia,Casa circondariale - Nuovo Complesso,406,2,389,17/06/2024,404,0.96
-MII172187,Aversa,Casa di reclusione - Filippo Saporito,254,23,251,17/06/2024,231,1.09
-MII173101,Carinola,Casa di reclusione - Gian Battista Novelli,552,64,493,17/06/2024,488,1.01
-MII173784,Eboli,Casa di reclusione,54,0,39,17/06/2024,54,0.72
-MII172580,Bolzano,Casa circondariale,88,1,117,17/06/2024,87,1.34
-MII176719,Gorizia,Casa circondariale - Angiolo Bigazzi,53,0,79,17/06/2024,53,1.49
-MII180426,Salerno,Casa circondariale - Antonio Caputo,376,0,574,17/06/2024,376,1.53
-MII181079,Sant'Angelo dei Lombardi,"Casa di reclusione - Famiglietti, Forgetta, Bartolo",124,9,183,17/06/2024,115,1.59
-MII179733,Voghera,Casa circondariale - Nuovo Complesso,341,0,367,17/06/2024,341,1.08
-MII159053,Ariano Irpino,Casa circondariale - Pasquale Campanello,276,15,306,17/06/2024,261,1.17
-MII179290,Padova,Casa circondariale,188,1,192,17/06/2024,187,1.03
-MII180424,Rovigo,Casa circondariale,211,7,260,17/06/2024,204,1.27
-MII173237,Castelfranco Emilia,Casa di reclusione,191,42,109,17/06/2024,149,0.73
-MII174501,Fermo,Casa di reclusione,43,0,59,17/06/2024,43,1.37
-MII181645,Treviso,Casa circondariale,138,0,239,17/06/2024,138,1.73
-MII176424,Fossombrone,Casa di reclusione,182,81,88,17/06/2024,101,0.87
-MII181661,Trieste,Casa circondariale - Ernesto Mari,150,3,255,17/06/2024,147,1.73
-MII181672,Udine,Casa circondariale - Antonio Santoro,95,1,157,17/06/2024,94,1.67
-MII179818,Pesaro,Casa circondariale,153,2,247,17/06/2024,151,1.64
-MII181863,Venezia Santa Maria Maggiore,Casa circondariale,159,0,245,17/06/2024,159,1.54
-MII180487,Santa Maria Capua Vetere,Casa circondariale - Francesco Uccella,818,125,969,17/06/2024,693,1.4
-MII179913,Pordenone,Casa circondariale,37,0,50,17/06/2024,37,1.35
-MII159065,Ascoli Piceno,Casa circondariale,103,4,117,17/06/2024,99,1.18
-MII181847,Venezia Giudecca,Casa di reclusione femminile,112,0,91,17/06/2024,112,0.81
-MII182440,Avezzano,Casa circondariale,53,2,70,17/06/2024,51,1.37
-MII173088,Campobasso,Casa circondariale,106,12,152,17/06/2024,94,1.62
-MII157783,Alba,Casa di reclusione - Giuseppe Montalto,138,89,43,17/06/2024,49,0.88
-MII173364,Chieti,Casa circondariale,79,0,133,17/06/2024,79,1.68
-MII159069,Asti,Casa di reclusione,205,1,265,17/06/2024,204,1.3
-MII173688,Civitavecchia Giuseppe Passerini,Casa di reclusione,144,52,70,17/06/2024,92,0.76
-MII173356,Chiavari,Casa di reclusione,52,0,62,17/06/2024,52,1.19
-MII173764,Cuneo,Casa circondariale,433,48,373,17/06/2024,385,0.97
-MII181636,Trento,Casa circondariale - Spini di Gardolo,422,6,364,17/06/2024,416,0.88
-MII172814,Brissogne - Aosta,Casa circondariale,181,3,146,17/06/2024,178,0.82
-MII176759,Isernia,Casa circondariale,50,0,75,17/06/2024,50,1.5
-MII176414,Fossano,Casa di reclusione,136,0,96,17/06/2024,136,0.71
-MII177134,L'Aquila,Casa circondariale,228,6,159,17/06/2024,222,0.72
-MII176703,Genova Pontedecimo,Casa circondariale,96,0,164,17/06/2024,96,1.71
-MII177107,Lanciano,Casa circondariale,289,0,265,17/06/2024,289,0.92
-MII177323,Larino,Casa circondariale,119,0,122,17/06/2024,119,1.03
-MII176749,Imperia,Casa circondariale,53,2,63,17/06/2024,51,1.24
-MII176781,Ivrea,Casa circondariale,195,14,251,17/06/2024,181,1.39
-MII179331,Paliano,Casa di reclusione,156,7,59,17/06/2024,149,0.4
-MII176788,La Spezia,Casa circondariale,151,32,156,17/06/2024,119,1.31
-MII180401,Roma Regina Coeli,Casa circondariale,628,1,1133,17/06/2024,627,1.81
-MII180437,Saluzzo,Casa di reclusione - Rodolfo Morandi,424,0,334,17/06/2024,424,0.79
-MII180380,Roma Rebibbia,Casa di reclusione,445,132,287,17/06/2024,313,0.92
-MII180356,Roma Rebibbia IIIª casa,Casa circondariale,172,40,81,17/06/2024,132,0.61
-MII180348,Roma Rebibbia femminile,Casa circondariale - Germana Stefanini,272,14,355,17/06/2024,258,1.38
-MII181870,Verbania,Casa circondariale,53,0,78,17/06/2024,53,1.47
-MII181880,Vercelli,Casa circondariale,230,38,313,17/06/2024,192,1.63
-MII179299,Padova Nuovo Complesso,Casa di reclusione,438,63,559,17/06/2024,375,1.49
-MII181371,Sulmona,Casa di reclusione,323,8,444,17/06/2024,315,1.41
-MII181820,Vasto,Casa di lavoro,197,50,92,17/06/2024,147,0.63
-MII181839,Velletri,Casa circondariale,412,26,592,17/06/2024,386,1.53
-MII181424,Torino,Casa circondariale - Lorusso Cutugno,1118,17,1488,17/06/2024,1101,1.35
-MII158919,"Alessandria Cantiello, Gaeta",Casa circondariale,233,22,200,17/06/2024,211,0.95
-MII179995,Reggio Calabria Giuseppe Panzera,Casa circondariale,180,8,224,17/06/2024,172,1.3
-MII181891,Verona,Casa circondariale - Montorio,335,7,618,17/06/2024,328,1.88
-MII173114,Cassino,Casa circondariale,200,73,208,17/06/2024,127,1.64
-MII176437,Frosinone,Casa circondariale - Giuseppe Pagliei,513,24,628,17/06/2024,489,1.28
-MII169535,Rieti,Casa circondariale - Nuovo Complesso,295,6,492,17/06/2024,289,1.7
-MII158924,Alessandria San Michele,Casa di reclusione,265,2,358,17/06/2024,263,1.36
-MII172277,Altamura,Casa di reclusione,52,1,89,17/06/2024,51,1.75
-MII172623,Brindisi,Casa circondariale,152,33,179,17/06/2024,119,1.5
-MII176743,Grosseto,Casa circondariale,15,0,25,17/06/2024,15,1.67
-MII176375,Foggia,Casa circondariale,364,19,689,17/06/2024,345,2.0
-MII177498,Livorno Gorgona,Casa di reclusione,89,0,82,17/06/2024,89,0.92
-MII177463,Livorno,Casa circondariale,391,210,254,17/06/2024,181,1.4
-MII178045,Lucera,Casa circondariale,135,0,170,17/06/2024,135,1.26
-MII178124,Matera,Casa circondariale,132,6,189,17/06/2024,126,1.5
-MII178141,Melfi,Casa circondariale,126,0,197,17/06/2024,126,1.56
-MII179938,Potenza,Casa circondariale - Antonio Santoro,110,58,100,17/06/2024,52,1.92
-MII180476,San Severo,Casa circondariale,61,0,80,17/06/2024,61,1.31
-MII181377,Taranto,Casa circondariale - Carmelo Magli,500,16,941,17/06/2024,484,1.94
-MII181434,Trani,Casa circondariale,447,146,411,17/06/2024,301,1.37
-MII182919,Pisa,Casa circondariale,197,10,290,17/06/2024,187,1.55
-MII181681,Turi,Casa di reclusione,108,0,167,17/06/2024,108,1.55
-MII179896,Pistoia,Casa circondariale,76,0,73,17/06/2024,76,0.96
-MII158948,Arezzo,Casa circondariale,108,84,40,17/06/2024,24,1.67
-MII181678,Bari,Casa circondariale - Francesco Rucci,294,45,403,17/06/2024,249,1.62
-MII174720,Firenze Sollicciano,Casa circondariale,497,89,558,17/06/2024,408,1.37
-MII179280,Orvieto,Casa di reclusione,98,0,116,17/06/2024,98,1.18
-MII158935,Alghero,Casa di reclusione - Giuseppe Tomasiello,156,0,92,17/06/2024,156,0.59
-MII179958,Prato,Casa circondariale,589,17,597,17/06/2024,572,1.04
-MII181115,Siena,Casa circondariale,58,0,78,17/06/2024,58,1.34
-MII181358,Spoleto,Casa di reclusione,456,18,443,17/06/2024,438,1.01
-MII172835,Cagliari Uta,Casa circondariale - Ettore Scalas,561,0,668,17/06/2024,561,1.19
-MII158910,Agrigento,Casa circondariale - Pasquale Di Lorenzo,283,6,372,17/06/2024,277,1.34
-MII177118,Lanusei,Casa circondariale - San Daniele,33,0,29,17/06/2024,33,0.88
-MII179224,Nuoro,Casa circondariale,378,106,193,17/06/2024,272,0.71
-MII181091,Sassari,Casa circondariale - Giovanni Bacchiddu,454,3,494,17/06/2024,451,1.1
-MII178148,Messina,Casa circondariale,302,82,207,17/06/2024,220,0.94
-MII158945,Arbus,Casa di reclusione - località Is Arenas,176,50,90,17/06/2024,126,0.71
-MII180458,San Gimignano,Casa di reclusione,243,20,312,17/06/2024,223,1.4
-MII172222,Barcellona Pozzo di Gotto,Casa circondariale - Vittorio Madia,414,114,204,17/06/2024,300,0.68
-MII178003,Onanì,Casa di reclusione - Onanì-Mamone,292,108,129,17/06/2024,184,0.7
-MII179274,Oristano,Casa di reclusione - Salvatore Soro,264,0,226,17/06/2024,264,0.86
-MII181385,Tempio Pausania,Casa di reclusione - Paolo Pittalis,170,0,168,17/06/2024,170,0.99
-MII179965,Ragusa,Casa circondariale,196,13,198,17/06/2024,183,1.08
-MII178666,Napoli Poggioreale,Casa circondariale - Giuseppe Salvia,1624,266,2053,17/06/2024,1358,1.51
-MII180370,Roma Rebibbia Nuovo Complesso,Casa circondariale - Raffaele Cinotti,1170,113,1551,17/06/2024,1057,1.47
-MII158895,Milano San Vittore,Casa circondariale - Francesco Di Cataldo,708,250,1041,17/06/2024,458,2.27
-MII178501,Milano San Vittore femminile,Casa circondariale - Francesco Di Cataldo,46,3,82,17/06/2024,43,1.91
-MII174825,Firenze Mario Gozzini,Casa circondariale,92,14,95,17/06/2024,78,1.22
-MII179781,Perugia,Casa circondariale - Nuovo complesso penitenziario Capanne,363,40,472,17/06/2024,323,1.46
-MII179932,Porto Azzurro,Casa di reclusione - Pasquale De Santis,334,31,303,17/06/2024,303,1.0
-MII181407,Terni,Casa circondariale,422,0,553,17/06/2024,422,1.31
-MII180465,Sanremo,Casa di reclusione - Nuovo Complesso,223,2,245,17/06/2024,221,1.11
-MII181109,Sciacca,Casa circondariale,73,53,23,17/06/2024,20,1.15
-MII178672,Napoli Secondigliano,Casa circondariale - Pasquale Mandato,1109,14,1382,17/06/2024,1095,1.26
-MII172592,Brescia Canton Monbello,Casa circondariale - Nerio Fischione,182,0,377,17/06/2024,182,2.07
-MII181392,Teramo,Casa circondariale,255,0,390,17/06/2024,255,1.53
-MII177332,Latina,Casa circondariale,77,0,130,17/06/2024,77,1.69
-MII181918,Vicenza,Casa circondariale - Filippo Del Papa,276,34,352,17/06/2024,242,1.45
-MII178085,Massa,Casa di reclusione,174,6,218,17/06/2024,168,1.3
-MII178115,Massa Marittima,Casa circondariale,48,0,33,17/06/2024,48,0.69
-MII158944,Ancona Barcaglione,Casa di reclusione,100,0,95,17/06/2024,100,0.95
-MII158941,Ancona Montacuto,Casa circondariale,256,0,330,17/06/2024,256,1.29
-MII172011,Avellino,Casa circondariale - Antimo Graziano Bellizzi,503,0,620,17/06/2024,503,1.23
-MII177420,Lecce,Casa circondariale - Nuovo Complesso,798,50,1228,17/06/2024,748,1.64
-MII179830,Pescara,Casa circondariale,276,1,429,17/06/2024,275,1.56
-MII159314,Augusta,Casa di reclusione,364,22,561,17/06/2024,342,1.64
-MII173006,Caltagirone,Casa circondariale,541,164,417,17/06/2024,377,1.11
-MII173259,Castelvetrano,Casa circondariale,44,0,69,17/06/2024,44,1.57
-MII173285,Catania Bicocca,Casa circondariale,136,1,202,17/06/2024,135,1.5
-MII179945,Pozzuoli,Casa circondariale femminile,98,98,0,17/06/2024,0,
-MII177346,Laureana di Borrello,Casa di reclusione - Luigi Daga,37,0,50,17/06/2024,37,1.35
-MII181440,Trani femminile,Casa di reclusione,32,0,40,17/06/2024,32,1.25
-MII173301,Catania Piazza Lanza,Casa circondariale,279,2,397,17/06/2024,277,1.43
-MII173813,Enna,Casa circondariale - Luigi Bodenza,167,5,212,17/06/2024,162,1.31
-MII173994,Favignana,Casa di reclusione - Giuseppe Barraco,89,3,107,17/06/2024,86,1.24
-MII176451,Gela,Casa circondariale,48,0,70,17/06/2024,48,1.46
-MII176714,Giarre,Casa circondariale,58,1,75,17/06/2024,57,1.32
-MII178681,Noto,Casa di reclusione - Attilio Bonincontro,176,0,146,17/06/2024,176,0.83
-MII179306,Palermo Pagliarelli,Casa circondariale - Antonio Lorusso,1164,9,1362,17/06/2024,1155,1.18
-MII179856,Piazza Armerina,Casa circondariale,49,1,70,17/06/2024,48,1.46
-MII180451,San Cataldo,Casa di reclusione,135,0,105,17/06/2024,135,0.78
-MII181401,Termini Imerese,Casa circondariale - Antonino Burrafato,97,6,96,17/06/2024,91,1.05
-MII179324,Palermo Ucciardone,Casa di reclusione - Calogero Di Bona,569,50,507,17/06/2024,519,0.98
-MII181625,Trapani,Casa circondariale - Pietro Cerulli,555,58,491,17/06/2024,497,0.99
-MII172332,Biella,Casa circondariale,394,4,345,17/06/2024,390,0.88
-MII179876,Volterra,Casa di reclusione,189,0,183,17/06/2024,189,0.97
-MII177384,Lauro,Istituto custodia attenuata per madri,50,0,38,17/06/2024,50,0.76
-MII181417,Tolmezzo,Casa circondariale,149,0,157,17/06/2024,149,1.05
-MII173063,Caltanissetta,Casa circondariale,180,0,236,17/06/2024,180,1.31
-MII158901,Belluno,Casa circondariale,90,7,102,17/06/2024,83,1.23
-MII173341,Cosenza,Casa circondariale - Sergio Cosmai,220,4,277,17/06/2024,216,1.28
-MII173265,Castrovillari,Casa circondariale - Rosa Sisca,122,0,164,17/06/2024,122,1.34
-MII172208,Civitavecchia Nuovo Complesso,Casa circondariale,357,46,527,17/06/2024,311,1.69
-MII178700,Novara,Casa circondariale,156,0,180,17/06/2024,156,1.15
-MII172344,Bollate,Casa di reclusione - IIª casa,1267,1,1455,17/06/2024,1266,1.15
-MII181691,Vallo della Lucania,Casa circondariale - Alfredo Paragano,40,0,55,17/06/2024,40,1.38
-MII160204,Benevento,Casa circondariale - Michele Gaglione,261,11,427,17/06/2024,250,1.71
-MII172827,Bergamo,Casa circondariale,319,1,573,17/06/2024,318,1.8
-MII176771,Isili,Casa di reclusione,130,23,84,17/06/2024,107,0.79
-MII152284,Genova Marassi,Casa circondariale,535,8,693,17/06/2024,527,1.31
-MII176403,Forlì,Casa circondariale,144,12,152,17/06/2024,132,1.15
-MII182339,Reggio Emilia,Istituti di pena - casa circondariale e di reclusione,292,58,281,17/06/2024,234,1.2
-MII181934,Viterbo,Casa circondariale  N.C.  - Nicandro Izzo,440,35,672,17/06/2024,405,1.66
-MII159060,Arienzo,Casa di reclusione - Gennaro De Angelis,58,2,96,17/06/2024,56,1.71
-MII180001,Rimini,Casa circondariale,118,0,159,17/06/2024,118,1.35
-MII172508,Bologna,Casa circondariale - Rocco D'Amato,498,7,847,17/06/2024,491,1.73
-MII179981,Ravenna,Casa circondariale,49,0,79,17/06/2024,49,1.61
-MII179364,Parma,Casa di reclusione,655,27,698,17/06/2024,628,1.11
-MII178638,Modena,Casa circondariale,372,0,537,17/06/2024,372,1.44
-MII181125,Siracusa,Casa circondariale,545,0,669,17/06/2024,545,1.23
-MII179842,Piacenza,Casa circondariale - San Lazzaro,416,19,437,17/06/2024,397,1.1
-MII174686,Ferrara,Casa circondariale - Costantino Satta,244,0,407,17/06/2024,244,1.67
-MII178035,Lucca,Casa circondariale,63,22,68,17/06/2024,41,1.66
-MII181392,Teramo,Casa circondariale,255,0,390,17/06/2024,255,1.53
-MII179364,Parma,Casa di reclusione,655,27,698,17/06/2024,628,1.11
-MII179364,Parma,Casa di reclusione,655,27,698,17/06/2024,628,1.11
+MII179988,Reggio Calabria Arghillà,Casa circondariale,294,1,339,2024-08-03,293,1.16
+MII172610,Brescia Verziano,Casa di reclusione,71,0,120,2024-08-03,71,1.69
+MII172320,Busto Arsizio,Casa circondariale,240,10,428,2024-08-03,230,1.86
+MII173712,Como,Casa circondariale,226,2,439,2024-08-03,224,1.96
+MII173747,Cremona,Casa circondariale,394,10,546,2024-08-03,384,1.42
+MII177436,Lecco,Casa circondariale,53,1,82,2024-08-03,52,1.58
+MII178027,Lodi,Casa circondariale,45,0,77,2024-08-03,45,1.71
+MII178072,Mantova,Casa circondariale,97,2,140,2024-08-03,95,1.47
+MII178659,Monza,Casa circondariale,411,5,703,2024-08-03,406,1.73
+MII179237,Opera,Casa di reclusione - Iª casa,918,14,1293,2024-08-03,904,1.43
+MII182910,Pavia,Casa circondariale,515,11,678,2024-08-03,504,1.35
+MII181346,Sondrio,Casa circondariale,26,0,27,2024-08-03,26,1.04
+MII181703,Varese,Casa circondariale,53,0,100,2024-08-03,53,1.89
+MII181924,Vigevano,Casa di reclusione,242,13,342,2024-08-03,229,1.49
+MII179733,Voghera,Casa circondariale - Nuovo Complesso,341,0,356,2024-08-03,341,1.04
+MII173311,Catanzaro,Casa circondariale - Ugo Caridi,682,56,611,2024-08-03,626,0.98
+MII173324,Crotone,Casa circondariale,99,0,129,2024-08-03,99,1.3
+MII177996,Locri,Casa circondariale,86,0,123,2024-08-03,86,1.43
+MII179342,Palmi,Casa circondariale - Filippo Salsone,141,0,169,2024-08-03,141,1.2
+MII179353,Paola,Casa circondariale,181,27,188,2024-08-03,154,1.22
+MII180415,Rossano,Casa di reclusione - Nuovo Complesso,263,3,317,2024-08-03,260,1.22
+MII181908,Vibo Valentia,Casa circondariale - Nuovo Complesso,406,4,400,2024-08-03,402,1.0
+MII159053,Ariano Irpino,Casa circondariale - Pasquale Campanello,276,16,310,2024-08-03,260,1.19
+MII172187,Aversa,Casa di reclusione - Filippo Saporito,254,23,255,2024-08-03,231,1.1
+MII173101,Carinola,Casa di reclusione - Gian Battista Novelli,552,56,504,2024-08-03,496,1.02
+MII173784,Eboli,Casa di reclusione,54,0,38,2024-08-03,54,0.7
+MII172580,Bolzano,Casa circondariale,95,14,107,2024-08-03,81,1.32
+MII176719,Gorizia,Casa circondariale - Angiolo Bigazzi,53,0,76,2024-08-03,53,1.43
+MII180426,Salerno,Casa circondariale - Antonio Caputo,376,0,587,2024-08-03,376,1.56
+MII181079,Sant'Angelo dei Lombardi,"Casa di reclusione - Famiglietti, Forgetta, Bartolo",124,7,183,2024-08-03,117,1.56
+MII179290,Padova,Casa circondariale,188,2,212,2024-08-03,186,1.14
+MII180487,Santa Maria Capua Vetere,Casa circondariale - Francesco Uccella,818,125,971,2024-08-03,693,1.4
+MII179913,Pordenone,Casa circondariale,37,0,54,2024-08-03,37,1.46
+MII180424,Rovigo,Casa circondariale,211,8,259,2024-08-03,203,1.28
+MII159065,Ascoli Piceno,Casa circondariale,103,4,132,2024-08-03,99,1.33
+MII173237,Castelfranco Emilia,Casa di reclusione,191,42,108,2024-08-03,149,0.72
+MII174501,Fermo,Casa di reclusione,43,0,50,2024-08-03,43,1.16
+MII181645,Treviso,Casa circondariale,138,0,233,2024-08-03,138,1.69
+MII176424,Fossombrone,Casa di reclusione,182,81,90,2024-08-03,101,0.89
+MII181661,Trieste,Casa circondariale - Ernesto Mari,150,4,235,2024-08-03,146,1.61
+MII181672,Udine,Casa circondariale - Antonio Santoro,95,0,170,2024-08-03,95,1.79
+MII179818,Pesaro,Casa circondariale,153,2,239,2024-08-03,151,1.58
+MII181863,Venezia Santa Maria Maggiore,Casa circondariale,159,0,249,2024-08-03,159,1.57
+MII181847,Venezia Giudecca,Casa di reclusione femminile,112,0,94,2024-08-03,112,0.84
+MII181891,Verona,Casa circondariale - Montorio,335,19,582,2024-08-03,316,1.84
+MII182440,Avezzano,Casa circondariale,53,2,70,2024-08-03,51,1.37
+MII173088,Campobasso,Casa circondariale,106,10,167,2024-08-03,96,1.74
+MII157783,Alba,Casa di reclusione - Giuseppe Montalto,138,89,43,2024-08-03,49,0.88
+MII173114,Cassino,Casa circondariale,200,73,217,2024-08-03,127,1.71
+MII173364,Chieti,Casa circondariale,79,0,138,2024-08-03,79,1.75
+MII159069,Asti,Casa di reclusione,205,1,261,2024-08-03,204,1.28
+MII173688,Civitavecchia Giuseppe Passerini,Casa di reclusione,144,52,75,2024-08-03,92,0.82
+MII173356,Chiavari,Casa di reclusione,52,0,59,2024-08-03,52,1.13
+MII176437,Frosinone,Casa circondariale - Giuseppe Pagliei,513,24,617,2024-08-03,489,1.26
+MII173764,Cuneo,Casa circondariale,433,54,367,2024-08-03,379,0.97
+MII181636,Trento,Casa circondariale - Spini di Gardolo,422,5,369,2024-08-03,417,0.88
+MII172814,Brissogne - Aosta,Casa circondariale,181,4,148,2024-08-03,177,0.84
+MII176759,Isernia,Casa circondariale,50,0,68,2024-08-03,50,1.36
+MII176414,Fossano,Casa di reclusione,136,0,102,2024-08-03,136,0.75
+MII176703,Genova Pontedecimo,Casa circondariale,96,0,159,2024-08-03,96,1.66
+MII177107,Lanciano,Casa circondariale,227,0,236,2024-08-03,227,1.04
+MII177323,Larino,Casa circondariale,119,0,126,2024-08-03,119,1.06
+MII176749,Imperia,Casa circondariale,53,0,70,2024-08-03,53,1.32
+MII176781,Ivrea,Casa circondariale,195,9,263,2024-08-03,186,1.41
+MII179331,Paliano,Casa di reclusione,156,4,63,2024-08-03,152,0.41
+MII176788,La Spezia,Casa circondariale,151,32,106,2024-08-03,119,0.89
+MII169535,Rieti,Casa circondariale - Nuovo Complesso,295,24,498,2024-08-03,271,1.84
+MII180401,Roma Regina Coeli,Casa circondariale,628,2,1133,2024-08-03,626,1.81
+MII180437,Saluzzo,Casa di reclusione - Rodolfo Morandi,424,0,331,2024-08-03,424,0.78
+MII180380,Roma Rebibbia,Casa di reclusione,445,141,297,2024-08-03,304,0.98
+MII180356,Roma Rebibbia IIIª casa,Casa circondariale,172,40,86,2024-08-03,132,0.65
+MII180348,Roma Rebibbia femminile,Casa circondariale - Germana Stefanini,272,11,362,2024-08-03,261,1.39
+MII181870,Verbania,Casa circondariale,53,0,79,2024-08-03,53,1.49
+MII181880,Vercelli,Casa circondariale,230,39,279,2024-08-03,191,1.46
+MII179299,Padova Nuovo Complesso,Casa di reclusione,438,63,563,2024-08-03,375,1.5
+MII181371,Sulmona,Casa di reclusione,323,8,444,2024-08-03,315,1.41
+MII181820,Vasto,Casa di lavoro,197,50,94,2024-08-03,147,0.64
+MII181839,Velletri,Casa circondariale,412,26,584,2024-08-03,386,1.51
+MII181424,Torino,Casa circondariale - Lorusso Cutugno,1117,18,1499,2024-08-03,1099,1.36
+MII158919,"Alessandria Cantiello, Gaeta",Casa circondariale,233,22,208,2024-08-03,211,0.99
+MII179995,Reggio Calabria Giuseppe Panzera,Casa circondariale,180,8,216,2024-08-03,172,1.26
+MII158924,Alessandria San Michele,Casa di reclusione,265,1,377,2024-08-03,264,1.43
+MII172277,Altamura,Casa di reclusione,52,1,85,2024-08-03,51,1.67
+MII158948,Arezzo,Casa circondariale,108,84,33,2024-08-03,24,1.38
+MII181678,Bari,Casa circondariale - Francesco Rucci,294,42,403,2024-08-03,252,1.6
+MII174720,Firenze Sollicciano,Casa circondariale,497,110,512,2024-08-03,387,1.32
+MII172623,Brindisi,Casa circondariale,152,33,193,2024-08-03,119,1.62
+MII176743,Grosseto,Casa circondariale,15,0,22,2024-08-03,15,1.47
+MII176375,Foggia,Casa circondariale,364,19,678,2024-08-03,345,1.97
+MII177498,Livorno Gorgona,Casa di reclusione,89,0,85,2024-08-03,89,0.96
+MII177463,Livorno,Casa circondariale,391,210,248,2024-08-03,181,1.37
+MII178045,Lucera,Casa circondariale,135,0,169,2024-08-03,135,1.25
+MII178035,Lucca,Casa circondariale,63,22,69,2024-08-03,41,1.68
+MII178124,Matera,Casa circondariale,132,6,177,2024-08-03,126,1.4
+MII178141,Melfi,Casa circondariale,126,0,181,2024-08-03,126,1.44
+MII179938,Potenza,Casa circondariale - Antonio Santoro,110,58,99,2024-08-03,52,1.9
+MII179280,Orvieto,Casa di reclusione,98,0,119,2024-08-03,98,1.21
+MII180476,San Severo,Casa circondariale,61,0,74,2024-08-03,61,1.21
+MII181377,Taranto,Casa circondariale - Carmelo Magli,500,17,910,2024-08-03,483,1.88
+MII181434,Trani,Casa circondariale,447,146,375,2024-08-03,301,1.25
+MII182919,Pisa,Casa circondariale,197,17,273,2024-08-03,180,1.52
+MII181681,Turi,Casa di reclusione,108,0,159,2024-08-03,108,1.47
+MII179896,Pistoia,Casa circondariale,76,0,68,2024-08-03,76,0.89
+MII158935,Alghero,Casa di reclusione - Giuseppe Tomasiello,156,0,93,2024-08-03,156,0.6
+MII179958,Prato,Casa circondariale,589,9,583,2024-08-03,580,1.01
+MII158945,Arbus,Casa di reclusione - località Is Arenas,176,50,92,2024-08-03,126,0.73
+MII180458,San Gimignano,Casa di reclusione,243,20,316,2024-08-03,223,1.42
+MII181115,Siena,Casa circondariale,58,0,74,2024-08-03,58,1.28
+MII181358,Spoleto,Casa di reclusione,456,6,458,2024-08-03,450,1.02
+MII172835,Cagliari Uta,Casa circondariale - Ettore Scalas,561,0,682,2024-08-03,561,1.22
+MII158910,Agrigento,Casa circondariale - Pasquale Di Lorenzo,283,4,367,2024-08-03,279,1.32
+MII177118,Lanusei,Casa circondariale - San Daniele,33,0,29,2024-08-03,33,0.88
+MII179224,Nuoro,Casa circondariale,378,106,185,2024-08-03,272,0.68
+MII172222,Barcellona Pozzo di Gotto,Casa circondariale - Vittorio Madia,414,142,194,2024-08-03,272,0.71
+MII178003,Onanì,Casa di reclusione - Onanì-Mamone,292,122,119,2024-08-03,170,0.7
+MII179274,Oristano,Casa di reclusione - Salvatore Soro,264,0,234,2024-08-03,264,0.89
+MII181091,Sassari,Casa circondariale - Giovanni Bacchiddu,454,3,499,2024-08-03,451,1.11
+MII181385,Tempio Pausania,Casa di reclusione - Paolo Pittalis,170,0,170,2024-08-03,170,1.0
+MII178148,Messina,Casa circondariale,302,98,202,2024-08-03,204,0.99
+MII179965,Ragusa,Casa circondariale,196,13,198,2024-08-03,183,1.08
+MII181109,Sciacca,Casa circondariale,73,53,22,2024-08-03,20,1.1
+MII178666,Napoli Poggioreale,Casa circondariale - Giuseppe Salvia,1624,266,2077,2024-08-03,1358,1.53
+MII178672,Napoli Secondigliano,Casa circondariale - Pasquale Mandato,1142,14,1444,2024-08-03,1128,1.28
+MII180370,Roma Rebibbia Nuovo Complesso,Casa circondariale - Raffaele Cinotti,1170,113,1577,2024-08-03,1057,1.49
+MII172592,Brescia Canton Monbello,Casa circondariale - Nerio Fischione,182,0,387,2024-08-03,182,2.13
+MII158895,Milano San Vittore,Casa circondariale - Francesco Di Cataldo,703,261,1019,2024-08-03,442,2.31
+MII178501,Milano San Vittore femminile,Casa circondariale - Francesco Di Cataldo,46,3,80,2024-08-03,43,1.86
+MII174825,Firenze Mario Gozzini,Casa circondariale,92,14,107,2024-08-03,78,1.37
+MII179781,Perugia,Casa circondariale - Nuovo complesso penitenziario Capanne,363,41,463,2024-08-03,322,1.44
+MII179932,Porto Azzurro,Casa di reclusione - Pasquale De Santis,334,13,314,2024-08-03,321,0.98
+MII181407,Terni,Casa circondariale,422,0,561,2024-08-03,422,1.33
+MII180465,Sanremo,Casa di reclusione - Nuovo Complesso,223,2,256,2024-08-03,221,1.16
+MII158944,Ancona Barcaglione,Casa di reclusione,100,0,100,2024-08-03,100,1.0
+MII158941,Ancona Montacuto,Casa circondariale,256,0,317,2024-08-03,256,1.24
+MII172011,Avellino,Casa circondariale - Antimo Graziano Bellizzi,503,0,622,2024-08-03,503,1.24
+MII181392,Teramo,Casa circondariale,255,0,387,2024-08-03,255,1.52
+MII177332,Latina,Casa circondariale,77,0,116,2024-08-03,77,1.51
+MII181918,Vicenza,Casa circondariale - Filippo Del Papa,276,32,354,2024-08-03,244,1.45
+MII178085,Massa,Casa di reclusione,174,6,224,2024-08-03,168,1.33
+MII178115,Massa Marittima,Casa circondariale,48,5,48,2024-08-03,43,1.12
+MII177420,Lecce,Casa circondariale - Nuovo Complesso,798,57,1178,2024-08-03,741,1.59
+MII179830,Pescara,Casa circondariale,276,1,431,2024-08-03,275,1.57
+MII179945,Pozzuoli,Casa circondariale femminile,98,98,0,2024-08-03,0,
+MII177346,Laureana di Borrello,Casa di reclusione - Luigi Daga,37,0,50,2024-08-03,37,1.35
+MII181440,Trani femminile,Casa di reclusione,32,0,40,2024-08-03,32,1.25
+MII159314,Augusta,Casa di reclusione,364,22,564,2024-08-03,342,1.65
+MII173006,Caltagirone,Casa circondariale,541,164,407,2024-08-03,377,1.08
+MII173259,Castelvetrano,Casa circondariale,44,0,68,2024-08-03,44,1.55
+MII173285,Catania Bicocca,Casa circondariale,136,0,203,2024-08-03,136,1.49
+MII173301,Catania Piazza Lanza,Casa circondariale,279,1,406,2024-08-03,278,1.46
+MII173813,Enna,Casa circondariale - Luigi Bodenza,167,5,213,2024-08-03,162,1.31
+MII173994,Favignana,Casa di reclusione - Giuseppe Barraco,89,6,105,2024-08-03,83,1.27
+MII176451,Gela,Casa circondariale,48,0,70,2024-08-03,48,1.46
+MII176714,Giarre,Casa circondariale,58,1,75,2024-08-03,57,1.32
+MII178681,Noto,Casa di reclusione - Attilio Bonincontro,176,0,147,2024-08-03,176,0.84
+MII179324,Palermo Ucciardone,Casa di reclusione - Calogero Di Bona,569,80,506,2024-08-03,489,1.03
+MII179306,Palermo Pagliarelli,Casa circondariale - Antonio Lorusso,1164,9,1343,2024-08-03,1155,1.16
+MII179856,Piazza Armerina,Casa circondariale,49,1,68,2024-08-03,48,1.42
+MII180451,San Cataldo,Casa di reclusione,135,1,87,2024-08-03,134,0.65
+MII181401,Termini Imerese,Casa circondariale - Antonino Burrafato,97,3,99,2024-08-03,94,1.05
+MII181625,Trapani,Casa circondariale - Pietro Cerulli,555,58,517,2024-08-03,497,1.04
+MII172332,Biella,Casa circondariale,394,1,377,2024-08-03,393,0.96
+MII179876,Volterra,Casa di reclusione,189,0,181,2024-08-03,189,0.96
+MII172208,Civitavecchia Nuovo Complesso,Casa circondariale,357,46,526,2024-08-03,311,1.69
+MII177384,Lauro,Istituto custodia attenuata per madri,50,0,5,2024-08-03,50,0.1
+MII181417,Tolmezzo,Casa circondariale,149,0,151,2024-08-03,149,1.01
+MII173063,Caltanissetta,Casa circondariale,180,0,229,2024-08-03,180,1.27
+MII158901,Belluno,Casa circondariale,90,7,102,2024-08-03,83,1.23
+MII173341,Cosenza,Casa circondariale - Sergio Cosmai,220,1,281,2024-08-03,219,1.28
+MII173265,Castrovillari,Casa circondariale - Rosa Sisca,122,3,160,2024-08-03,119,1.34
+MII178700,Novara,Casa circondariale,156,1,167,2024-08-03,155,1.08
+MII172344,Bollate,Casa di reclusione - IIª casa,1267,1,1451,2024-08-03,1266,1.15
+MII181691,Vallo della Lucania,Casa circondariale - Alfredo Paragano,40,0,54,2024-08-03,40,1.35
+MII160204,Benevento,Casa circondariale - Michele Gaglione,259,7,409,2024-08-03,252,1.62
+MII181934,Viterbo,Casa circondariale  N.C.  - Nicandro Izzo,440,35,687,2024-08-03,405,1.7
+MII172827,Bergamo,Casa circondariale,319,1,572,2024-08-03,318,1.8
+MII176771,Isili,Casa di reclusione,130,23,80,2024-08-03,107,0.75
+MII159060,Arienzo,Casa di reclusione - Gennaro De Angelis,58,0,91,2024-08-03,58,1.57
+MII177134,L'Aquila,Casa circondariale,228,6,165,2024-08-03,222,0.74
+MII152284,Genova Marassi,Casa circondariale,535,2,687,2024-08-03,533,1.29
+MII176403,Forlì,Casa circondariale,144,12,153,2024-08-03,132,1.16
+MII182339,Reggio Emilia,Istituti di pena - casa circondariale e di reclusione,292,58,289,2024-08-03,234,1.24
+MII180001,Rimini,Casa circondariale,118,0,157,2024-08-03,118,1.33
+MII174686,Ferrara,Casa circondariale - Costantino Satta,244,0,383,2024-08-03,244,1.57
+MII179842,Piacenza,Casa circondariale - San Lazzaro,416,3,483,2024-08-03,413,1.17
+MII172508,Bologna,Casa circondariale - Rocco D'Amato,498,6,832,2024-08-03,492,1.69
+MII179981,Ravenna,Casa circondariale,49,0,81,2024-08-03,49,1.65
+MII179364,Parma,Casa di reclusione,655,25,713,2024-08-03,630,1.13
+MII178638,Modena,Casa circondariale,372,0,528,2024-08-03,372,1.42
+MII181125,Siracusa,Casa circondariale,545,0,671,2024-08-03,545,1.23
