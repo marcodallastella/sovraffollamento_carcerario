@@ -63,7 +63,6 @@ MII177107,EE18,Lanciano,Casa circondariale,42.2305316,14.3907794,5,"Lazio, Abruz
 MII177323,FF25,Larino,Casa circondariale,41.8055672,14.9210984,5,"Lazio, Abruzzo, Molise",Contrada Monte Arcano n.2 - 86035 Larino,+39 0874 822041
 MII176749,AA06,Imperia,Casa circondariale,43.8862958,8.0267106,0,"Val D'Aosta, Piemonte, Liguria",Via Giacomo Agnesi n. 2 18100 Imperia,+39   0183 293551
 MII176781,AA27,Ivrea,Casa circondariale,45.4673791,7.874797,0,"Val D'Aosta, Piemonte, Liguria",Corso Vercelli n.165 - 10015 Ivrea,+39  0125 614311
-MII179331,EE22,Paliano,Casa di reclusione,41.8060233,13.0580683,5,"Lazio, Abruzzo, Molise",Viale Garibaldi n.6 - 03018 Paliano,+39   0775 578112
 MII176788,AA07,La Spezia,Casa circondariale,44.107033,9.8282255,0,"Val D'Aosta, Piemonte, Liguria",Piazza Falcone e Borsellino n.1 - 19125 La Spezia,+39    0187 503064
 MII169535,EE48,Rieti,Casa circondariale,42.4016906,12.8629993,5,"Lazio, Abruzzo, Molise",Via Maestri del lavoro n.2 - 02100 Rieti,+39 0746 221343
 MII180401,EE02,Roma Regina Coeli,Casa circondariale,41.8952204,12.46386051,5,"Lazio, Abruzzo, Molise",Via della Lungara n.29 - 00165 Roma,+39  06 680291
@@ -117,7 +116,6 @@ MII178003,LL07,Onanì,Casa di reclusione,40.5725948,9.4205999,10,Sardegna,Via Ce
 MII179274,LL09,Oristano,Casa di reclusione,39.94078795,8.61201176,10,Sardegna,Loc. Su Pedriaxiu Massama n. snc - 09170 Oristano,+39  0783 71031
 MII181091,LL10,Sassari,Casa circondariale,40.72020106,8.55148315,10,Sardegna,Localit&agrave; Bancali - Strada Provinciale 56 n.4 - 07100 Sassari,+39  079 3090
 MII181385,LL11,Tempio Pausania,Casa di reclusione,40.8973821,9.1035159,10,Sardegna,Localit&agrave; Nuchis n. snc - 07029 Tempio Pausania,+39  079 6727611
-MII178148,HH01,Messina,Casa circondariale,38.048433,15.00434682,9,Sicilia,Via Consolare Valeria n.2 - 98124 Messina,+39  090 2281111
 MII179965,KK07,Ragusa,Casa circondariale,36.9145799,14.72372512,9,Sicilia,Via G. di Vittorio n.26 - 97100 Ragusa,+ 39 0932 658601
 MII181109,KK13,Sciacca,Casa circondariale,37.5064786,13.0823323,9,Sicilia,Via Pietro Gerardi n.12 - 92019 Sciacca,+39 0925 21380
 MII178666,FF01,Napoli Poggioreale,Casa circondariale,40.8599808,14.27937499,6,Campania,Via Nuova Poggioreale n.167 - 80143 Napoli,+39 081 266666
@@ -169,7 +167,6 @@ MII173063,KK09,Caltanissetta,Casa circondariale,37.494382965222556,14.0561560419
 MII158901,CC05,Belluno,Casa circondariale,46.1397378,12.2192968,2,"Veneto, Trentino, Friuli Venezia Giulia",Via Baldenich n.11 - 32100 Belluno,+39  0437 930810
 MII173341,HH04,Cosenza,Casa circondariale,39.3099931,16.2501929,8,Calabria,Viale Giacomo Mancini n.320 - 87100 Cosenza,+39 0984 826001
 MII173265,HH12,Castrovillari,Casa circondariale,39.83602485,16.2210616,8,Calabria,Via Sergio Cosmai n 1 - 87012 Castrovillari,+39   0981 483127
-MII178700,AA19,Novara,Casa circondariale,45.4353796,8.63788811,0,"Val D'Aosta, Piemonte, Liguria",Via Sforzesca n.49 - 28100 Novara,+39    0321 483535
 MII172344,BB50,Bollate,Casa di reclusione,45.543835,9.1177075,1,Lombardia,Via Cristina Belgioioso n.120 20157 - Milano,+39 02 382067000
 MII181691,FF24,Vallo della Lucania,Casa circondariale  Alfredo Paragano,40.229704,15.26576,6,Campania,A.R. Passaro n.39 - 84078  Vallo della Lucania,+39   0974 4268
 MII160204,FF08,Benevento,Casa circondariale  Michele Gaglione,41.1295587,14.7824639,6,Campania,Via Ermete Novelli n.11 -  82100 Benevento,+39  0824 53451
@@ -178,6 +175,8 @@ MII172827,BB06,Bergamo,Casa circondariale,45.7566557,9.7542192,1,Lombardia,via M
 MII176771,LL05,Isili,Casa di reclusione,39.7404048,9.1085903,10,Sardegna,Localit&agrave; Sarcidano n.SN - 08033 Isili,+39  0782 802045
 MII159060,FF18,Arienzo,Casa di reclusione  Gennaro De Angelis,41.0242566,14.4970522,6,Campania,Via Nazionale Appia Km 230+600 n.7 - 81021 Arienzo,+39 0823 805516
 MII177134,EE11,L'Aquila,Casa circondariale,42.3489203,13.3979672,5,"Lazio, Abruzzo, Molise",Via Amiternina Localit&agrave; Costarelle di Preturo n.3 - 67100 L'Aquila,+39 0862 452020
+MII178700,AA19,Novara,Casa circondariale,45.4353796,8.63788811,0,"Val D'Aosta, Piemonte, Liguria",Via Sforzesca n.49 - 28100 Novara,+39    0321 4835
+MII178148,HH01,Messina,Casa circondariale,38.048433,15.00434682,9,Sicilia,Via Consolare Valeria n.2 - 98124 Messina,+39  090 2281111
 MII152284,AA02,Genova Marassi,Casa circondariale,44.4179134,8.9511004,0,"Val D'Aosta, Piemonte, Liguria",Piazzale Marassi n.2 - 16139 Genova,+39  010 84051
 MII176403,BB09,Forlì,Casa circondariale,44.2226017,12.0409384,3,"Emilia Romagna, Marche",Via della Rocca n.4/6 - 47121 Forl&igrave;,+39 0543 33208
 MII182339,BB29,Reggio Emilia,Istituti di pena,44.6639363,10.63973152,3,"Emilia Romagna, Marche",Via Settembrini n.8 - 42123 Reggio Emilia,+39  0522 331666
