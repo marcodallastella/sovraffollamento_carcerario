@@ -113,7 +113,6 @@ MII179224,LL08,Nuoro,Casa circondariale,40.31421085,9.30414976,10,Sardegna,Via B
 MII172222,HH08,Barcellona Pozzo di Gotto,Casa circondariale,38.15123,15.2278876,9,Sicilia,Via V. Madia n.31 - 98051 Barcellona Pozzo di Gotto,+39 090 970931
 MII178003,LL07,Onanì,Casa di reclusione,40.5725948,9.4205999,10,Sardegna,Via Centrale n.3 - 08020 Onan&igrave; (Nuoro),+39   0784 14524
 MII179274,LL09,Oristano,Casa di reclusione,39.94078795,8.61201176,10,Sardegna,Loc. Su Pedriaxiu Massama n. snc - 09170 Oristano,+39  0783 71031
-MII181091,LL10,Sassari,Casa circondariale,40.72020106,8.55148315,10,Sardegna,Localit&agrave; Bancali - Strada Provinciale 56 n.4 - 07100 Sassari,+39  079 3090
 MII181385,LL11,Tempio Pausania,Casa di reclusione,40.8973821,9.1035159,10,Sardegna,Localit&agrave; Nuchis n. snc - 07029 Tempio Pausania,+39  079 6727611
 MII179965,KK07,Ragusa,Casa circondariale,36.9145799,14.72372512,9,Sicilia,Via G. di Vittorio n.26 - 97100 Ragusa,+ 39 0932 658601
 MII181109,KK13,Sciacca,Casa circondariale,37.5064786,13.0823323,9,Sicilia,Via Pietro Gerardi n.12 - 92019 Sciacca,+39 0925 21380
@@ -124,7 +123,6 @@ MII172592,BB02,Brescia Canton Monbello,Casa circondariale,45.5325399,10.2340676,
 MII158895,BB01,Milano San Vittore,Casa circondariale,45.4615979,9.16639949,1,Lombardia,Piazza Filangieri n.2 - 20123 Milano,+39 02 438521
 MII178501,BB32,Milano San Vittore femminile,Casa circondariale,45.4615979,9.16639949,1,Lombardia,Piazza Filangieri n.2 - 20123 Milano,+39 02 438521
 MII174825,DD49,Firenze Mario Gozzini,Casa circondariale,43.7698712,11.2555757,4,"Toscana, Umbria",Via Girolamo Minervini n.5 - 50142 Firenze,+39  055 755451
-MII179781,DD55,Perugia,Casa circondariale,43.05317525,12.26260324,4,"Toscana, Umbria",Strada Pievaiola n.252 - 06132 Perugia,+39   075 7740001
 MII179932,DD03,Porto Azzurro,Casa di reclusione,42.7655212,10.40289057,4,"Toscana, Umbria",Forte San Giacomo n.1 57036 - Porto Azzurro,+39    0565 95045
 MII181407,DD18,Terni,Casa circondariale,42.5545755,12.5982445,4,"Toscana, Umbria",Strada delle Campore n.32 - 05100 Terni,+39   0744 800100
 MII180465,AA16,Sanremo,Casa di reclusione,43.8198253,7.7748827,0,"Val D'Aosta, Piemonte, Liguria",Strada Armea n.144/a - 18038 Sanremo,+39    0184 515040
@@ -150,7 +148,6 @@ MII173994,KK12,Favignana,Casa di reclusione,37.9314505,12.3273647,9,Sicilia,Via 
 MII176451,KK33,Gela,Casa circondariale,37.0664363,14.2502445,9,Sicilia,C.da Balate SS 117 bis n. snc - 93012 Gela,+39  0933 908167
 MII176714,KK26,Giarre,Casa circondariale,37.726857,15.187688,9,Sicilia,Via Foscolo n.67 - 95017 Giarre,+39 095 7794356
 MII178681,KK06,Noto,Casa di reclusione,36.89341275,15.07208372,9,Sicilia,Via Garibaldi n.8 - 96017 Noto,+39 0931 571233
-MII179324,KK01,Palermo Ucciardone,Casa di reclusione,38.13289445,13.35769614,9,Sicilia,Via Enrico Albanese n.3 - 90139 Palermo,+39  091 300431
 MII179306,KK23,Palermo Pagliarelli,Casa circondariale,38.09077025,13.33932043,9,Sicilia,Piazza Pietro Cerulli n.1 - 90129 Palermo,+39 091 6685456
 MII179856,KK18,Piazza Armerina,Casa circondariale,37.385946,14.367174,9,Sicilia,Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina,+39 0935 681385
 MII180451,KK22,San Cataldo,Casa di reclusione,37.488445,13.993065,9,Sicilia,Piazza Marconi n.1 - 93017 San Cataldo,+39  0934 571113
@@ -178,6 +175,9 @@ MII180426,FF11,Salerno,Casa circondariale,40.6521175,14.85032945,6,Campania,Via 
 MII173285,KK24,Catania Bicocca,Casa circondariale,37.50570535,14.94420233,9,Sicilia,Tangenziale Ovest km 8 n. s.n.c. - 95030 Catania,+39 095 592728
 MII181079,FF68,Sant'Angelo dei Lombardi,Casa di reclusione,40.9101396,15.1892849,6,Campania,C. da Selvatico n. SNC - 83054 Sant'Angelo dei Lombardi,+39 0827 24124
 MII177384,FF65,Lauro,Istituto custodia attenuata per madri,40.8799681,14.629467,6,Campania,Strada Provinciale Bosagro n. snc - 83023 Lauro,+39 081 8240430/8240444
+MII179324,KK01,Palermo Ucciardone,Casa di reclusione,38.13289445,13.35769614,9,Sicilia,Via Enrico Albanese n.3 - 90139 Palermo,+39  091 300431
+MII181091,LL10,Sassari,Casa circondariale,40.72020106,8.55148315,10,Sardegna,Localit&agrave; Bancali - Strada Provinciale 56 n.4 - 07100 Sassari,+39  079 3090
+MII179781,DD55,Perugia,Casa circondariale,43.05317525,12.26260324,4,"Toscana, Umbria",Strada Pievaiola n.252 - 06132 Perugia,+39   075 7740001
 MII152284,AA02,Genova Marassi,Casa circondariale,44.4179134,8.9511004,0,"Val D'Aosta, Piemonte, Liguria",Piazzale Marassi n.2 - 16139 Genova,+39  010 84051
 MII176403,BB09,Forlì,Casa circondariale,44.2226017,12.0409384,3,"Emilia Romagna, Marche",Via della Rocca n.4/6 - 47121 Forl&igrave;,+39 0543 33208
 MII182339,BB29,Reggio Emilia,Istituti di pena,44.6639363,10.63973152,3,"Emilia Romagna, Marche",Via Settembrini n.8 - 42123 Reggio Emilia,+39  0522 331666
