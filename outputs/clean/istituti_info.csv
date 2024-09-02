@@ -12,11 +12,9 @@ MII179237,BB39,Opera,Casa di reclusione,45.373069,9.211149,1,Lombardia,Via Campo
 MII182910,BB23,Pavia,Casa circondariale,45.2073703,9.17887325,1,Lombardia,Via Vigentina n.85 - 27100 Pavia,+39   0382 574701
 MII181346,BB24,Sondrio,Casa circondariale,46.32336235,10.25841367,1,Lombardia,Via Antonio Caimi n.80 - 23100 Sondrio,+39  034 2212031
 MII181703,BB25,Varese,Casa circondariale,45.8175359,8.8263438,1,Lombardia,Via Felicita Morandi n.5 - 21100 Varese,+39  0332 283708
-MII181924,BB26,Vigevano,Casa di reclusione,45.3211074,8.8114587,1,Lombardia,Via Gravellona n.240 - 27029 Vigevano,+39  0381 325760
 MII179733,BB37,Voghera,Casa circondariale,44.9978954,8.9925217,1,Lombardia,Via Prati Nuovi n.7 - 27058 Voghera,+39   0383 212222
 MII173311,HH11,Catanzaro,Casa circondariale,38.9076353,16.5960465,8,Calabria,Via Tre Fontane n.28 - 88100 Catanzaro,+39 0961 469593
 MII173324,HH39,Crotone,Casa circondariale,39.0806223,17.127196,8,Calabria,Localit&agrave; Passovecchio n.1 - 88900 Crotone,+39  0962 930013
-MII177996,HH06,Locri,Casa circondariale,38.2385368,16.2655092,8,Calabria,Via Vittorio Veneto n.71 - 89044 Locri,+39 0964 20139
 MII179342,HH19,Palmi,Casa circondariale,38.3673254,15.8589302,8,Calabria,Via Trodio n.1 - 89015 Palmi,+39 0966 46741
 MII179353,HH20,Paola,Casa circondariale,39.359893,16.039588,8,Calabria,Via Paolino Maria Quattrone n.1 - 87027 Paola,+39 0982 848487
 MII180415,HH41,Rossano,Casa di reclusione,39.5746821,16.6348647,8,Calabria,Contrada Ciminata n. snc - 87067 Rossano,+39  0983 510555
@@ -70,7 +68,6 @@ MII180380,EE29,Roma Rebibbia,Casa di reclusione,41.93451235,12.57406556,5,"Lazio
 MII180356,EE39,Roma Rebibbia IIIª casa,Casa circondariale,41.93451235,12.57406556,5,"Lazio, Abruzzo, Molise",Via Bartolo Longo n.82 - 00156 Roma,+39  06 4122131
 MII180348,EE28,Roma Rebibbia femminile,Casa circondariale,41.93451235,12.57406556,5,"Lazio, Abruzzo, Molise",Via Bartolo Longo n.92 - 00156 Roma,+39  06 415941
 MII181870,AA14,Verbania,Casa circondariale,45.9221715,8.5516789,0,"Val D'Aosta, Piemonte, Liguria",Via Giuseppe Castelli n.8 - 28922 Verbania,+39    0323 503843
-MII181880,AA13,Vercelli,Casa circondariale,45.3063558,8.42909461,0,"Val D'Aosta, Piemonte, Liguria",Strada Vicinale del Rollone n.19 - 13100 Vercelli,+39  0161 215124
 MII179299,CC25,Padova Nuovo Complesso,Casa di reclusione,45.4436499,11.84528382,2,"Veneto, Trentino, Friuli Venezia Giulia",Via Due Palazzi n.35 - 35135 Padova,+39   049 8908411
 MII181371,EE12,Sulmona,Casa di reclusione,42.0685398,13.9279741,5,"Lazio, Abruzzo, Molise",Via Lamaccio n. snc - 67039 Sulmona,+39 0864 210831
 MII181820,EE19,Vasto,Casa di lavoro,42.29559582,14.44633484,5,"Lazio, Abruzzo, Molise",Via Torre Sinello n.23 - 66054 Vasto,+39  0873 310901
@@ -88,14 +85,12 @@ MII176743,DD20,Grosseto,Casa circondariale,42.7597261,11.1137389,4,"Toscana, Umb
 MII176375,FF13,Foggia,Casa circondariale,41.50281055,15.45289961,7,"Puglia, Basilicata",Via delle Casermette n.22 - 71100 Foggia,+39  0881 778156
 MII177498,DD07,Livorno Gorgona,Casa di reclusione,43.42959665,9.89870751,4,"Toscana, Umbria",Gorgona Via Torre Nuova n.1 -. 57030 Livorno,+39   0586 495501
 MII177463,DD08,Livorno,Casa circondariale,43.5507411,10.3091456,4,"Toscana, Umbria",Via delle Macchie n.9 - 57124 Livorno,+39  0586 853044
-MII178045,FF14,Lucera,Casa circondariale,41.51140835,15.33357537,7,"Puglia, Basilicata",Piazza Tribunali n.16 - 71036 Lucera,+39   0881 521493
 MII178035,DD09,Lucca,Casa circondariale,43.84570065,10.49998221,4,"Toscana, Umbria",Via San Giorgio n.108 - 55100 Lucca,+39   0583 419696
 MII178124,HH14,Matera,Casa circondariale,40.676213,16.60599858,7,"Puglia, Basilicata",Via Cererie n.24 - 75100 Matera,+39  0835 334751
 MII178141,HH15,Melfi,Casa circondariale,40.9961962,15.6556359,7,"Puglia, Basilicata",Via Lecce n. snc - 85025 Melfi,+39  0972 21822
 MII179938,HH02,Potenza,Casa circondariale,40.6413675,15.824158,7,"Puglia, Basilicata",Via Appia n.175 - 85100 Potenza,+39  0971 471017
 MII179280,DD14,Orvieto,Casa di reclusione,42.72110485,12.11506423,4,"Toscana, Umbria",Via Roma n.1 - 05018 Orvieto,+39  0763 340435
 MII180476,FF23,San Severo,Casa circondariale,41.6893215,15.3708272,7,"Puglia, Basilicata",Via Emilio Dotoli n.1 - 71016 San Severo,+39  0882 373131
-MII181377,FF17,Taranto,Casa circondariale,40.45574895,17.29388354,7,"Puglia, Basilicata",Via Carmelo Magli n.1 - 74100 Taranto,+39   099 7798915
 MII181434,FF15,Trani,Casa circondariale,41.275354,16.3959453,7,"Puglia, Basilicata",Via Andria n 300 - 76125 Trani,+39  0883 584848
 MII182919,DD02,Pisa,Casa circondariale,43.71851375,10.41402939,4,"Toscana, Umbria",Via S. Giovanni Bosco n.43 - 56127 Pisa,+39  050 574102
 MII181681,FF16,Turi,Casa di reclusione,40.91732385,17.01893088,7,"Puglia, Basilicata",Piazza Aldo Moro n.4 - 70010 Turi,+39  080 8915811
@@ -118,7 +113,6 @@ MII179965,KK07,Ragusa,Casa circondariale,36.9145799,14.72372512,9,Sicilia,Via G.
 MII181109,KK13,Sciacca,Casa circondariale,37.5064786,13.0823323,9,Sicilia,Via Pietro Gerardi n.12 - 92019 Sciacca,+39 0925 21380
 MII178666,FF01,Napoli Poggioreale,Casa circondariale,40.8599808,14.27937499,6,Campania,Via Nuova Poggioreale n.167 - 80143 Napoli,+39 081 266666
 MII178672,FF58,Napoli Secondigliano,Casa circondariale,40.9104776,14.24587204,6,Campania,Via Roma verso Scampia n.350 - 80144 Napoli,+39 081 702 14 14
-MII180370,EE01,Roma Rebibbia Nuovo Complesso,Casa circondariale,41.93451235,12.57406556,5,"Lazio, Abruzzo, Molise",Via Raffaele Majetti n.70 - 00156 Roma,+39  06 439801
 MII172592,BB02,Brescia Canton Monbello,Casa circondariale,45.5325399,10.2340676,1,Lombardia,Via Spalto San Marco n 20 - 25121 Brescia,+39  030 3773523
 MII158895,BB01,Milano San Vittore,Casa circondariale,45.4615979,9.16639949,1,Lombardia,Piazza Filangieri n.2 - 20123 Milano,+39 02 438521
 MII178501,BB32,Milano San Vittore femminile,Casa circondariale,45.4615979,9.16639949,1,Lombardia,Piazza Filangieri n.2 - 20123 Milano,+39 02 438521
@@ -130,7 +124,6 @@ MII158944,EE47,Ancona Barcaglione,Casa di reclusione,43.613360,13.440180,3,"Emil
 MII158941,EE04,Ancona Montacuto,Casa circondariale,43.619340,13.527880,3,"Emilia Romagna, Marche",Via Montecavallo di Montacuto n.73/a - 60129 Ancona,+39 071 897892
 MII172011,FF32,Avellino,Casa circondariale,40.9141958,14.7888764,6,Campania,Frazione Bellizzi Irpino - Contrada Sant'Oronzo n.1 -  83100 Avellino,+39 0825 73014
 MII181392,EE13,Teramo,Casa circondariale,42.6612893,13.6983524,5,"Lazio, Abruzzo, Molise",C.da Ceppata n.1 - 64100 Teramo,+39   0861 414777
-MII177332,EE23,Latina,Casa circondariale,41.46083555,12.89935226,5,"Lazio, Abruzzo, Molise",Via Aspromonte n.100 - 04100 Latina,+39  0773 41781
 MII181918,CC09,Vicenza,Casa circondariale,45.5518993,11.5780075,2,"Veneto, Trentino, Friuli Venezia Giulia",Via Basilio Dalla Scola n. 150 - 36100 Vicenza,+39  0444 513790
 MII178085,AA08,Massa,Casa di reclusione,44.0231028,10.1371655,4,"Toscana, Umbria",Via Pietro Pellegrini n.17 - 54100 Massa,+39   0585 790921
 MII178115,DD22,Massa Marittima,Casa circondariale,43.0438048,10.9023227,4,"Toscana, Umbria",Viale Martiri della Niccioleta n.148 - 58024 Massa Marittima,+39   0566 904187
@@ -149,7 +142,6 @@ MII176451,KK33,Gela,Casa circondariale,37.0664363,14.2502445,9,Sicilia,C.da Bala
 MII176714,KK26,Giarre,Casa circondariale,37.726857,15.187688,9,Sicilia,Via Foscolo n.67 - 95017 Giarre,+39 095 7794356
 MII178681,KK06,Noto,Casa di reclusione,36.89341275,15.07208372,9,Sicilia,Via Garibaldi n.8 - 96017 Noto,+39 0931 571233
 MII179306,KK23,Palermo Pagliarelli,Casa circondariale,38.09077025,13.33932043,9,Sicilia,Piazza Pietro Cerulli n.1 - 90129 Palermo,+39 091 6685456
-MII179856,KK18,Piazza Armerina,Casa circondariale,37.385946,14.367174,9,Sicilia,Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina,+39 0935 681385
 MII180451,KK22,San Cataldo,Casa di reclusione,37.488445,13.993065,9,Sicilia,Piazza Marconi n.1 - 93017 San Cataldo,+39  0934 571113
 MII181401,KK04,Termini Imerese,Casa circondariale,37.983651,13.695554,9,Sicilia,Via Zara n.28 - 90018 Termini Imerese,+39 091 8144760
 MII181625,KK03,Trapani,Casa circondariale,38.0160543,12.5437475,9,Sicilia,Via Madonna di Fatima n.222 - 91016 Trapani,+39  0923 470111
@@ -160,7 +152,6 @@ MII181417,CC26,Tolmezzo,Casa circondariale,46.418570686533315,13.018053166820799
 MII173063,KK09,Caltanissetta,Casa circondariale,37.494382965222556,14.05615604195194,9,Sicilia,Via Messina n. 94 - 93100 Caltanissetta,+39 0934 584500
 MII158901,CC05,Belluno,Casa circondariale,46.1397378,12.2192968,2,"Veneto, Trentino, Friuli Venezia Giulia",Via Baldenich n.11 - 32100 Belluno,+39  0437 930810
 MII173341,HH04,Cosenza,Casa circondariale,39.3099931,16.2501929,8,Calabria,Viale Giacomo Mancini n.320 - 87100 Cosenza,+39 0984 826001
-MII173265,HH12,Castrovillari,Casa circondariale,39.83602485,16.2210616,8,Calabria,Via Sergio Cosmai n 1 - 87012 Castrovillari,+39   0981 483127
 MII172344,BB50,Bollate,Casa di reclusione,45.543835,9.1177075,1,Lombardia,Via Cristina Belgioioso n.120 20157 - Milano,+39 02 382067000
 MII181691,FF24,Vallo della Lucania,Casa circondariale  Alfredo Paragano,40.229704,15.26576,6,Campania,A.R. Passaro n.39 - 84078  Vallo della Lucania,+39   0974 4268
 MII160204,FF08,Benevento,Casa circondariale  Michele Gaglione,41.1295587,14.7824639,6,Campania,Via Ermete Novelli n.11 -  82100 Benevento,+39  0824 53451
@@ -178,8 +169,16 @@ MII177384,FF65,Lauro,Istituto custodia attenuata per madri,40.8799681,14.629467,
 MII179324,KK01,Palermo Ucciardone,Casa di reclusione,38.13289445,13.35769614,9,Sicilia,Via Enrico Albanese n.3 - 90139 Palermo,+39  091 300431
 MII181091,LL10,Sassari,Casa circondariale,40.72020106,8.55148315,10,Sardegna,Localit&agrave; Bancali - Strada Provinciale 56 n.4 - 07100 Sassari,+39  079 3090
 MII179781,DD55,Perugia,Casa circondariale,43.05317525,12.26260324,4,"Toscana, Umbria",Strada Pievaiola n.252 - 06132 Perugia,+39   075 7740001
+MII181880,AA13,Vercelli,Casa circondariale,45.3063558,8.42909461,0,"Val D'Aosta, Piemonte, Liguria",Strada Vicinale del Rollone n.19 - 13100 Vercelli,+39  0161 215124
+MII181924,BB26,Vigevano,Casa di reclusione,45.3211074,8.8114587,1,Lombardia,Via Gravellona n.240 - 27029 Vigevano,+39  0381 325760
+MII177996,HH06,Locri,Casa circondariale,38.2385368,16.2655092,8,Calabria,Via Vittorio Veneto n.71 - 89044 Locri,+39 0964 20139
+MII180370,EE01,Roma Rebibbia Nuovo Complesso,Casa circondariale,41.93451235,12.57406556,5,"Lazio, Abruzzo, Molise",Via Raffaele Majetti n.70 - 00156 Roma,+39  06 439801
+MII173265,HH12,Castrovillari,Casa circondariale,39.83602485,16.2210616,8,Calabria,Via Sergio Cosmai n 1 - 87012 Castrovillari,+39   0981 483127
+MII178045,FF14,Lucera,Casa circondariale,41.51140835,15.33357537,7,"Puglia, Basilicata",Piazza Tribunali n.16 - 71036 Lucera,+39   0881 521493
+MII177332,EE23,Latina,Casa circondariale,41.46083555,12.89935226,5,"Lazio, Abruzzo, Molise",Via Aspromonte n.100 - 04100 Latina,+39  0773 41781
+MII179856,KK18,Piazza Armerina,Casa circondariale,37.385946,14.367174,9,Sicilia,Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina,+39 0935 681385
+MII181377,FF17,Taranto,Casa circondariale,40.45574895,17.29388354,7,"Puglia, Basilicata",Via Carmelo Magli n.1 - 74100 Taranto,+39   099 7798915
 MII152284,AA02,Genova Marassi,Casa circondariale,44.4179134,8.9511004,0,"Val D'Aosta, Piemonte, Liguria",Piazzale Marassi n.2 - 16139 Genova,+39  010 84051
-MII176403,BB09,Forlì,Casa circondariale,44.2226017,12.0409384,3,"Emilia Romagna, Marche",Via della Rocca n.4/6 - 47121 Forl&igrave;,+39 0543 33208
 MII182339,BB29,Reggio Emilia,Istituti di pena,44.6639363,10.63973152,3,"Emilia Romagna, Marche",Via Settembrini n.8 - 42123 Reggio Emilia,+39  0522 331666
 MII180001,BB15,Rimini,Casa circondariale,44.0593886,12.5684371,3,"Emilia Romagna, Marche",Via Santa Cristina n.19 - 47900 Rimini,+39  0541 751306
 MII174686,BB08,Ferrara,Casa circondariale,44.8423466,11.5822881,3,"Emilia Romagna, Marche",Via Arginone n.327 - 44122 Ferrara,+39 053 2250011
@@ -187,5 +186,6 @@ MII179842,BB04,Piacenza,Casa circondariale,45.0534751,9.6947461,3,"Emilia Romagn
 MII172508,BB03,Bologna,Casa circondariale,44.4936714,11.3430347,3,"Emilia Romagna, Marche",Via del Gomito n. 2 - 40127 Bologna,+39 051 320512
 MII179981,BB13,Ravenna,Casa circondariale,44.41458045,12.19213791,3,"Emilia Romagna, Marche",Via Port'Aurea n.57 - 48121 Ravenna,+39  0544 36836 - 36885 - 36978
 MII179364,BB30,Parma,Casa di reclusione,44.8167494,10.36522212,3,"Emilia Romagna, Marche",Strada Burla n.57 - 43122 Parma,+39 0521 7089
+MII176403,BB09,Forlì,Casa circondariale,44.2226017,12.0409384,3,"Emilia Romagna, Marche",Via della Rocca n.4/6 - 47121 Forl&igrave;,+39 0543 33208
 MII178638,BB10,Modena,Casa circondariale,44.67086,10.9190707,3,"Emilia Romagna, Marche",Strada Sant'Anna n.370 - 41122 Modena,+39  059 450800
 MII181125,KK08,Siracusa,Casa circondariale,37.03487355,15.16261221,9,Sicilia,Via Monasteri n.20 - 96100  Siracusa,+39 0931 717206
