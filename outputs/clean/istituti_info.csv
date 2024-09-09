@@ -55,7 +55,6 @@ MII172814,AA11,Brissogne - Aosta,Casa circondariale,45.7285199,7.4066634,0,"Val 
 MII176759,FF19,Isernia,Casa circondariale,41.600216,14.238217,5,"Lazio, Abruzzo, Molise",Via Ponte San Leonardo n.5 - 86170  Isernia,+39 0865 3965
 MII176414,AA05,Fossano,Casa di reclusione,44.5493489,7.7250155,0,"Val D'Aosta, Piemonte, Liguria",Via S.Giovanni Bosco n.48 - 12045 Fossano,+39  0172 635791
 MII176703,AA45,Genova Pontedecimo,Casa circondariale,44.49411925,8.90540935,0,"Val D'Aosta, Piemonte, Liguria",Via Coni Zugna n.32 - 16100 Genova,+39   010 784320
-MII177107,EE18,Lanciano,Casa circondariale,42.2305316,14.3907794,5,"Lazio, Abruzzo, Molise",C/da Villa Stanazzo n.212/A - 66034 Lanciano,+39 0872 716509
 MII177323,FF25,Larino,Casa circondariale,41.8055672,14.9210984,5,"Lazio, Abruzzo, Molise",Contrada Monte Arcano n.2 - 86035 Larino,+39 0874 822041
 MII176749,AA06,Imperia,Casa circondariale,43.8862958,8.0267106,0,"Val D'Aosta, Piemonte, Liguria",Via Giacomo Agnesi n. 2 18100 Imperia,+39   0183 293551
 MII176781,AA27,Ivrea,Casa circondariale,45.4673791,7.874797,0,"Val D'Aosta, Piemonte, Liguria",Corso Vercelli n.165 - 10015 Ivrea,+39  0125 614311
@@ -141,7 +140,6 @@ MII173994,KK12,Favignana,Casa di reclusione,37.9314505,12.3273647,9,Sicilia,Via 
 MII176451,KK33,Gela,Casa circondariale,37.0664363,14.2502445,9,Sicilia,C.da Balate SS 117 bis n. snc - 93012 Gela,+39  0933 908167
 MII176714,KK26,Giarre,Casa circondariale,37.726857,15.187688,9,Sicilia,Via Foscolo n.67 - 95017 Giarre,+39 095 7794356
 MII178681,KK06,Noto,Casa di reclusione,36.89341275,15.07208372,9,Sicilia,Via Garibaldi n.8 - 96017 Noto,+39 0931 571233
-MII179306,KK23,Palermo Pagliarelli,Casa circondariale,38.09077025,13.33932043,9,Sicilia,Piazza Pietro Cerulli n.1 - 90129 Palermo,+39 091 6685456
 MII180451,KK22,San Cataldo,Casa di reclusione,37.488445,13.993065,9,Sicilia,Piazza Marconi n.1 - 93017 San Cataldo,+39  0934 571113
 MII181401,KK04,Termini Imerese,Casa circondariale,37.983651,13.695554,9,Sicilia,Via Zara n.28 - 90018 Termini Imerese,+39 091 8144760
 MII181625,KK03,Trapani,Casa circondariale,38.0160543,12.5437475,9,Sicilia,Via Madonna di Fatima n.222 - 91016 Trapani,+39  0923 470111
@@ -162,7 +160,6 @@ MII159060,FF18,Arienzo,Casa di reclusione  Gennaro De Angelis,41.0242566,14.4970
 MII177134,EE11,L'Aquila,Casa circondariale,42.3489203,13.3979672,5,"Lazio, Abruzzo, Molise",Via Amiternina Localit&agrave; Costarelle di Preturo n.3 - 67100 L'Aquila,+39 0862 452020
 MII178700,AA19,Novara,Casa circondariale,45.4353796,8.63788811,0,"Val D'Aosta, Piemonte, Liguria",Via Sforzesca n.49 - 28100 Novara,+39    0321 4835
 MII178148,HH01,Messina,Casa circondariale,38.048433,15.00434682,9,Sicilia,Via Consolare Valeria n.2 - 98124 Messina,+39  090 2281111
-MII180426,FF11,Salerno,Casa circondariale,40.6521175,14.85032945,6,Campania,Via del Tonnazzo n.1 - 84100 Salerno,+39  089 301722
 MII173285,KK24,Catania Bicocca,Casa circondariale,37.50570535,14.94420233,9,Sicilia,Tangenziale Ovest km 8 n. s.n.c. - 95030 Catania,+39 095 592728
 MII181079,FF68,Sant'Angelo dei Lombardi,Casa di reclusione,40.9101396,15.1892849,6,Campania,C. da Selvatico n. SNC - 83054 Sant'Angelo dei Lombardi,+39 0827 24124
 MII177384,FF65,Lauro,Istituto custodia attenuata per madri,40.8799681,14.629467,6,Campania,Strada Provinciale Bosagro n. snc - 83023 Lauro,+39 081 8240430/8240444
@@ -178,6 +175,9 @@ MII178045,FF14,Lucera,Casa circondariale,41.51140835,15.33357537,7,"Puglia, Basi
 MII177332,EE23,Latina,Casa circondariale,41.46083555,12.89935226,5,"Lazio, Abruzzo, Molise",Via Aspromonte n.100 - 04100 Latina,+39  0773 41781
 MII179856,KK18,Piazza Armerina,Casa circondariale,37.385946,14.367174,9,Sicilia,Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina,+39 0935 681385
 MII181377,FF17,Taranto,Casa circondariale,40.45574895,17.29388354,7,"Puglia, Basilicata",Via Carmelo Magli n.1 - 74100 Taranto,+39   099 7798915
+MII177107,EE18,Lanciano,Casa circondariale,42.2305316,14.3907794,5,"Lazio, Abruzzo, Molise",C/da Villa Stanazzo n.212/A - 66034 Lanciano,+39 0872 716509
+MII179306,KK23,Palermo Pagliarelli,Casa circondariale,38.09077025,13.33932043,9,Sicilia,Piazza Pietro Cerulli n.1 - 90129 Palermo,+39 091 6685456
+MII180426,FF11,Salerno,Casa circondariale,40.6521175,14.85032945,6,Campania,Via del Tonnazzo n.1 - 84100 Salerno,+39  089 301722
 MII152284,AA02,Genova Marassi,Casa circondariale,44.4179134,8.9511004,0,"Val D'Aosta, Piemonte, Liguria",Piazzale Marassi n.2 - 16139 Genova,+39  010 84051
 MII182339,BB29,Reggio Emilia,Istituti di pena,44.6639363,10.63973152,3,"Emilia Romagna, Marche",Via Settembrini n.8 - 42123 Reggio Emilia,+39  0522 331666
 MII180001,BB15,Rimini,Casa circondariale,44.0593886,12.5684371,3,"Emilia Romagna, Marche",Via Santa Cristina n.19 - 47900 Rimini,+39  0541 751306
