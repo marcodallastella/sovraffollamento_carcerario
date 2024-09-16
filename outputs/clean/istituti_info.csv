@@ -8,7 +8,6 @@ MII177436,BB19,Lecco,Casa circondariale,45.8553764,9.389605,1,Lombardia,Via Cesa
 MII178027,BB20,Lodi,Casa circondariale,45.3138959,9.503263,1,Lombardia,Via Cagnola n.2 - 26900 Lodi,+39  0371 420214
 MII178072,BB21,Mantova,Casa circondariale,45.1566683,10.7917191,1,Lombardia,Via C. Poma n.3 - 46100 Mantova,+39  0376 328829
 MII178659,BB22,Monza,Casa circondariale,45.5604241,9.28125258,1,Lombardia,Via Sanquirico n.6 - 20900 Monza,+39 039 839691
-MII179237,BB39,Opera,Casa di reclusione,45.373069,9.211149,1,Lombardia,Via Camporgnago n.40 - 20090 Milano,+39  02 576841
 MII182910,BB23,Pavia,Casa circondariale,45.2073703,9.17887325,1,Lombardia,Via Vigentina n.85 - 27100 Pavia,+39   0382 574701
 MII181346,BB24,Sondrio,Casa circondariale,46.32336235,10.25841367,1,Lombardia,Via Antonio Caimi n.80 - 23100 Sondrio,+39  034 2212031
 MII181703,BB25,Varese,Casa circondariale,45.8175359,8.8263438,1,Lombardia,Via Felicita Morandi n.5 - 21100 Varese,+39  0332 283708
@@ -53,7 +52,6 @@ MII173764,AA20,Cuneo,Casa circondariale,44.64319015,7.43645384,0,"Val D'Aosta, P
 MII181636,CC30,Trento,Casa circondariale,46.1268099,11.09424056,2,"Veneto, Trentino, Friuli Venezia Giulia",Via Cesare Beccaria n.13 - 38121 Trento,+39   0461 969101
 MII172814,AA11,Brissogne - Aosta,Casa circondariale,45.7285199,7.4066634,0,"Val D'Aosta, Piemonte, Liguria","Loc. Les Iles, 14 n.14  - 761900 Brissogne",+39 0165 761900
 MII176759,FF19,Isernia,Casa circondariale,41.600216,14.238217,5,"Lazio, Abruzzo, Molise",Via Ponte San Leonardo n.5 - 86170  Isernia,+39 0865 3965
-MII176414,AA05,Fossano,Casa di reclusione,44.5493489,7.7250155,0,"Val D'Aosta, Piemonte, Liguria",Via S.Giovanni Bosco n.48 - 12045 Fossano,+39  0172 635791
 MII176703,AA45,Genova Pontedecimo,Casa circondariale,44.49411925,8.90540935,0,"Val D'Aosta, Piemonte, Liguria",Via Coni Zugna n.32 - 16100 Genova,+39   010 784320
 MII177323,FF25,Larino,Casa circondariale,41.8055672,14.9210984,5,"Lazio, Abruzzo, Molise",Contrada Monte Arcano n.2 - 86035 Larino,+39 0874 822041
 MII176749,AA06,Imperia,Casa circondariale,43.8862958,8.0267106,0,"Val D'Aosta, Piemonte, Liguria",Via Giacomo Agnesi n. 2 18100 Imperia,+39   0183 293551
@@ -174,10 +172,12 @@ MII173265,HH12,Castrovillari,Casa circondariale,39.83602485,16.2210616,8,Calabri
 MII178045,FF14,Lucera,Casa circondariale,41.51140835,15.33357537,7,"Puglia, Basilicata",Piazza Tribunali n.16 - 71036 Lucera,+39   0881 521493
 MII177332,EE23,Latina,Casa circondariale,41.46083555,12.89935226,5,"Lazio, Abruzzo, Molise",Via Aspromonte n.100 - 04100 Latina,+39  0773 41781
 MII179856,KK18,Piazza Armerina,Casa circondariale,37.385946,14.367174,9,Sicilia,Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina,+39 0935 681385
-MII181377,FF17,Taranto,Casa circondariale,40.45574895,17.29388354,7,"Puglia, Basilicata",Via Carmelo Magli n.1 - 74100 Taranto,+39   099 7798915
 MII177107,EE18,Lanciano,Casa circondariale,42.2305316,14.3907794,5,"Lazio, Abruzzo, Molise",C/da Villa Stanazzo n.212/A - 66034 Lanciano,+39 0872 716509
 MII179306,KK23,Palermo Pagliarelli,Casa circondariale,38.09077025,13.33932043,9,Sicilia,Piazza Pietro Cerulli n.1 - 90129 Palermo,+39 091 6685456
 MII180426,FF11,Salerno,Casa circondariale,40.6521175,14.85032945,6,Campania,Via del Tonnazzo n.1 - 84100 Salerno,+39  089 301722
+MII181377,FF17,Taranto,Casa circondariale,40.45574895,17.29388354,7,"Puglia, Basilicata",Via Carmelo Magli n.1 - 74100 Taranto,+39   099 7798915
+MII176414,AA05,Fossano,Casa di reclusione,44.5493489,7.7250155,0,"Val D'Aosta, Piemonte, Liguria",Via S.Giovanni Bosco n.48 - 12045 Fossano,+39  0172 635791
+MII179237,BB39,Opera,Casa di reclusione,45.373069,9.211149,1,Lombardia,Via Camporgnago n.40 - 20090 Milano,+39  02 576841
 MII152284,AA02,Genova Marassi,Casa circondariale,44.4179134,8.9511004,0,"Val D'Aosta, Piemonte, Liguria",Piazzale Marassi n.2 - 16139 Genova,+39  010 84051
 MII182339,BB29,Reggio Emilia,Istituti di pena,44.6639363,10.63973152,3,"Emilia Romagna, Marche",Via Settembrini n.8 - 42123 Reggio Emilia,+39  0522 331666
 MII180001,BB15,Rimini,Casa circondariale,44.0593886,12.5684371,3,"Emilia Romagna, Marche",Via Santa Cristina n.19 - 47900 Rimini,+39  0541 751306
