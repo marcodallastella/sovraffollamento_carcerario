@@ -4,48 +4,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Lo stato del sovraffollamento nelle carceri Italiane, aggiornato con gli ultimi dati disponibili del Ministero.">
-  <title>Mappa del sovraffollamento carcerario in Italia.</title>
+  <title>Mappa del sovraffollamento carcerario in Italia</title>
   <link rel="icon" href="prison.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <meta content="La mappa del sovraffollamento carcerario in Italia." property="og:site_name">
   <meta name="twitter:creator" content="@mdallastella">
   <meta name="twitter:title" content="La mappa del sovraffollamento carcerario in Italia.">
   <meta name="twitter:description" content="Lo stato del sovraffollamento nelle carceri Italiane, aggiornato con gli ultimi dati disponibili del Ministero.">
-  <meta name="twitter:image" content="https://https://marcodallastella.github.io/prison_overcrowding/prison.png">
+  <meta name="twitter:image" content="https://marcodallastella.github.io/prison_overcrowding/prison.png">
   <meta name="twitter:image:alt" content="A symbolic image of an overcrowded prison.">
   <meta name="twitter:card" content="summary">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://https://marcodallastella.github.io/prison_overcrowding/">
+  <meta property="og:url" content="https://marcodallastella.github.io/prison_overcrowding/">
   <meta property="og:title" content="La mappa del sovraffollamento carcerario in Italia.">
   <meta property="og:description" content="Lo stato del sovraffollamento nelle carceri Italiane, aggiornato con gli ultimi dati disponibili del Ministero.">
-  <meta property="og:image" content="https://https://marcodallastella.github.io/prison_overcrowding/prison.png">
+  <meta property="og:image" content="https://marcodallastella.github.io/prison_overcrowding/prison.png">
   <meta property="og:image:height" content="912">
   <meta property="og:image:width" content="921">
+  <style>
+    .iframe-container {
+      display: none;
+    }
 
+    .iframe-container.active {
+      display: block;
+    }
 
+    .pagination-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <section class="section">
-    <h1 class="title">La Mappa del Sovraffollamento Carcerario in Italia.</h1>
-    <h2 class="subtitle">Lo stato delle carceri in Italia, aggiornato con gli ultimi dati disponibili del Ministero.</h2>
-
-<iframe title="Detenuti presenti e Capienza Regolamentare" aria-label="Interactive line chart" id="datawrapper-chart-DaecH" src="https://datawrapper.dwcdn.net/DaecH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="436" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-<br>
-<br>
-<iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU" src="https://datawrapper.dwcdn.net/LfHlU/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="731" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-<br>
-<br>
-<iframe title="I Carceri più sovraffollati d'Italia" aria-label="Tabella" id="datawrapper-chart-iwl9W" src="https://datawrapper.dwcdn.net/iwl9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1362" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
+  <!-- Hero Section -->
+  <section class="hero is-link">
+    <div class="hero-body">
+      <p class="title">La Mappa del Sovraffollamento Carcerario in Italia.</p>
+      <p class="subtitle">Lo stato delle carceri in Italia, aggiornato con gli ultimi dati disponibili del Ministero.</p>
+    </div>
   </section>
 
+  <!-- Main Content Section -->
+  <section class="section">
+    <div class="container">
 
+      <!-- Iframe Container 1 -->
+      <div class="iframe-container active" id="chart-1">
+        <iframe title="Detenuti presenti e Capienza Regolamentare" aria-label="Interactive line chart" id="datawrapper-chart-DaecH" src="https://datawrapper.dwcdn.net/DaecH/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="436" data-external="1"></iframe>
+      </div>
 
+      <!-- Iframe Container 2 -->
+      <div class="iframe-container" id="chart-2">
+        <iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU" src="https://datawrapper.dwcdn.net/LfHlU/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="731" data-external="1"></iframe>
+      </div>
+
+      <!-- Iframe Container 3 -->
+      <div class="iframe-container" id="chart-3">
+        <iframe title="I Carceri più sovraffollati d'Italia" aria-label="Tabella" id="datawrapper-chart-iwl9W" src="https://datawrapper.dwcdn.net/iwl9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1362" data-external="1"></iframe>
+      </div>
+
+      <!-- Pagination Control -->
+      <div class="pagination-container">
+        <button class="button is-link" onclick="showChart(1)">1</button>
+        <button class="button is-link" onclick="showChart(2)">2</button>
+        <button class="button is-link" onclick="showChart(3)">3</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scripts for Pagination -->
+  <script>
+    function showChart(chartNumber) {
+      // Hide all iframes
+      const charts = document.querySelectorAll('.iframe-container');
+      charts.forEach(chart => chart.classList.remove('active'));
+
+      // Show the selected iframe
+      document.getElementById(`chart-${chartNumber}`).classList.add('active');
+    }
+
+    // Automatically adjust iframe height
+    window.addEventListener("message", function (a) {
+      if (a.data["datawrapper-height"]) {
+        var iframes = document.querySelectorAll("iframe");
+        for (var t in a.data["datawrapper-height"]) {
+          for (var i = 0; i < iframes.length; i++) {
+            if (iframes[i].contentWindow === a.source) {
+              iframes[i].style.height = a.data["datawrapper-height"][t] + "px";
+            }
+          }
+        }
+      }
+    });
+  </script>
 
 </body>
+
 </html>
