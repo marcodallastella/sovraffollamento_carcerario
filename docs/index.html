@@ -87,14 +87,23 @@
       <div class="hero-body">
         <div class="text-container is-size-3">
           <p id="overcrowding-rate" style="display: inline;"></p>
+          <p id="unavailable-places" style="display: inline;"></p>
+          <p id="recent-overcrowding-rate" style="display: inline;"></p>
         </div>
       </div>
     </section>
-        <br>
-        <br>
-        <!-- Iframe Container 2 -->
-        <section class="hero is-large is-blank">
-          <div class="hero-body">
+    <section class="hero is-large is-blank">
+      <div class="hero-body">
+        <div class="text-container is-size-3">
+          <p>La realtà però è che la situazione, in molte carceri italiane, è ben peggiore.</p>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <!-- Iframe Container 2 -->
+    <section class="hero is-large is-blank">
+      <div class="hero-body">
 
         <div class="iframe-container" id="chart-2">
           <iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU"
@@ -141,16 +150,40 @@
       const formattedCapacity = parseFloat(capacity).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).replace(/,/g, '.');
 
       // Fetch overcrowding rate
-      const overcrowdingRate = columns[columns.length - 1].replace(/\./g, ''); // Adjust column index as necessary
-      const formattedRate = parseFloat(overcrowdingRate).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+      const overcrowdingRate = columns[columns.length - 1]; // Do not remove any dots here
+      const formattedRate = parseFloat(overcrowdingRate.replace(',', '.')).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
 
 
       // Update the HTML to show the number of detainees and capacity
       document.getElementById('detainees-count').innerText = `${formattedCount}`;
       document.getElementById('capacity-count').innerText = `a fronte di ${formattedCapacity} posti disponibili.`;
       document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`; // Display last update date
-      document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedRate} persone per ogni posto disponibile. Ma la situazione è spesso peggiore, dato che questo dato non tiene conto dei posti che non sono disponibili.`; // Display overcrowding rate
+      document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedRate} persone per ogni posto disponibile.`;
 
+
+      // Fetch data from the second CSV file
+      const response2 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent_totals.csv');
+      const data2 = await response2.text();
+      const rows2 = data2.split('\n');
+
+      // Assuming the first row contains the header
+      const headers2 = rows2[0].split(',');
+
+      // Find the column indices for `tasso_sovraffollamento` and `posti_non_disponibili`
+      const indexOvercrowdingRate = headers2.indexOf('tasso_sovraffollamento');
+      const indexUnavailablePlaces = headers2.indexOf('posti_non_disponibili');
+
+      // Get the data from the most recent row
+      const lastRow2 = rows2[rows2.length - 2].split(',');
+
+      // Fetch specific data points
+      const latestOvercrowdingRate = parseFloat(lastRow2[indexOvercrowdingRate].replace(',', '.')).toLocaleString('it-IT', { minimumFractionDigits: 2 });
+      const unavailablePlaces = parseInt(lastRow2[indexUnavailablePlaces], 10).toLocaleString('it-IT');
+
+      // Update HTML elements with the new data
+      document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate}% detenuto per ogni posto disponibile.`;
+      document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, dato che questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
 
     }
 
