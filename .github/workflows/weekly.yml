@@ -22,14 +22,17 @@ jobs:
           pip install -r requirements.txt
           playwright install
 
-      - name: Scrape institutes info
-        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_4_Scraper_Monthly.ipynb"
+      - name: Look for new bulletines
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_4_Weekly_scrape.ipynb"
 
-      - name: Scrape institutes data
-        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_3_Cleaning.ipynb"
+      - name: Clean bulletines
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_3_Bulletines_clean.ipynb"
 
-      - name: Analyze data
-        run: jupyter nbconvert --to notebook --execute "notebooks/3_analysis.ipynb"
+      - name: Search for updated institutes' data
+        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Weekly_scrape.ipynb"        
+
+      - name: Analyzing the data data
+        run: jupyter nbconvert --to notebook --execute "notebooks/3_Analysis.ipynb"
         
       - name: Commit and push changes
         env:
