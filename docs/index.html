@@ -95,7 +95,7 @@
     <section class="hero is-large is-blank">
       <div class="hero-body">
         <div class="text-container is-size-3">
-          <p>La realtà però è che la situazione, in molte carceri italiane, è ben peggiore.</p>
+          <p>La realtà però è che la situazione, in molte carceri italiane, è ben peggiore. In numerose carceri italiane, ci sono più del doppio dei detenuti rispetto alla capienza attuale.</p>
         </div>
       </div>
     </section>
@@ -104,12 +104,6 @@
     <!-- Iframe Container 2 -->
     <section class="hero is-large is-blank">
       <div class="hero-body">
-        <div class="text-container is-size-3">
-          <p>In numerose carceri italiane, ci sono più del doppio dei detenuti rispetto alla capienza attuale.</p>
-        </div>
-        <br>
-        <br>
-
         <div class="iframe-container" id="chart-2">
           <iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU"
             src="https://datawrapper.dwcdn.net/LfHlU/1/" scrolling="no" frameborder="0"
@@ -123,7 +117,7 @@
     <!-- Iframe Container 3 -->
     <div class="iframe-container" id="chart-3">
       <iframe title="I Carceri più sovraffollati d'Italia" aria-label="Tabella" id="datawrapper-chart-iwl9W"
-        src="https://datawrapper.dwcdn.net/iwl9W/1/" scrolling="no" frameborder="0"
+        src="https://datawrapper.dwcdn.net/AVjKa/1/" scrolling="no" frameborder="0"
         style="width: 0; min-width: 100% !important; border: none;" height="1362" data-external="1"></iframe>
     </div>
   </section>
@@ -187,7 +181,7 @@
       const unavailablePlaces = parseInt(lastRow2[indexUnavailablePlaces], 10).toLocaleString('it-IT');
 
       // Update HTML elements with the new data
-      document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate}% detenuto per ogni posto disponibile.`;
+      document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate} detenuto per ogni posto disponibile.`;
       document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, dato che questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
 
     }
