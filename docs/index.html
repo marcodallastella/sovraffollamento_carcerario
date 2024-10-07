@@ -142,7 +142,7 @@
 
       // Fetch overcrowding rate
       const overcrowdingRate = columns[columns.length - 1].replace(/\./g, ''); // Adjust column index as necessary
-      const formattedRate = parseFloat(overcrowdingRate).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 1 });
+      const formattedRate = parseFloat(overcrowdingRate).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
 
       // Update the HTML to show the number of detainees and capacity
