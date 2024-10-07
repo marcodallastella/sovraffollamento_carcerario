@@ -23,10 +23,10 @@ jobs:
           playwright install
 
       - name: Scrape institutes info
-        run: jupyter nbconvert --to notebook --execute "notebooks/1_scraper_institutes_info.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_4_Scraper_Monthly.ipynb"
 
       - name: Scrape institutes data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_scraper_institutes_data.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_General_3_Cleaning.ipynb"
 
       - name: Analyze data
         run: jupyter nbconvert --to notebook --execute "notebooks/3_analysis.ipynb"
