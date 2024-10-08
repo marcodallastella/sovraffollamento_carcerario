@@ -28,7 +28,7 @@ jobs:
       - name: Clean bulletines
         run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_3_Clean.ipynb"
 
-      - name: Analyzing the data data
+      - name: Analyzing the data
         run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_5_Analysis_.ipynb"
         
       - name: Commit and push changes

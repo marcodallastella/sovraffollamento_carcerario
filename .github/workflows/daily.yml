@@ -23,7 +23,7 @@ jobs:
           playwright install
 
       - name: Look for new institutes' data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Weekly_scraper.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Daily_scraper.ipynb"
 
       - name: Analyze the data
         run: jupyter nbconvert --to notebook --execute "notebooks/3_Institutes_3_Analysis.ipynb"        
