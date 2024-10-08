@@ -29,7 +29,7 @@ jobs:
         run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_3_Clean.ipynb"
 
       - name: Analyzing the data data
-        run: jupyter nbconvert --to notebook --execute "notebooks/3_Analysis.ipynb"
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_5_Analysis_.ipynb"
         
       - name: Commit and push changes
         env:
