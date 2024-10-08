@@ -1,9 +1,9 @@
-name: daily
+name: monthly
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *' # Run daily at 5:00 AM
+    - cron: '0 5 15 * *' # Run monthly on the 15th at 5:00 AM
 
 jobs:
   data_processing:
@@ -22,15 +22,15 @@ jobs:
           pip install -r requirements.txt
           playwright install
 
-      - name: Look for new institutes' data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Weekly_scraper.ipynb"
+      - name: Look for new bulletines
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_4_Monthly_scraper.ipynb"
 
-      - name: Clean institutes' data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_3_Clean.ipynb"
+      - name: Clean bulletines
+        run: jupyter nbconvert --to notebook --execute "notebooks/1_Bulletines_3_Clean.ipynb"
 
-      - name: Analyze the data
-        run: jupyter nbconvert --to notebook --execute "notebooks/3_Institutes_3_Analysis.ipynb"        
-
+      - name: Analyzing the data data
+        run: jupyter nbconvert --to notebook --execute "notebooks/3_Analysis.ipynb"
+        
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

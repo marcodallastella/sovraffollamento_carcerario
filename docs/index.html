@@ -122,6 +122,18 @@
     </div>
   </section>
 
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Questo è un progetto di <a href="https://marcodallastella.github.io/">Marco Dalla Stella</a>, data journalist radicato a Brooklyn, NY.<br>
+        Il codice utilizzato per l'ottenimento dei dati è disponibile su 
+        <a href="https://github.com/marcodallastella/prison_overcrowding">GitHub</a>.<br>
+        Per suggerimenti, critiche o osservazioni, scrivere a <a href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>.
+      </p>
+    </div>
+  </footer>
+  
+
   <script>
     async function fetchData() {
       const response = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/bulletines_totals.csv');
@@ -138,14 +150,14 @@
 
 
       // Assuming the "Detenuti presenti - totale" is the third last column and "Capacità" is the second last column
-      const detaineesCount = columns[columns.length - 3].replace(/\./g, '').replace(',', '.'); // Clean the number format
+      const detaineesCount = columns[columns.length - 4].replace(/\./g, '').replace(',', '.'); // Clean the number format
       const numberCount = parseFloat(detaineesCount); // Convert to float
 
       // Format the detainees count with dot as thousands separator
       const formattedCount = numberCount.toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).replace(/,/g, '.');
 
       // Fetch capacity
-      const capacity = columns[columns.length - 4].replace(/\./g, '').replace(',', '.'); // Clean the capacity format
+      const capacity = columns[columns.length - 5].replace(/\./g, '').replace(',', '.'); // Clean the capacity format
       const formattedCapacity = parseFloat(capacity).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).replace(/,/g, '.');
 
       // Fetch overcrowding rate
