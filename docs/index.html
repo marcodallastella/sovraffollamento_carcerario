@@ -55,7 +55,7 @@
       <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del
         Ministero.
       </p>
-      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/">Marco Dalla Stella.<a></p>
+      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella.<a></p>
     </div>
   </section>
 
@@ -127,16 +127,41 @@
       </script>
     </div>
   </section>
+
+
+  <section class="hero is-medium is-blank">
+    <div class="hero-body">
+      <div class="text-container is-size-3">
+        <p style="color:black;">
+          Scarica i dati
+        </p>
+        <ul style="font-size: 0.6em; list-style-type: disc; padding-left: 2rem;">
+          <li>
+            <a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv" target="_blank">Dati
+              schede trasparenza istituti penitenziari</a> (da ottobre 2024)
+          </li>
+          <li>
+            <a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv" target="_blank">Dati
+              bollettini mensili</a> (da gennaio 2019)
+          </li>
+        </ul>
+      </div>
+      <br><br>
+    </div>
+  </section>
+  
+
+
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Questo è un progetto di <a href="https://marcodallastella.github.io/">Marco Dalla Stella</a>, data journalist
+        Questo è un progetto di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a>, data journalist
         radicato a Brooklyn, NY. <br>
-        Il codice utilizzato per l'ottenimento dei dati è disponibile su
-        <a href="https://github.com/marcodallastella/prison_overcrowding">GitHub</a>.<br>
+        Il codice utilizzato per l'ottenimento e l'elaborazione dei dati è disponibile su
+        <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a>.<br>
         Per suggerimenti, critiche o osservazioni, scrivere a <a
           href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>Se pensi che questo progetto sia utile,
-        considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella">offrirmi un caffè</a>.
+        considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a>.
       </p>
     </div>
   </footer>
@@ -205,43 +230,43 @@
       document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate} detenuto per ogni posto disponibile.`;
       document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, dato che questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
 
-         // Fetch data from the third CSV file (institutes_most_recent.csv)
-    const response3 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
-    const data3 = await response3.text();
-    const rows3 = data3.split('\n');
-    const headers3 = rows3[0].split(',');
+      // Fetch data from the third CSV file (institutes_most_recent.csv)
+      const response3 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
+      const data3 = await response3.text();
+      const rows3 = data3.split('\n');
+      const headers3 = rows3[0].split(',');
 
-    const indexAffollamento = headers3.indexOf('tasso_affollamento');
-    const indexNome = headers3.indexOf('nome');
+      const indexAffollamento = headers3.indexOf('tasso_affollamento');
+      const indexNome = headers3.indexOf('nome');
 
-    // Find the highest `tasso_affollamento`
-    let highestAffollamento = 0;
-    let highestAffollamentoNome = '';
-    let overcrowdedPrisonCount = 0; // Initialize counter for overcrowded prisons
+      // Find the highest `tasso_affollamento`
+      let highestAffollamento = 0;
+      let highestAffollamentoNome = '';
+      let overcrowdedPrisonCount = 0; // Initialize counter for overcrowded prisons
 
-    for (let i = 1; i < rows3.length - 1; i++) {
-      const row = rows3[i].split(',');
-      const currentAffollamento = parseFloat(row[indexAffollamento].replace(',', '.'));
+      for (let i = 1; i < rows3.length - 1; i++) {
+        const row = rows3[i].split(',');
+        const currentAffollamento = parseFloat(row[indexAffollamento].replace(',', '.'));
 
-      // Check for the highest overcrowding rate
-      if (currentAffollamento > highestAffollamento) {
-        highestAffollamento = currentAffollamento;
-        highestAffollamentoNome = row[indexNome];
+        // Check for the highest overcrowding rate
+        if (currentAffollamento > highestAffollamento) {
+          highestAffollamento = currentAffollamento;
+          highestAffollamentoNome = row[indexNome];
+        }
+
+        // Count prisons with `tasso_affollamento` >= 1.5
+        if (currentAffollamento >= 1.5) {
+          overcrowdedPrisonCount++;
+        }
       }
 
-      // Count prisons with `tasso_affollamento` >= 1.5
-      if (currentAffollamento >= 1.5) {
-        overcrowdedPrisonCount++;
-      }
+      // Format the highest overcrowding rate and update HTML
+      const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 2 });
+      document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove ci sono ${formattedHighestAffollamento} detenuti per ogni posto disponibile.`;
+
+      // Update HTML with the count of overcrowded prisons
+      document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore a 1.5 (tre persone ogni due posti disponibili).`;
     }
-
-    // Format the highest overcrowding rate and update HTML
-    const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 2 });
-    document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove ci sono ${formattedHighestAffollamento} detenuti per ogni posto disponibile.`;
-
-    // Update HTML with the count of overcrowded prisons
-    document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore a 1.5 (tre persone ogni due posti disponibili).`;
-  }
 
 
 
