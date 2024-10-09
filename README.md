@@ -1,61 +1,50 @@
-# Monitoring Prison Overcrowding in Italy
+# I Dati sul Sovraffollamento Carcerario in Italia 
 
 Author: Marco Dalla Stella \
 Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
-## Intro
+## Introduzione
 
-Questo progetto si propone di fornire dati aggregati e aggiornati sul problema del sovraffollamento carcerario in Italia. È stato sviluppato in supporto al lavoro condotto da [Associazione Antigone](https://www.antigone.it/) e in appoggio al loro XX rapporto annuale.
+Questo progetto si propone di fornire dati aggregati e aggiornati sul problema del sovraffollamento carcerario in Italia. È stato sviluppato in supporto al lavoro condotto dall’[Associazione Antigone](https://www.antigone.it), un’organizzazione impegnata nella difesa dei diritti dei detenuti.
 
-L'ispirazione proviene da [Data Liberation Project](https://www.data-liberation-project.org/about/), un'iniziativa che si propone di identificare, ottenere, ripulire, documentare e pubblicare dati governativi di pubblico interesse.
+Il progetto si ispira al [Data Liberation Project](https://www.data-liberation-project.org/about/), un'iniziativa che mira a identificare, ottenere, ripulire, documentare e pubblicare dati governativi di pubblico interesse.
 
-La necessità proviene dal fatto che i dati sul sovraffollamento carcerario in Italia sono sparsi e non di facile consultazione. Il Ministero della Giustizia mette a disposizione principalmente due tipologie di dati:
+La necessità nasce dal fatto che i dati sul sovraffollamento carcerario in Italia sono sparsi e di difficile consultazione. Il Ministero della Giustizia mette a disposizione principalmente due tipologie di dati:
 
-1 I [bollettini mensili](ttps://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023): pubblicati con cadenza mensile, contengono informazioni circa la capacità regolamentare, totale dei detenuti, totale dei detenuti donna, e totale dei detenuti di origine straniera per ogni centro di detenzione in Italia. I dati sono pubblicati sotto forma di tabella sul sito del Ministero, e non in un formato strutturato come ad esempio `.csv`.
+1 I [bollettini mensili](ttps://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023): pubblicati con cadenza mensile, contengono informazioni riguardo alla capacità regolamentare, al totale dei detenuti, al numero di detenute, e al totale dei detenuti di origine straniera per ogni centro di detenzione in Italia. I dati sono pubblicati in formato tabellare sul sito del Ministero e non in un formato strutturato come un file .csv.
 
-2 [Schede istituti penitenziari](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari): schede con informazioni più dettagliate su ogni istituto penitenziario. Queste schede contengono informazioni necessarie a comprendere il fenomeno del sovraffollamento carcerario in Italia come la quantità di posti non disponibili. Spesso infatti il sovraffollamento carcerario viene calcolato sulla capienza regolamentare degli istituti, e non sulla capienza effettiva.
-Queste informazioni sono pubblicate tabelle sparse sulle pagine di ogni singolo istituto e non sono fornite in un formato strutturato come ad esempio `.csv`.
+2 [Schede istituti penitenziari](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari): forniscono informazioni più dettagliate su ogni istituto penitenziario, inclusi dettagli come il numero di posti non disponibili. Questi dati sono essenziali per comprendere il fenomeno del sovraffollamento, in quanto la capienza regolamentare spesso non riflette quella effettiva. Le informazioni sono pubblicate in tabelle distribuite sulle singole pagine di ciascun istituto e, una volta aggiornate, le versioni precedenti non sono più disponibili.
 
 
-## Data
+## Dati Principali
 
-- `istituti_info`(https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/institutes_info.csv) \
-Dataset contente le informazioni più recenti disponibili riguardo gli istituti penitenziari attualmente attivi in Italia, estratte dalla pagina [Schede trasparenza istituti penitenziari](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari).
+- [Bollettini mensili](outputs/clean/bulletines.csv): contiene tutti i bollettini mensili emessi da gennaio 2019 a oggi (con l’eccezione di ottobre 2021, che sembra mancare sul sito del Ministero).
+- [Dati per istituto](outputs/clean/institutes.csv): include tutti gli aggiornamenti alle singole pagine degli istituti penitenziari, a partire da ottobre 2024, quando lo scraper è stato finalizzato e programmato per avviarsi con cadenza giornaliera.
 
-1. [istituti_data](https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/main/outputs/clean/istituti_data.csv) \
-Dataset contenente i dati provenienti dalle singole schede istituti penitenziari. Colonne includono:
-- `id`
--`nome`
-- `tipo`
-- `posti_regolamentari`
-- `posti_non_disponibili`
-- `posti_occupati`
-- `posti_aggiornati_al`
-- `asl`
-- `nome_responsabile_asl`
-- `cognome_responsabie_asl`
-- `nome_direttore`
-- `cognome_direttore`
-- `ruolo_direttore`
-- `personale_polizia_effettivi`
-- `personale_polizia_previsti`
-- `personale_amministrativi_effettivi`
-- `personale_amministrativi_previsti`
-- `personale_educatori_effettivi`
-- `personale_educatori_previsti`
-- `personale_polizia_aggiornato_al`
-- `personale_amministrativo_aggiornato_al`
+## Dati di Supporto
+
+- [Bollettini links](outputs/clean/bulletines_links.csv): contiene i link ai vari bollettini mensili pubblicati sul sito del Ministero.
+- [Informazioni istituti](outputs/clean/institutes_info.csv): contiene informazioni aggiornate sugli istituti penitenziari in Italia, inclusi tipologia, indirizzo e coordinate geografiche.
+
+## Dataset per Visualizzazioni
+
+- [Bollettini Totali](outputs/viz/bulletines_totals.csv): contiene i dati mensili totali, aggregati per data.
+- [Istituti Totali](outputs/viz/institutes_totals.csv): aggrega i dati delle schede istituti per data di aggiornamento.
+- [Istituti - Ultimo Aggiornamento](outputs/viz/institutes_most_recent.csv): contiene l'ultimo aggiornamento disponibile delle informazioni presenti sulle schede istituti. Poiché le schede non vengono aggiornate simultaneamente, è possibile che alcuni istituti abbiano aggiornamenti più recenti di altri.
 
 ## Notebooks
 
-### 1_scraper_institutes_info
+Questo progetto si avvale dei seguenti notebooks:
 
-Questo notebook contiene il codice utilizzato per estrarre le informazioni relative agli istituti penitenziari in Italia. Utilizza playwright per estrarre il codice sorgente della pagina [Schede trasparenza istituti penitenziari](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari). Poiché le informazioni sui singoli istituti sono caricate tramite JavaScript, lo script fa uso di RegEx per estrarre le informazioni rilevanti dal codice sorgente.
+#### Bollettini
+1. [Links Scraper](notebooks/1_Bulletines_1_Links_scraper.ipynb): ottiene i link ai bollettini mensili utilizzando browser automation con Playwright. Visita la pagina del Ministero, effettua la ricerca e raccoglie i link pertinenti.
+2. [Scraper](notebooks/1_Bulletines_2_Scraper.ipynb): scarica i dati dei bollettini utilizzando i link raccolti nel notebook precedente.
+3. [Clean](notebooks/1_Bulletines_3_Clean.ipynb): ripulisce e standardizza i dati, ad esempio omologando i nomi dei vari istituti (es. "Milano S. Vittore" e "Milano San Vittore").
+4. [Analisi](notebooks/1_Bulletines_5_Analysis_.ipynb): esegue l’analisi dei dati ripuliti e crea i file necessari per le visualizzazioni.
+5. [Scraper mensile](notebooks/1_Bulletines_4_Monthly_scraper.ipynb): eseguito automaticamente ogni mese per scaricare i dati relativi al mese appena trascorso.
 
+#### Schede Istituti Penitenziari
+- [Informazioni istituti Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb): ottiene informazioni aggiornate sugli istituti penitenziari attualmente in funzione.
+- [Analisi](notebooks/3_Institutes_3_Analysis.ipynb): eseguito automaticamente ogni giorno per raccogliere i dati aggiornati dalle schede istituti.
+- [Scraper giornaliero](notebooks/2_Institutes_2_Daily_scraper.ipynb): esegue l’analisi dei dati e crea i file per le visualizzazioni.
 
-### 2_scraper_institutes_data.ipynb
-
-Questo notebook contiene il codice utilizzato per estrarre le informazioni dalle singole schede degli istituti penitenziari. Utilizza playwright e i codici identificativi salvati su `istituti_info` per visitare ognuna della singole schede, scaricare il codice sorgente, e poi BeautifulSoup per estrarre le informazioni rilevanti.
-
-
-Marco Dalla Stella
