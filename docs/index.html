@@ -52,7 +52,8 @@
   <section class="hero is-large">
     <div class="hero-body">
       <p class="title">I Numeri del Sovraffollamento Carcerario in Italia.</p>
-      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato con gli ultimi dati disponibili del Ministero.
+      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del
+        Ministero.
       </p>
       <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/">Marco Dalla Stella.<a></p>
     </div>
@@ -60,7 +61,7 @@
 
   <!-- Main Content Section -->
   <section class="section">
-    <section class="hero is-large is-blank">
+    <section class="hero is-medium is-blank">
       <div class="hero-body">
         <div class="text-container is-size-3">
           <p id="last-update" style="display: inline;"></p>
@@ -72,7 +73,10 @@
 
         <!-- Iframe Container 1 -->
         <div class="iframe-container" id="chart-1">
-          <iframe title="Detenuti presenti e Capienza Regolamentare" aria-label="Interactive line chart" id="datawrapper-chart-DaecH" src="https://datawrapper.dwcdn.net/DaecH/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="455" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+          <iframe title="Detenuti presenti e Capienza Regolamentare" aria-label="Interactive line chart"
+            id="datawrapper-chart-DaecH" src="https://datawrapper.dwcdn.net/DaecH/7/" scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;" height="455" data-external="1"></iframe>
+          <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
           </script>
         </div>
       </div>
@@ -80,7 +84,7 @@
     <br>
 
 
-    <section class="hero is-large is-blank">
+    <section class="hero is-medium is-blank">
       <div class="hero-body">
         <div class="text-container is-size-3">
           <p id="overcrowding-rate" style="display: inline;"></p>
@@ -89,45 +93,55 @@
         </div>
       </div>
     </section>
-    <section class="hero is-large is-blank">
+    <section class="hero is-medium is-blank">
       <div class="hero-body">
         <div class="text-container is-size-3">
-          <p>La realtà però è che la situazione, in molte carceri italiane, è ben peggiore. In numerose carceri italiane, ci sono più del doppio dei detenuti rispetto alla capienza attuale.</p>
+          <p>
+            La realtà però è spesso peggiore.
+            <span id="overcrowded-prisons-count" style="display:inline;"></span>
+            <span id="highest-overcrowding" style="display: inline;"></span>
+          </p>
         </div>
-      </div>
-    </section>
-    <br>
-    <br>
-    <!-- Iframe Container 2 -->
-    <section class="hero is-large is-blank">
-      <div class="hero-body">
+        <br>
+        <br>
         <div class="iframe-container" id="chart-2">
-          <iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU" src="https://datawrapper.dwcdn.net/LfHlU/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="731" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+          <iframe title="Affollamento carcerario in Italia" aria-label="Map" id="datawrapper-chart-LfHlU"
+            src="https://datawrapper.dwcdn.net/LfHlU/5/" scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;" height="731" data-external="1"></iframe>
+          <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
           </script>
         </div>
       </div>
     </section>
 
+    <br>
+    <br>
 
 
     <!-- Iframe Container 3 -->
     <div class="iframe-container" id="chart-3">
-      <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa" src="https://datawrapper.dwcdn.net/AVjKa/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1004" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+      <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa"
+        src="https://datawrapper.dwcdn.net/AVjKa/2/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="1004" data-external="1"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
       </script>
     </div>
   </section>
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Questo è un progetto di <a href="https://marcodallastella.github.io/">Marco Dalla Stella</a>, data journalist radicato a Brooklyn, NY. <br>
-        Il codice utilizzato per l'ottenimento dei dati è disponibile su 
+        Questo è un progetto di <a href="https://marcodallastella.github.io/">Marco Dalla Stella</a>, data journalist
+        radicato a Brooklyn, NY. <br>
+        Il codice utilizzato per l'ottenimento dei dati è disponibile su
         <a href="https://github.com/marcodallastella/prison_overcrowding">GitHub</a>.<br>
-        Per suggerimenti, critiche o osservazioni, scrivere a <a href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>Se pensi che questo progetto sia utile, considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella">offrirmi un caffè</a>.
+        Per suggerimenti, critiche o osservazioni, scrivere a <a
+          href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>Se pensi che questo progetto sia utile,
+        considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella">offrirmi un caffè</a>.
       </p>
     </div>
   </footer>
-  
-  
+
+
 
   <script>
     async function fetchData() {
@@ -169,7 +183,7 @@
 
 
       // Fetch data from the second CSV file
-      const response2 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent_totals.csv');
+      const response2 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
       const data2 = await response2.text();
       const rows2 = data2.split('\n');
 
@@ -191,7 +205,45 @@
       document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate} detenuto per ogni posto disponibile.`;
       document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, dato che questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
 
+         // Fetch data from the third CSV file (institutes_most_recent.csv)
+    const response3 = await fetch('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
+    const data3 = await response3.text();
+    const rows3 = data3.split('\n');
+    const headers3 = rows3[0].split(',');
+
+    const indexAffollamento = headers3.indexOf('tasso_affollamento');
+    const indexNome = headers3.indexOf('nome');
+
+    // Find the highest `tasso_affollamento`
+    let highestAffollamento = 0;
+    let highestAffollamentoNome = '';
+    let overcrowdedPrisonCount = 0; // Initialize counter for overcrowded prisons
+
+    for (let i = 1; i < rows3.length - 1; i++) {
+      const row = rows3[i].split(',');
+      const currentAffollamento = parseFloat(row[indexAffollamento].replace(',', '.'));
+
+      // Check for the highest overcrowding rate
+      if (currentAffollamento > highestAffollamento) {
+        highestAffollamento = currentAffollamento;
+        highestAffollamentoNome = row[indexNome];
+      }
+
+      // Count prisons with `tasso_affollamento` >= 1.5
+      if (currentAffollamento >= 1.5) {
+        overcrowdedPrisonCount++;
+      }
     }
+
+    // Format the highest overcrowding rate and update HTML
+    const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 2 });
+    document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove ci sono ${formattedHighestAffollamento} detenuti per ogni posto disponibile.`;
+
+    // Update HTML with the count of overcrowded prisons
+    document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore a 1.5 (tre persone ogni due posti disponibili).`;
+  }
+
+
 
     // Fetch the detainees count and capacity when the page loads
     window.onload = fetchData;
