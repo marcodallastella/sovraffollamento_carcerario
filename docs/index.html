@@ -27,18 +27,42 @@
   <meta property="og:image:width" content="921">
   <style>
     .hero {
-      background-color: rgb(190, 207, 207);
+      background-color: #f0f4f8;
+      /* Soft background color */
     }
-
 
     .text-container {
-      margin-left: 5%;
-      margin-right: 5%;
-      color: black;
+      margin: 0 auto;
+      /* Centered container */
+      max-width: 800px;
+      /* Limit width for readability */
+      color: #333;
+      /* Darker text for better contrast */
     }
 
-    .is-blank {
-      background-color: white;
+    .button {
+      background-color: #007bff;
+      /* Button color */
+      color: white;
+      /* Button text color */
+      border-radius: 5px;
+      /* Rounded corners */
+      transition: background-color 0.3s;
+      /* Smooth transition */
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+      /* Darker shade on hover */
+    }
+
+    .footer {
+      background-color: #333;
+      /* Dark footer background */
+      color: white;
+      /* Light footer text */
+      padding: 2rem;
+      /* Padding for the footer */
     }
   </style>
 </head>
@@ -51,239 +75,99 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-MSZ7RZTEBS');
   </script>
+
   <!-- Hero Section -->
   <section class="hero is-large">
     <div class="hero-body">
       <p class="title">I Numeri del Sovraffollamento Carcerario in Italia.</p>
-      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del
-        Ministero.
-      </p>
-      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla
-          Stella.<a></p>
+      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del Ministero.</p>
+      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a></p>
       <i>
-        <p class="subtitle is-6" , style="margin-bottom: 0.2rem;">Ultimo aggiornamento bollettini mensili: <span
-            id="last-update-bollettini" style="display: inline;"></span></p>
-        <p class="subtitle is-6" , style="margin-bottom: 0.2rem;">Ultimo aggiornamento schede istituti: <span
-            id="last-update-istituti" style="display: inline;"></span></p>
+        <p class="subtitle is-6" style="margin-bottom: 0.2rem;">Ultimo aggiornamento bollettini mensili: <span id="last-update-bollettini" style="display: inline;"></span></p>
+        <p class="subtitle is-6" style="margin-bottom: 0.2rem;">Ultimo aggiornamento schede istituti: <span id="last-update-istituti" style="display: inline;"></span></p>
       </i>
     </div>
   </section>
 
   <!-- Main Content Section -->
   <section class="section">
-    <section class="hero is-medium is-blank">
-      <div class="hero-body">
-        <div class="text-container is-size-3">
-          <span id="last-update" style="display: inline;"></span>
-          <span id="detainees-count" style="display: inline;"></span>
-          <span id="capacity-count" style="display: inline;"></span>
-        </div>
-        <br>
-        <br>
-
-        <!-- Iframe Container 1 -->
-        <div style="min-height:455px" id="datawrapper-vis-DaecH">
-          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8"
-            data-target="#datawrapper-vis-DaecH"></script><noscript><img
-              src="https://datawrapper.dwcdn.net/DaecH/full.png"
-              alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
-        </div>
-      </div>
-    </section>
-    <br>
-
-
-    <section class="hero is-medium is-blank">
-      <div class="hero-body">
-        <div class="text-container is-size-3">
-          <p id="overcrowding-rate" style="display: inline;"></p>
-          <p id="unavailable-places" style="display: inline;"></p>
-          <p id="recent-overcrowding-rate" style="display: inline;"></p>
-        </div>
-      </div>
-    </section>
-    <section class="hero is-medium is-blank">
-      <div class="hero-body">
-        <div class="text-container is-size-3">
-          <p>
-            La realtà però è spesso peggiore.
-            <span id="overcrowded-prisons-count" style="display:inline;"></span>
-            <span id="highest-overcrowding" style="display: inline;"></span>
-          </p>
-        </div>
-        <br>
-        <br>
-        <div style="min-height:731px" id="datawrapper-vis-LfHlU">
-          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/LfHlU/embed.js" charset="utf-8"
-            data-target="#datawrapper-vis-LfHlU"></script><noscript><img
-              src="https://datawrapper.dwcdn.net/LfHlU/full.png"
-              alt="Una mappa del sovraffollamento carcerario in Italia" /></noscript>
-        </div>
-      </div>
-    </section>
-
+    <div class="text-container">
+      <span id="last-update" style="display: inline;"></span>
+      <span id="detainees-count" style="display: inline;"></span>
+      <span id="capacity-count" style="display: inline;"></span>
+    </div>
     <br>
     <br>
 
+    <!-- Iframe Container 1 -->
+    <div style="min-height:455px" id="datawrapper-vis-DaecH">
+      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8" data-target="#datawrapper-vis-DaecH"></script>
+      <noscript><img src="https://datawrapper.dwcdn.net/DaecH/full.png" alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
+    </div>
+    <br>
+
+    <div class="text-container">
+      <p id="overcrowding-rate" style="display: inline;"></p>
+      <p id="unavailable-places" style="display: inline;"></p>
+      <p id="recent-overcrowding-rate" style="display: inline;"></p>
+    </div>
+    <br>
+
+    <div class="text-container">
+      <p>
+        La realtà però è spesso peggiore.
+        <span id="overcrowded-prisons-count" style="display:inline;"></span>
+        <span id="highest-overcrowding" style="display: inline;"></span>
+      </p>
+      <br>
+      <br>
+      <div style="min-height:731px" id="datawrapper-vis-LfHlU">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/LfHlU/embed.js" charset="utf-8" data-target="#datawrapper-vis-LfHlU"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/LfHlU/full.png" alt="Una mappa del sovraffollamento carcerario in Italia" /></noscript>
+      </div>
+    </div>
+    <br>
+    <br>
 
     <!-- Iframe Container 3 -->
     <div style="min-height:905px" id="datawrapper-vis-AVjKa">
-      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/AVjKa/embed.js" charset="utf-8"
-        data-target="#datawrapper-vis-AVjKa"></script><noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png"
-          alt="" /></noscript>
+      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/AVjKa/embed.js" charset="utf-8" data-target="#datawrapper-vis-AVjKa"></script>
+      <noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png" alt="" /></noscript>
     </div>
   </section>
 
-
-  <section class="hero is-medium is-blank">
-    <div class="hero-body">
-      <div class="text-container is-size-3">
-        <p style="color:black;">
-          Scarica i dati
-        </p>
-        <ul style="font-size: 0.6em; list-style-type: disc; padding-left: 2rem;">
-          <li>
-            <a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv"
-              target="_blank">Dati
-              schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)
-          </li>
-          <li>
-            <a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv"
-              target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5 ottobre 2024)
-          </li>
-          <li>
-            <a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv"
-              target="_blank">Dati
-              bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)
-          </li>
-          <li>
-            <a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv"
-              target="_blank">Dati
-              bollettini mensili, totali mensili</a> (da gennaio 2019)
-          </li>
-        </ul>
-      </div>
-      <br><br>
+  <!-- Data Download Section -->
+  <section class="section">
+    <div class="text-container">
+      <p style="color:black;">Scarica i dati</p>
+      <ul style="font-size: 0.6em; list-style-type: disc; padding-left: 2rem;">
+        <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv" target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
+        <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv" target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5 ottobre 2024)</li>
+        <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv" target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)</li>
+        <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv" target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
+      </ul>
     </div>
+    <br><br>
   </section>
 
-
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Questo è un progetto di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a>,
-        data journalist
-        radicato a Brooklyn, NY. <br>
-        Il codice utilizzato per l'ottenimento e l'elaborazione dei dati è disponibile su
-        <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a>.<br>
-        Per suggerimenti, critiche o osservazioni, scrivere a <a
-          href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>Se pensi che questo progetto sia utile,
-        considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un
-          caffè</a>.
+        Questo è un progetto di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a>, data journalist radicato a Brooklyn, NY. <br>
+        Il codice utilizzato per l'ottenimento e l'elaborazione dei dati è disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a>.<br>
+        Per suggerimenti, critiche o osservazioni, scrivere a <a href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>
+        Se pensi che questo progetto sia utile, considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a>.
       </p>
     </div>
   </footer>
 
-
-  <script>
-    async function fetchCSV(url) {
-        const response = await fetch(url);
-        const data = await response.text();
-        return data.split('\n').map(row => row.trim()).filter(row => row !== '');
-    }
-
-    function formatDate(dateString, locale = 'it-IT') {
-        const [year, month, day] = dateString.split('-');
-        const date = new Date(year, month - 1, day);
-        return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
-    }
-
-    function formatNumber(numberString, locale = 'it-IT') {
-        const sanitizedNumber = numberString.replace(/\./g, '').replace(',', '.');
-        const parsedNumber = parseInt(sanitizedNumber, 10); // Parse as integer
-        console.log('Parsed Number:', parsedNumber); // Debugging step
-        return parsedNumber.toLocaleString(locale); // Format the integer
-    }
-
-    async function fetchData() {
-        // Fetch main CSV (bulletines_totals.csv)
-        const bulletinesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/bulletines_totals.csv');
-        const lastBulletinRow = bulletinesRows[bulletinesRows.length - 1].split(',');
-        console.log('Tasso di sovraffollamento (raw):', lastBulletinRow[lastBulletinRow.length - 1]);
-
-        // Format data from the last row
-        const lastUpdateDate = lastBulletinRow[0].trim();
-        const formattedDate = formatDate(lastUpdateDate);
-        const detaineesCount = formatNumber(lastBulletinRow[lastBulletinRow.length - 4]);
-        const capacity = formatNumber(lastBulletinRow[lastBulletinRow.length - 5]);
-        
-        // Correctly parse the overcrowding rate
-        const rawOvercrowdingRate = parseFloat(lastBulletinRow[lastBulletinRow.length - 1].replace(',', '.')); // Replace comma with dot for parsing
-        const formattedOvercrowdingRate = rawOvercrowdingRate.toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
-
-        // Update HTML with detainees data
-        document.getElementById('detainees-count').innerText = `${detaineesCount}`;
-        document.getElementById('capacity-count').innerText = `a fronte di ${capacity} posti disponibili.`;
-        document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`;
-        document.getElementById('last-update-bollettini').innerText = `${formattedDate}`;
-        document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone per ogni 100 posti disponibili.`;
-
-        // Fetch second CSV (institutes_totals.csv)
-        const institutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
-        const headers2 = institutesRows[0].split(',');
-        const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
-        
-        // Correctly parse the latest overcrowding rate and unavailable places
-        const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso_affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
-        const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti_non_disponibili')], 10).toLocaleString('it-IT');
-
-        // Update HTML with additional data
-        document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia del ${latestOvercrowdingRate}%.`;
-        document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
-
-        // Fetch third CSV (institutes_most_recent.csv)
-        const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
-        const headers3 = recentInstitutesRows[0].split(',');
-        const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(',');
-
-        const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('posti_aggiornati_al')];
-        const formattedDate2 = formatDate(lastUpdateInstitutes);
-
-        // Find the highest overcrowding rate and count overcrowded prisons
-        let highestAffollamento = 0;
-        let highestAffollamentoNome = '';
-        let overcrowdedPrisonCount = 0;
-
-        for (let i = 1; i < recentInstitutesRows.length - 1; i++) {
-            const row = recentInstitutesRows[i].split(',');
-            const currentAffollamento = parseFloat(row[headers3.indexOf('tasso_affollamento')].replace(',', '.'));
-
-            if (currentAffollamento > highestAffollamento) {
-                highestAffollamento = currentAffollamento;
-                highestAffollamentoNome = row[headers3.indexOf('nome')];
-            }
-
-            if (currentAffollamento >= 150) {
-                overcrowdedPrisonCount++;
-            }
-        }
-
-        // Update HTML with highest overcrowding and prison count
-        const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 0 });
-        document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
-        document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
-        document.getElementById('last-update-istituti').innerText = `${formattedDate2}`;
-    }
-
-    window.onload = fetchData;
-</script>
+</body>
 
 
-
+  <script src="script.js"></script>
 
 </body>
 
