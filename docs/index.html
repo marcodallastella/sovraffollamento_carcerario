@@ -214,7 +214,7 @@
       document.getElementById('detainees-count').innerText = `${formattedCount}`;
       document.getElementById('capacity-count').innerText = `a fronte di ${formattedCapacity} posti disponibili.`;
       document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`; // Display last update date
-      document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedRate} persone per ogni posto disponibile.`;
+      document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedRate} persone per ogni 100 posti disponibili.`;
 
 
       // Fetch data from the second CSV file
@@ -237,7 +237,7 @@
       const unavailablePlaces = parseInt(lastRow2[indexUnavailablePlaces], 10).toLocaleString('it-IT');
 
       // Update HTML elements with the new data
-      document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia di ${latestOvercrowdingRate} detenuto per ogni posto disponibile.`;
+      document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia del ${latestOvercrowdingRate} %.`;
       document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, dato che questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
 
       // Fetch data from the third CSV file (institutes_most_recent.csv)
@@ -265,17 +265,17 @@
         }
 
         // Count prisons with `tasso_affollamento` >= 1.5
-        if (currentAffollamento >= 1.5) {
+        if (currentAffollamento >= 150) {
           overcrowdedPrisonCount++;
         }
       }
 
       // Format the highest overcrowding rate and update HTML
       const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 2 });
-      document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove ci sono ${formattedHighestAffollamento} detenuti per ogni posto disponibile.`;
+      document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
 
       // Update HTML with the count of overcrowded prisons
-      document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore a 1.5 (tre persone ogni due posti disponibili).`;
+      document.getElementById('overcrowded-prisons-count').innerText = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
     }
 
 
