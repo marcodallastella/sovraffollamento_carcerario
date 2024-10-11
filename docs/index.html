@@ -198,7 +198,8 @@
 
       // Fetch overcrowding rate
       const overcrowdingRate = columns[columns.length - 1]; // Do not remove any dots here
-      const formattedRate = parseFloat(overcrowdingRate.replace(',', '.')).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const formattedRate = parseFloat(overcrowdingRate.replace(',', '.')).toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
 
 
 
