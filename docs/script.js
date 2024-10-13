@@ -37,7 +37,7 @@ async function fetchData() {
   document.getElementById('detainees-count').innerText = `${detaineesCount}`;
   document.getElementById('capacity-count').innerText = `a fronte di ${capacity} posti disponibili.`;
   document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`;
-  document.getElementById('last-update-bollettini').innerText = `${formattedDate}`;
+  // document.getElementById('last-update-bollettini').innerText = `${formattedDate}`;
   document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone per ogni 100 posti disponibili.`;
 
   // Fetch second CSV (institutes_totals.csv)
