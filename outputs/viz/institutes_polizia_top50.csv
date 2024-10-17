@@ -1,51 +1,51 @@
-﻿nome,tasso_affollamento,personale_polizia_mancanti_perceent
-Roma Rebibbia IIIª casa,64.0,32.61
-Tempio Pausania,101.0,28.77
-Ancona Montacuto,129.0,28.57
-Vasto,65.0,28.42
-Roma Rebibbia,102.0,28.04
-Roma Regina Coeli,179.0,27.71
-Pescara,169.0,26.51
-Favignana,101.0,25.32
-Massa Marittima,102.0,25.0
-San Severo,118.0,25.0
-Cassino,172.0,24.65
-Rovigo,117.0,24.57
-Fossombrone,87.0,23.26
-Velletri,150.0,22.91
-Civitavecchia Giuseppe Passerini,90.0,22.64
-Lanciano,111.0,22.52
-Porto Azzurro,96.0,22.44
-Matera,146.0,22.4
-Lucca,178.0,21.98
-Augusta,159.0,21.88
-Rieti,189.0,21.71
-Rossano,121.0,21.58
-Onanì,72.0,21.01
-Viterbo,172.0,20.91
-Bolzano,124.0,20.78
-Udine,188.0,19.64
-Cagliari Uta,132.0,19.54
-Brescia Verziano,163.0,18.95
-Arbus,71.0,18.52
-Venezia Giudecca,82.0,18.52
-Pistoia,87.0,18.46
-Volterra,96.0,18.29
-Napoli Poggioreale,157.0,18.0
-Noto,82.0,17.98
-Teramo,139.0,17.96
-Avezzano,135.0,17.95
-Ragusa,111.0,17.86
-Alba,86.0,17.76
-Reggio Calabria Arghillà,112.0,17.68
-Nuoro,70.0,17.28
-Sassari,115.0,17.25
-Pordenone,146.0,16.98
-Terni,134.0,16.87
-Trieste,171.0,16.78
-Biella,113.0,16.67
-Cuneo,108.0,16.5
-Oristano,92.0,16.49
-Lucera,120.0,16.48
-Bollate,113.0,16.33
-Laureana di Borrello,151.0,16.22
+﻿nome,posti_occupati,tasso_affollamento,personale_polizia_mancanti_perceent
+Roma Rebibbia IIIª casa,84,64.0,32.61
+Tempio Pausania,172,101.0,28.77
+Ancona Montacuto,330,129.0,28.57
+Vasto,96,65.0,28.42
+Roma Rebibbia,302,102.0,28.04
+Roma Regina Coeli,1119,179.0,27.71
+Pescara,461,169.0,26.51
+Favignana,90,101.0,25.32
+Massa Marittima,49,102.0,25.0
+San Severo,72,118.0,25.0
+Cassino,219,172.0,24.65
+Rovigo,239,117.0,24.57
+Fossombrone,88,87.0,23.26
+Velletri,505,150.0,22.91
+Civitavecchia Giuseppe Passerini,83,90.0,22.64
+Lanciano,247,111.0,22.52
+Porto Azzurro,308,96.0,22.44
+Matera,184,146.0,22.4
+Lucca,73,178.0,21.98
+Augusta,545,159.0,21.88
+Rieti,512,189.0,21.71
+Rossano,319,121.0,21.58
+Onanì,122,72.0,21.01
+Viterbo,697,172.0,20.91
+Bolzano,105,124.0,20.78
+Udine,179,188.0,19.64
+Cagliari Uta,741,132.0,19.54
+Brescia Verziano,116,163.0,18.95
+Arbus,90,71.0,18.52
+Venezia Giudecca,92,82.0,18.52
+Pistoia,66,87.0,18.46
+Volterra,181,96.0,18.29
+Napoli Poggioreale,2138,157.0,18.0
+Noto,144,82.0,17.98
+Teramo,354,139.0,17.96
+Avezzano,69,135.0,17.95
+Ragusa,203,111.0,17.86
+Alba,42,86.0,17.76
+Reggio Calabria Arghillà,329,112.0,17.68
+Nuoro,188,70.0,17.28
+Sassari,519,115.0,17.25
+Pordenone,54,146.0,16.98
+Terni,565,134.0,16.87
+Trieste,250,171.0,16.78
+Biella,441,113.0,16.67
+Cuneo,406,108.0,16.5
+Oristano,243,92.0,16.49
+Lucera,162,120.0,16.48
+Bollate,1430,113.0,16.33
+Laureana di Borrello,56,151.0,16.22
