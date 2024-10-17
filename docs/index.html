@@ -35,11 +35,17 @@
     .text-container {
       margin: 0 auto;
       /* Centered container */
-      max-width: 800px;
+      max-width: 80vw;
       /* Limit width for readability */
       color: #333;
       /* Darker text for better contrast */
     }
+
+    .plot-container {
+      margin: 0 auto;
+      max-width: 60vw;
+    }
+
 
     .button {
       background-color: #007bff;
@@ -102,10 +108,12 @@
     <br>
     <br>
 
+    <div class="plot-container">
     <!-- Iframe Container 1 -->
     <div style="min-height:455px" id="datawrapper-vis-DaecH">
       <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8" data-target="#datawrapper-vis-DaecH"></script>
       <noscript><img src="https://datawrapper.dwcdn.net/DaecH/full.png" alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
+    </div>
     </div>
     <br>
 
@@ -124,34 +132,36 @@
       </p>
       <br>
       <br>
+      <div class="plot-container">
       <div style="min-height:731px" id="datawrapper-vis-LfHlU">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/LfHlU/embed.js" charset="utf-8" data-target="#datawrapper-vis-LfHlU"></script>
         <noscript><img src="https://datawrapper.dwcdn.net/LfHlU/full.png" alt="Una mappa del sovraffollamento carcerario in Italia" /></noscript>
       </div>
     </div>
+    </div>
     <br>
     <br>
 
-
+    <div class="plot-container">
     <!-- Iframe Container 3 -->
     <div style="min-height:905px" id="datawrapper-vis-AVjKa">
       <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/AVjKa/embed.js" charset="utf-8" data-target="#datawrapper-vis-AVjKa"></script>
       <noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png" alt="" /></noscript>
     </div>
-
+  </div>
 
     <br>
     <br>
-    
+    <div class="plot-container">
     <!-- Iframe Container 3 -->
     <div style="min-height:3661px" id="datawrapper-vis-ZpY4p"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/ZpY4p/embed.js" charset="utf-8" data-target="#datawrapper-vis-ZpY4p"></script><noscript><img src="https://datawrapper.dwcdn.net/ZpY4p/full.png" alt="Comparazione polizia penitenziaria prevista ed effettiva" /></noscript></div>
-
+  </div>
     <br>
     <br>
   </section>
 
 
-
+  <div class="plot-container">
   <!-- Data Download Section -->
   <section class="section">
     <div class="text-container">
@@ -163,6 +173,7 @@
         <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv" target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
       </ul>
     </div>
+  </div>
     <br><br>
   </section>
 
