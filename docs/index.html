@@ -2,77 +2,81 @@
 <html lang="it">
 
 <head>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Scopri l'attuale stato del sovraffollamento nelle carceri italiane. Aggiornato con i dati più recenti del Ministero.">
+    <meta name="description"
+      content="Scopri l'attuale stato del sovraffollamento nelle carceri italiane. Aggiornato con i dati più recenti del Ministero.">
     <title>Sovraffollamento Carcerario in Italia: Esplora la Mappa e le Statistiche</title>
     <link rel="icon" href="prison.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <meta property="og:site_name" content="Mappa del Sovraffollamento Carcerario in Italia">
     <meta name="twitter:creator" content="@mdallastella">
     <meta name="twitter:title" content="Esplora il Sovraffollamento Carcerario in Italia">
-    <meta name="twitter:description" content="Scopri l'attuale stato del sovraffollamento nelle carceri italiane. Aggiornato con i dati più recenti del Ministero.">
+    <meta name="twitter:description"
+      content="Scopri l'attuale stato del sovraffollamento nelle carceri italiane. Aggiornato con i dati più recenti del Ministero.">
     <meta name="twitter:image" content="https://marcodallastella.github.io/sovraffollamento_carcerario/prison.png">
     <meta name="twitter:image:alt" content="Un'immagine simbolica di una prigione sovraffollata.">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.sovraffollamentocarcerario.it/">
     <meta property="og:title" content="Sovraffollamento Carcerario in Italia: La Tua Guida Completa">
-    <meta property="og:description" content="Analizza il sovraffollamento nelle carceri italiane con dati aggiornati del Ministero. Scopri come puoi contribuire al cambiamento.">
+    <meta property="og:description"
+      content="Analizza il sovraffollamento nelle carceri italiane con dati aggiornati del Ministero. Scopri come puoi contribuire al cambiamento.">
     <meta property="og:image" content="https://marcodallastella.github.io/sovraffollamento_carcerario/prison.png">
     <meta property="og:image:height" content="912">
     <meta property="og:image:width" content="921">
     <link rel="canonical" href="https://www.sovraffollamentocarcerario.it">
     <meta name="lang" content="it">
-  
-  <style>
-    .hero {
-      background-color: #f0f4f8;
-      /* Soft background color */
-    }
 
-    .text-container {
-      margin: 0 auto;
-      /* Centered container */
-      max-width: 80vw;
-      /* Limit width for readability */
-      color: #333;
-      /* Darker text for better contrast */
-    }
+    <style>
+      .hero {
+        background-color: #f0f4f8;
+        /* Soft background color */
+      }
 
-    .plot-container {
-      margin: 0 auto;
-      max-width: 60vw;
-    }
+      .text-container {
+        margin: 0 auto;
+        /* Centered container */
+        max-width: 80vw;
+        /* Limit width for readability */
+        color: #333;
+        /* Darker text for better contrast */
+      }
+
+      .plot-container {
+        margin: 0 auto;
+        max-width: 60vw;
+      }
 
 
-    .button {
-      background-color: #007bff;
-      /* Button color */
-      color: white;
-      /* Button text color */
-      border-radius: 5px;
-      /* Rounded corners */
-      transition: background-color 0.3s;
-      /* Smooth transition */
-    }
+      .button {
+        background-color: #007bff;
+        /* Button color */
+        color: white;
+        /* Button text color */
+        border-radius: 5px;
+        /* Rounded corners */
+        transition: background-color 0.3s;
+        /* Smooth transition */
+      }
 
-    .button:hover {
-      background-color: #0056b3;
-      /* Darker shade on hover */
-    }
+      .button:hover {
+        background-color: #0056b3;
+        /* Darker shade on hover */
+      }
 
-    .footer {
-      background-color: #333;
-      /* Dark footer background */
-      color: white;
-      /* Light footer text */
-      padding: 2rem;
-      /* Padding for the footer */
-    }
-  </style>
-</head>
+      .footer {
+        background-color: #333;
+        /* Dark footer background */
+        color: white;
+        /* Light footer text */
+        padding: 2rem;
+        /* Padding for the footer */
+      }
+    </style>
+  </head>
 
 <body>
 
@@ -89,11 +93,14 @@
   <section class="hero is-large">
     <div class="hero-body">
       <p class="title">I Numeri del Sovraffollamento Carcerario in Italia.</p>
-      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del Ministero.</p>
-      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a></p>
+      <p class="subtitle">Lo stato delle carceri in Italia. Aggiornato in tempo (quasi) reale con gli ultimi dati del
+        Ministero.</p>
+      <p class="subtitle is-6">A cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla
+          Stella</a></p>
       <i>
         <!-- <p class="subtitle is-6" style="margin-bottom: 0.2rem;">Ultimo aggiornamento bollettini mensili: <span id="last-update-bollettini" style="display: inline;"></span></p> -->
-        <p class="subtitle is-6" style="margin-bottom: 0.2rem;">Ultimo aggiornamento: <span id="last-update-istituti" style="display: inline;"></span></p>
+        <p class="subtitle is-6" style="margin-bottom: 0.2rem;">Ultimo aggiornamento: <span id="last-update-istituti"
+            style="display: inline;"></span></p>
       </i>
     </div>
   </section>
@@ -109,19 +116,32 @@
     <br>
 
     <div class="plot-container">
-    <!-- Iframe Container 1 -->
-    <div style="min-height:455px" id="datawrapper-vis-DaecH">
-      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8" data-target="#datawrapper-vis-DaecH"></script>
-      <noscript><img src="https://datawrapper.dwcdn.net/DaecH/full.png" alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
-    </div>
+      <!-- Iframe Container 1 -->
+      <div style="min-height:455px" id="datawrapper-vis-DaecH">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-DaecH"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/DaecH/full.png"
+            alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
+      </div>
     </div>
     <br>
-
+    <br>
     <div class="text-container">
       <p id="overcrowding-rate" style="display: inline;"></p>
       <p id="unavailable-places" style="display: inline;"></p>
       <p id="recent-overcrowding-rate" style="display: inline;"></p>
     </div>
+    <br>
+    <br>
+    <div class="plot-container">
+      <div style="min-height:504px" id="datawrapper-vis-q7smz">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/q7smz/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-q7smz"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/q7smz/full.png"
+            alt="Il grafico mostra il tasso di affollamento reale nei centri penitenziari italiani, aggiornato ad ogni pubblicazione dati da parte del Ministero." /></noscript>
+      </div>
+    </div>
+    <br>
     <br>
 
     <div class="text-container">
@@ -133,58 +153,77 @@
       <br>
       <br>
       <div class="plot-container">
-      <div style="min-height:731px" id="datawrapper-vis-LfHlU">
-        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/LfHlU/embed.js" charset="utf-8" data-target="#datawrapper-vis-LfHlU"></script>
-        <noscript><img src="https://datawrapper.dwcdn.net/LfHlU/full.png" alt="Una mappa del sovraffollamento carcerario in Italia" /></noscript>
+        <div style="min-height:731px" id="datawrapper-vis-LfHlU">
+          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/LfHlU/embed.js" charset="utf-8"
+            data-target="#datawrapper-vis-LfHlU"></script>
+          <noscript><img src="https://datawrapper.dwcdn.net/LfHlU/full.png"
+              alt="Una mappa del sovraffollamento carcerario in Italia" /></noscript>
+        </div>
       </div>
     </div>
-    </div>
     <br>
     <br>
 
     <div class="plot-container">
-    <!-- Iframe Container 3 -->
-    <div style="min-height:905px" id="datawrapper-vis-AVjKa">
-      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/AVjKa/embed.js" charset="utf-8" data-target="#datawrapper-vis-AVjKa"></script>
-      <noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png" alt="" /></noscript>
+      <!-- Iframe Container 3 -->
+      <div style="min-height:905px" id="datawrapper-vis-AVjKa">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/AVjKa/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-AVjKa"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png" alt="" /></noscript>
+      </div>
     </div>
-  </div>
 
     <br>
     <br>
     <div class="plot-container">
-    <!-- Iframe Container 3 -->
-    <div style="min-height:3661px" id="datawrapper-vis-ZpY4p"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/ZpY4p/embed.js" charset="utf-8" data-target="#datawrapper-vis-ZpY4p"></script><noscript><img src="https://datawrapper.dwcdn.net/ZpY4p/full.png" alt="Comparazione polizia penitenziaria prevista ed effettiva" /></noscript></div>
-  </div>
+      <!-- Iframe Container 3 -->
+      <div style="min-height:3661px" id="datawrapper-vis-ZpY4p">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/ZpY4p/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-ZpY4p"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/ZpY4p/full.png"
+            alt="Comparazione polizia penitenziaria prevista ed effettiva" /></noscript>
+      </div>
+    </div>
     <br>
     <br>
   </section>
 
 
   <div class="plot-container">
-  <!-- Data Download Section -->
-  <section class="section">
-    <div class="text-container">
-      <p style="color:black;">Scarica i dati</p>
-      <ul style="font-size: 0.6em; list-style-type: disc; padding-left: 2rem;">
-        <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv" target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
-        <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv" target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5 ottobre 2024)</li>
-        <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv" target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)</li>
-        <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv" target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
-      </ul>
-    </div>
+    <!-- Data Download Section -->
+    <section class="section">
+      <div class="text-container">
+        <p style="color:black;">Scarica i dati</p>
+        <ul style="font-size: 0.6em; list-style-type: disc; padding-left: 2rem;">
+          <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv"
+              target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
+          <li><a
+              href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv"
+              target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5 ottobre 2024)
+          </li>
+          <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv"
+              target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)</li>
+          <li><a
+              href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv"
+              target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
+        </ul>
+      </div>
   </div>
-    <br><br>
+  <br><br>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Questo è un progetto di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a>, data journalist radicato a Brooklyn, NY. <br>
-        Il codice utilizzato per l'ottenimento e l'elaborazione dei dati è disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a>.<br>
-        Per suggerimenti, critiche o osservazioni, scrivere a <a href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>
-        Se pensi che questo progetto sia utile, considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a>.
+        Questo è un progetto di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a>,
+        data journalist radicato a Brooklyn, NY. <br>
+        Il codice utilizzato per l'ottenimento e l'elaborazione dei dati è disponibile su <a
+          href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a>.<br>
+        Per suggerimenti, critiche o osservazioni, scrivere a <a
+          href="mailto:md3934@columbia.edu">md3934@columbia.edu</a>. <br>
+        Se pensi che questo progetto sia utile, considera la possibilità di <a
+          href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a>.
       </p>
     </div>
   </footer>
@@ -192,7 +231,7 @@
 </body>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 
