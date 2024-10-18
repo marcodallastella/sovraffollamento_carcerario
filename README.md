@@ -5,7 +5,7 @@ Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
 ## Introduzione
 
-Questo progetto si propone di fornire dati aggregati e aggiornati sul problema del sovraffollamento carcerario in Italia. È stato sviluppato in supporto al lavoro condotto dall’[Associazione Antigone](https://www.antigone.it), un’organizzazione impegnata nella difesa dei diritti dei detenuti.
+Questo progetto si propone di fornire dati aggregati e aggiornati sul problema del sovraffollamento carcerario in Italia.
 
 Il progetto si ispira al [Data Liberation Project](https://www.data-liberation-project.org/about/), un'iniziativa che mira a identificare, ottenere, ripulire, documentare e pubblicare dati governativi di pubblico interesse.
 
