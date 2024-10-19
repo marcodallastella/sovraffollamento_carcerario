@@ -43,11 +43,34 @@
         /* Limit width for readability */
         color: #333;
         /* Darker text for better contrast */
+        padding: 0 20px;
+        /* Add some padding to avoid the text touching the edges */
       }
 
       .plot-container {
         margin: 0 auto;
+        /* Centered container */
         max-width: 60vw;
+        /* Limit width for plot container */
+        padding: 0 20px;
+        /* Add some padding to avoid the plot touching the edges */
+      }
+
+      /* Media query for smartphones */
+      @media (max-width: 600px) {
+        .text-container {
+          max-width: 100vw;
+          /* Allow the container to take the full width on small screens */
+          padding: 0 5px;
+          /* Add some padding for better readability */
+        }
+
+        .plot-container {
+          max-width: 100vw;
+          /* Allow the plot container to take the full width on small screens */
+          padding: 0 5px;
+          /* Add padding to ensure it doesn’t touch the edges */
+        }
       }
 
 
