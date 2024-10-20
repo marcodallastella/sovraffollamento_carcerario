@@ -9,9 +9,9 @@ This project provides aggregated and up-to-date data on the issue of prison over
 
 The need for this project stems from the scattered and difficult-to-access nature of Italy's prison overcrowding data. The Ministry of Justice provides two main types of data:
 
-1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regulatory capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
+1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regular capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
 
-2. **[Prison Institution Sheets](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari)**: These sheets provide detailed information for each penitentiary institution, including the number of unavailable beds. This information is essential for understanding overcrowding, as regulatory capacity often differs from the actual capacity. These tables are published on individual institution pages and are not archived.
+2. **[Prison Institution Sheets](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari)**: These sheets provide detailed information for each penitentiary institution, including the number of unavailable beds. This information is essential for understanding overcrowding, as regular capacity often differs from the actual capacity. These tables are published on individual institution pages and are not archived.
 
 ## Main Data
 
