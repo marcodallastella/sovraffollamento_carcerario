@@ -5,7 +5,7 @@ Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
 ## Introduction
 
-This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system.
+This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system. Takaways and data visualizations are available at [sovraffollamentocarcerario.it](https://www.sovraffollamentocarcerario.it).
 
 The need for this project stems from the scattered and difficult-to-access nature of Italy's prison overcrowding data. The Ministry of Justice provides two main types of data:
 
