@@ -1,50 +1,59 @@
-# I Dati sul Sovraffollamento Carcerario in Italia 
+# Prison Overcrowding Data in Italy
 
 Author: Marco Dalla Stella \
 Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
-## Introduzione
+## Introduction
 
-Questo progetto si propone di fornire dati aggregati e aggiornati sul problema del sovraffollamento carcerario in Italia.
+This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system.
 
-Il progetto si ispira al [Data Liberation Project](https://www.data-liberation-project.org/about/), un'iniziativa che mira a identificare, ottenere, ripulire, documentare e pubblicare dati governativi di pubblico interesse.
+The project is inspired by the [Data Liberation Project](https://www.data-liberation-project.org/about/), an initiative aimed at identifying, obtaining, cleaning, documenting, and publishing government data of public interest.
 
-La necessità nasce dal fatto che i dati sul sovraffollamento carcerario in Italia sono sparsi e di difficile consultazione. Il Ministero della Giustizia mette a disposizione principalmente due tipologie di dati:
+The need for this project stems from the scattered and difficult-to-access nature of Italy's prison overcrowding data. The Ministry of Justice provides two main types of data:
 
-1 I [bollettini mensili](ttps://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023): pubblicati con cadenza mensile, contengono informazioni riguardo alla capacità regolamentare, al totale dei detenuti, al numero di detenute, e al totale dei detenuti di origine straniera per ogni centro di detenzione in Italia. I dati sono pubblicati in formato tabellare sul sito del Ministero e non in un formato strutturato come un file .csv.
+1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regulatory capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
 
-2 [Schede istituti penitenziari](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari): forniscono informazioni più dettagliate su ogni istituto penitenziario, inclusi dettagli come il numero di posti non disponibili. Questi dati sono essenziali per comprendere il fenomeno del sovraffollamento, in quanto la capienza regolamentare spesso non riflette quella effettiva. Le informazioni sono pubblicate in tabelle distribuite sulle singole pagine di ciascun istituto e, una volta aggiornate, le versioni precedenti non sono più disponibili.
+2. **[Prison Institution Sheets](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari)**: These sheets provide detailed information for each penitentiary institution, including the number of unavailable beds. This information is essential for understanding overcrowding, as regulatory capacity often differs from the actual capacity. These tables are published on individual institution pages and are not archived.
 
+## Main Data
 
-## Dati Principali
+- **[Monthly Bulletins](outputs/clean/bulletines.csv)**: Contains all monthly bulletins from January 2019 to the present (except for October 2021, which is missing from the Ministry’s website).
+- **[Institution Data](outputs/clean/institutes.csv)**: Includes updates from individual prison institution pages starting in October 2024, when the scraper was set up for daily runs.
 
-- [Bollettini mensili](outputs/clean/bulletines.csv): contiene tutti i bollettini mensili emessi da gennaio 2019 a oggi (con l’eccezione di ottobre 2021, che sembra mancare sul sito del Ministero).
-- [Dati per istituto](outputs/clean/institutes.csv): include tutti gli aggiornamenti alle singole pagine degli istituti penitenziari, a partire da ottobre 2024, quando lo scraper è stato finalizzato e programmato per avviarsi con cadenza giornaliera.
+## Supporting Data
 
-## Dati di Supporto
+- **[Bulletin Links](outputs/clean/bulletines_links.csv)**: Contains links to the various monthly bulletins published on the Ministry’s website.
+- **[Institution Information](outputs/clean/institutes_info.csv)**: Contains updated information on Italian penitentiary institutions, including type, address, and geographical coordinates.
 
-- [Bollettini links](outputs/clean/bulletines_links.csv): contiene i link ai vari bollettini mensili pubblicati sul sito del Ministero.
-- [Informazioni istituti](outputs/clean/institutes_info.csv): contiene informazioni aggiornate sugli istituti penitenziari in Italia, inclusi tipologia, indirizzo e coordinate geografiche.
+## Datasets for Visualization
 
-## Dataset per Visualizzazioni
-
-- [Bollettini Totali](outputs/viz/bulletines_totals.csv): contiene i dati mensili totali, aggregati per data.
-- [Istituti Totali](outputs/viz/institutes_totals.csv): aggrega i dati delle schede istituti per data di aggiornamento.
-- [Istituti - Ultimo Aggiornamento](outputs/viz/institutes_most_recent.csv): contiene l'ultimo aggiornamento disponibile delle informazioni presenti sulle schede istituti. Poiché le schede non vengono aggiornate simultaneamente, è possibile che alcuni istituti abbiano aggiornamenti più recenti di altri.
+- **[Total Bulletins](outputs/viz/bulletines_totals.csv)**: Contains monthly totals aggregated by date, useful for trend analysis.
+- **[Total Institutions](outputs/viz/institutes_totals.csv)**: Aggregates data from institution sheets based on update dates.
+- **[Institutions - Most Recent Update](outputs/viz/institutes_most_recent.csv)**: Provides the latest available data from institution sheets. Since updates are non-simultaneous, some institutions may have more recent data than others.
+- **[Overcrowding Rate](outputs/viz/tasso_affollamento.csv)**: Contains both official and real overcrowding rates. Missing data is estimated using [interpolation](https://academy.datawrapper.de/article/321-patchy-data).
 
 ## Notebooks
 
-Questo progetto si avvale dei seguenti notebooks:
+The project uses the following notebooks to collect, clean, and analyze data:
 
-#### Bollettini
-1. [Links Scraper](notebooks/1_Bulletines_1_Links_scraper.ipynb): ottiene i link ai bollettini mensili utilizzando browser automation con Playwright. Visita la pagina del Ministero, effettua la ricerca e raccoglie i link pertinenti.
-2. [Scraper](notebooks/1_Bulletines_2_Scraper.ipynb): scarica i dati dei bollettini utilizzando i link raccolti nel notebook precedente.
-3. [Clean](notebooks/1_Bulletines_3_Clean.ipynb): ripulisce e standardizza i dati, ad esempio omologando i nomi dei vari istituti (es. "Milano S. Vittore" e "Milano San Vittore").
-4. [Analisi](notebooks/1_Bulletines_5_Analysis_.ipynb): esegue l’analisi dei dati ripuliti e crea i file necessari per le visualizzazioni.
-5. [Scraper mensile](notebooks/1_Bulletines_4_Monthly_scraper.ipynb): eseguito automaticamente ogni mese per scaricare i dati relativi al mese appena trascorso.
+#### Bulletins
+1. **[Links Scraper](notebooks/1_Bulletines_1_Links_scraper.ipynb)**: Automates the collection of monthly bulletin links using Playwright, a browser automation tool, which scrapes the Ministry's page for relevant links.
+2. **[Bulletin Data Scraper](notebooks/1_Bulletines_2_Scraper.ipynb)**: Downloads bulletin data using the links gathered from the previous notebook.
+3. **[Data Cleaning](notebooks/1_Bulletines_3_Clean.ipynb)**: Cleans and standardizes data, for instance, by ensuring consistency in the names of penitentiary institutions (e.g., unifying variations like "Milano S. Vittore" and "Milano San Vittore").
+4. **[Data Analysis](notebooks/1_Bulletines_5_Analysis_.ipynb)**: Performs statistical and trend analysis on cleaned data and generates files for visualizations and reports.
+5. **[Monthly Scraper](notebooks/1_Bulletines_4_Monthly_scraper.ipynb)**: This script runs automatically every month to collect the most recent bulletin data.
 
-#### Schede Istituti Penitenziari
-- [Informazioni istituti Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb): ottiene informazioni aggiornate sugli istituti penitenziari attualmente in funzione.
-- [Analisi](notebooks/3_Institutes_3_Analysis.ipynb): eseguito automaticamente ogni giorno per raccogliere i dati aggiornati dalle schede istituti.
-- [Scraper giornaliero](notebooks/2_Institutes_2_Daily_scraper.ipynb): esegue l’analisi dei dati e crea i file per le visualizzazioni.
+#### Prison Institution Sheets
+- **[Institution Info Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb)**: Collects updated details on currently operational penitentiary institutions.
+- **[Daily Analysis](notebooks/3_Institutes_3_Analysis.ipynb)**: Automatically runs each day to gather and analyze new updates from prison institution sheets.
+- **[Daily Scraper](notebooks/2_Institutes_2_Daily_scraper.ipynb)**: Gathers data and prepares it for visualization by running daily analysis.
 
+## How to Use These Datasets
+
+The datasets are designed to help researchers, journalists, and policymakers understand the scope and impact of prison overcrowding in Italy. They can be used for trend analysis, to compare official vs. real prison capacities, and to visualize the geographic distribution of overcrowding rates.
+
+For visualizations, the cleaned datasets can be easily imported into tools like Datawrapper or Tableau, or used in Python/R for custom analysis.
+
+Since the data is collected via a scraper and the website structure may change over time, it is recommended to manually verify the data if possible to ensure its accuracy.
+
+If this dataset is used, please attribute it to **Marco Dalla Stella**.
