@@ -15,7 +15,7 @@ The need for this project stems from the scattered and difficult-to-access natur
 
 ## Main Data
 
-- **[Monthly Bulletins](outputs/clean/bulletines.csv)**: Contains all monthly bulletins from January 2019 to the present (except for October 2021, which is missing from the Ministry’s website).
+- **[Monthly Bulletins](outputs/clean/bulletines.csv)**: Contains all monthly bulletins from January 2019 to the present.
 - **[Institution Data](outputs/clean/institutes.csv)**: Includes updates from individual prison institution pages starting in October 2024, when the scraper was set up for daily runs.
 
 ## Supporting Data
