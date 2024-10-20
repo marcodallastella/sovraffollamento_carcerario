@@ -7,8 +7,6 @@ Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
 This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system.
 
-The project is inspired by the [Data Liberation Project](https://www.data-liberation-project.org/about/), an initiative aimed at identifying, obtaining, cleaning, documenting, and publishing government data of public interest.
-
 The need for this project stems from the scattered and difficult-to-access nature of Italy's prison overcrowding data. The Ministry of Justice provides two main types of data:
 
 1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regulatory capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
