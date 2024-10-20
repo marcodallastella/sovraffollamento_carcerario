@@ -42,9 +42,9 @@ The project uses the following notebooks to collect, clean, and analyze data:
 5. **[Monthly Scraper](notebooks/1_Bulletines_4_Monthly_scraper.ipynb)**: This script runs automatically every month to collect the most recent bulletin data.
 
 #### Prison Institution Sheets
-- **[Institution Info Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb)**: Collects updated details on currently operational penitentiary institutions.
-- **[Daily Analysis](notebooks/3_Institutes_3_Analysis.ipynb)**: Automatically runs each day to gather and analyze new updates from prison institution sheets.
-- **[Daily Scraper](notebooks/2_Institutes_2_Daily_scraper.ipynb)**: Gathers data and prepares it for visualization by running daily analysis.
+1. **[Institution Info Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb)**: Collects updated details on currently operational penitentiary institutions.
+2. **[Daily Analysis](notebooks/3_Institutes_3_Analysis.ipynb)**: Automatically runs each day to gather and analyze new updates from prison institution sheets.
+3. **[Daily Scraper](notebooks/2_Institutes_2_Daily_scraper.ipynb)**: Gathers data and prepares it for visualization by running daily analysis.
 
 ## How to Use These Datasets
 
