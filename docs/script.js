@@ -38,20 +38,7 @@ async function fetchData() {
   document.getElementById('capacity-count').innerText = `a fronte di ${capacity} posti regolamentari.`;
   document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`;
   // document.getElementById('last-update-bollettini').innerText = `${formattedDate}`;
-  document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone per ogni 100 posti disponibili.`;
-
-  // Fetch second CSV (institutes_totals.csv)
-  const institutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
-  const headers2 = institutesRows[0].split(',');
-  const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
-  
-  // Correctly parse the latest overcrowding rate and unavailable places
-  const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso_affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
-  const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti_non_disponibili')], 10).toLocaleString('it-IT');
-
-  // Update HTML with additional data
-  document.getElementById('recent-overcrowding-rate').innerText = `Questo fa si che il reale tasso di sovraffollamento sia del ${latestOvercrowdingRate}%.`;
-  document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei ${unavailablePlaces} posti che, per un motivo o per l'altro, non sono disponibili.`;
+  document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone ogni 100 posti disponibili.`;
 
   // Fetch third CSV (institutes_most_recent.csv)
   const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
@@ -85,6 +72,21 @@ async function fetchData() {
   document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
   document.getElementById('overcrowded-prisons-count').innerText = `La realtà però è spesso peggiore. In ben ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
   document.getElementById('last-update-istituti').innerText = `${formattedDate2}`;
+
+  // Fetch second CSV (institutes_totals.csv)
+  const institutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
+  const headers2 = institutesRows[0].split(',');
+  const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
+  
+  // Correctly parse the latest overcrowding rate and unavailable places
+  const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso_affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
+  const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti_non_disponibili')], 10).toLocaleString('it-IT');
+
+  // Update HTML with additional data
+  document.getElementById('recent-overcrowding-rate').innerText = `e il reale tasso di sovraffollamento ${latestOvercrowdingRate}%.`;
+  document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, erano ${unavailablePlaces}`;
+
+  
 }
 
 window.onload = fetchData;
