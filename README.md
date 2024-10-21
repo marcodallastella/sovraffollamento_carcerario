@@ -5,19 +5,17 @@ Contact: [md3934@columbia.edu](mailto:md3934@columbia.edu)
 
 ## Introduction
 
-This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system.
-
-The project is inspired by the [Data Liberation Project](https://www.data-liberation-project.org/about/), an initiative aimed at identifying, obtaining, cleaning, documenting, and publishing government data of public interest.
+This project provides aggregated and up-to-date data on the issue of prison overcrowding in Italy. This data is crucial for understanding systemic inefficiencies, human rights issues, and the capacity planning of the Italian penal system. Takaways and data visualizations are available at [sovraffollamentocarcerario.it](https://www.sovraffollamentocarcerario.it).
 
 The need for this project stems from the scattered and difficult-to-access nature of Italy's prison overcrowding data. The Ministry of Justice provides two main types of data:
 
-1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regulatory capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
+1. **[Monthly Bulletins](https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST459023)**: Published monthly, these bulletins contain information on regular capacity, total inmates, number of female inmates, and the total number of foreign inmates for each detention center in Italy. However, the data is published in non-structured table formats on the Ministry’s website instead of more accessible formats like CSV files.
 
-2. **[Prison Institution Sheets](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari)**: These sheets provide detailed information for each penitentiary institution, including the number of unavailable beds. This information is essential for understanding overcrowding, as regulatory capacity often differs from the actual capacity. These tables are published on individual institution pages and are not archived.
+2. **[Prison Institution Sheets](https://www.giustizia.it/giustizia/page/it/istituti_penitenziari)**: These sheets provide detailed information for each penitentiary institution, including the number of unavailable beds. This information is essential for understanding overcrowding, as regular capacity often differs from the actual capacity. These tables are published on individual institution pages and are not archived.
 
 ## Main Data
 
-- **[Monthly Bulletins](outputs/clean/bulletines.csv)**: Contains all monthly bulletins from January 2019 to the present (except for October 2021, which is missing from the Ministry’s website).
+- **[Monthly Bulletins](outputs/clean/bulletines.csv)**: Contains all monthly bulletins from January 2019 to the present.
 - **[Institution Data](outputs/clean/institutes.csv)**: Includes updates from individual prison institution pages starting in October 2024, when the scraper was set up for daily runs.
 
 ## Supporting Data
@@ -44,9 +42,9 @@ The project uses the following notebooks to collect, clean, and analyze data:
 5. **[Monthly Scraper](notebooks/1_Bulletines_4_Monthly_scraper.ipynb)**: This script runs automatically every month to collect the most recent bulletin data.
 
 #### Prison Institution Sheets
-- **[Institution Info Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb)**: Collects updated details on currently operational penitentiary institutions.
-- **[Daily Analysis](notebooks/3_Institutes_3_Analysis.ipynb)**: Automatically runs each day to gather and analyze new updates from prison institution sheets.
-- **[Daily Scraper](notebooks/2_Institutes_2_Daily_scraper.ipynb)**: Gathers data and prepares it for visualization by running daily analysis.
+1. **[Institution Info Scraper](notebooks/2_Institutes_1_Info_scraper.ipynb)**: Collects updated details on currently operational penitentiary institutions.
+2. **[Daily Analysis](notebooks/3_Institutes_3_Analysis.ipynb)**: Automatically runs each day to gather and analyze new updates from prison institution sheets.
+3. **[Daily Scraper](notebooks/2_Institutes_2_Daily_scraper.ipynb)**: Gathers data and prepares it for visualization by running daily analysis.
 
 ## How to Use These Datasets
 
