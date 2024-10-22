@@ -46,6 +46,7 @@ async function fetchData() {
   const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(',');
 
   const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('dati aggiornati al')];
+  console.log('lastUpdateInstitutes:', lastUpdateInstitutes);
   const formattedDate2 = formatDate(lastUpdateInstitutes);
 
   // Find the highest overcrowding rate and count overcrowded prisons
