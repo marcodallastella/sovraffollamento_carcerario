@@ -45,7 +45,7 @@ async function fetchData() {
   const headers3 = recentInstitutesRows[0].split(',');
   const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(',');
 
-  const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('posti_aggiornati_al')];
+  const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('dati aggiornati al')];
   const formattedDate2 = formatDate(lastUpdateInstitutes);
 
   // Find the highest overcrowding rate and count overcrowded prisons
@@ -55,11 +55,11 @@ async function fetchData() {
 
   for (let i = 1; i < recentInstitutesRows.length - 1; i++) {
       const row = recentInstitutesRows[i].split(',');
-      const currentAffollamento = parseFloat(row[headers3.indexOf('tasso_affollamento')].replace(',', '.'));
+      const currentAffollamento = parseFloat(row[headers3.indexOf('tasso di affollamento')].replace(',', '.'));
 
       if (currentAffollamento > highestAffollamento) {
           highestAffollamento = currentAffollamento;
-          highestAffollamentoNome = row[headers3.indexOf('nome')];
+          highestAffollamentoNome = row[headers3.indexOf('nome istituto')];
       }
 
       if (currentAffollamento >= 150) {
@@ -79,12 +79,12 @@ async function fetchData() {
   const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
   
   // Correctly parse the latest overcrowding rate and unavailable places
-  const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso_affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
-  const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti_non_disponibili')], 10).toLocaleString('it-IT');
+  const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
+  const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
 
   // Update HTML with additional data
   document.getElementById('recent-overcrowding-rate').innerText = `e il reale tasso di sovraffollamento ${latestOvercrowdingRate}%.`;
-  document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, erano ${unavailablePlaces}`;
+  document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, questi erano ${unavailablePlaces}`;
 
   
 }

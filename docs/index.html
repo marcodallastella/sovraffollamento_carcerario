@@ -32,73 +32,54 @@
 
     <style>
       .hero {
-        background-color: #f0f4f8;
-        /* Soft background color */
+          background-color: #f0f4f8; /* Soft background color */
       }
-
+  
       .text-container {
-        margin: 0 auto;
-        /* Centered container */
-        max-width: 80vw;
-        /* Limit width for readability */
-        color: #333;
-        /* Darker text for better contrast */
-        padding: 0 20px;
-        /* Add some padding to avoid the text touching the edges */
+          margin: 0 auto; /* Centered container */
+          max-width: 800px; /* Set a max width for readability */
+          color: #333; /* Darker text for better contrast */
+          padding: 0 20px; /* Add some padding to avoid the text touching the edges */
       }
-
+  
       .plot-container {
-        margin: 0 auto;
-        /* Centered container */
-        max-width: 80vw;
-        /* Limit width for plot container */
-        padding: 0 20px;
-        /* Add some padding to avoid the plot touching the edges */
+          margin: 0 auto; /* Centered container */
+          max-width: 800px; /* Set a max width for plot container */
+          padding: 0 20px; /* Add some padding to avoid the plot touching the edges */
       }
-
+  
       /* Media query for smartphones */
       @media (max-width: 600px) {
-        .text-container {
-          max-width: 100vw;
-          /* Allow the container to take the full width on small screens */
-          padding: 0 5px;
-          /* Add some padding for better readability */
-        }
-
-        .plot-container {
-          max-width: 100vw;
-          /* Allow the plot container to take the full width on small screens */
-          padding: 0 5px;
-          /* Add padding to ensure it doesn’t touch the edges */
-        }
+          .text-container,
+          .plot-container {
+              max-width: 100vw; /* Allow full width on small screens */
+              padding: 0 10px; /* Add padding for better readability */
+          }
       }
-
-
+  
       .button {
-        background-color: #007bff;
-        /* Button color */
-        color: white;
-        /* Button text color */
-        border-radius: 5px;
-        /* Rounded corners */
-        transition: background-color 0.3s;
-        /* Smooth transition */
+          background-color: #007bff; /* Button color */
+          color: white; /* Button text color */
+          border: none; /* Remove border */
+          border-radius: 5px; /* Rounded corners */
+          padding: 10px 20px; /* Add padding for better size */
+          font-size: 16px; /* Consistent font size */
+          cursor: pointer; /* Change cursor on hover */
+          transition: background-color 0.3s; /* Smooth transition */
       }
-
+  
       .button:hover {
-        background-color: #0056b3;
-        /* Darker shade on hover */
+          background-color: #0056b3; /* Darker shade on hover */
       }
-
+  
       .footer {
-        background-color: #333;
-        /* Dark footer background */
-        color: white;
-        /* Light footer text */
-        padding: 2rem;
-        /* Padding for the footer */
+          background-color: #333; /* Dark footer background */
+          color: white; /* Light footer text */
+          padding: 2rem; /* Padding for the footer */
+          text-align: center; /* Center footer text */
       }
-    </style>
+  </style>
+  
   </head>
 
 <body>
