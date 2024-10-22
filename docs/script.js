@@ -5,6 +5,10 @@ async function fetchCSV(url) {
 }
 
 function formatDate(dateString, locale = 'it-IT') {
+  if (!dateString) {
+    console.error('Invalid date string:', dateString);
+    return ''; // Return an empty string or a default value as needed
+  }
   const [year, month, day] = dateString.split('-');
   const date = new Date(year, month - 1, day);
   return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
