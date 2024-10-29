@@ -29,20 +29,20 @@ async function fetchData() {
 
   // Format data from the last row
   const lastUpdateDate = lastBulletinRow[0].trim();
-  const formattedDate = formatDate(lastUpdateDate);
-  const detaineesCount = formatNumber(lastBulletinRow[lastBulletinRow.length - 4]);
-  const capacity = formatNumber(lastBulletinRow[lastBulletinRow.length - 5]);
+  // const formattedDate = formatDate(lastUpdateDate);
+  // const detaineesCount = formatNumber(lastBulletinRow[lastBulletinRow.length - 4]);
+  // const capacity = formatNumber(lastBulletinRow[lastBulletinRow.length - 5]);
   
   // Correctly parse the overcrowding rate
   const rawOvercrowdingRate = parseFloat(lastBulletinRow[lastBulletinRow.length - 1].replace(',', '.')); // Replace comma with dot for parsing
-  const formattedOvercrowdingRate = rawOvercrowdingRate.toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  // const formattedOvercrowdingRate = rawOvercrowdingRate.toLocaleString('it-IT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
   // Update HTML with detainees data
-  document.getElementById('detainees-count').innerText = `${detaineesCount}`;
-  document.getElementById('capacity-count').innerText = `a fronte di ${capacity} posti regolamentari.`;
-  document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`;
+  // document.getElementById('detainees-count').innerText = `${detaineesCount}`;
+  // document.getElementById('capacity-count').innerText = `a fronte di ${capacity} posti regolamentari.`;
+  // document.getElementById('last-update').innerText = `Al ${formattedDate} i detenuti presenti in Italia erano`;
   // document.getElementById('last-update-bollettini').innerText = `${formattedDate}`;
-  document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone ogni 100 posti disponibili.`;
+  // document.getElementById('overcrowding-rate').innerText = `Ufficialmente, nelle carceri italiane ci sono quindi ${formattedOvercrowdingRate} persone ogni 100 posti disponibili.`;
 
   // Fetch third CSV (institutes_most_recent.csv)
   const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
@@ -86,10 +86,15 @@ async function fetchData() {
   // Correctly parse the latest overcrowding rate and unavailable places
   const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
   const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
+  const totalDetainees = parseInt(lastInstituteRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
+  const availablePlacesRecent = parseInt(lastInstituteRow[headers2.indexOf('posti regolamentari')], 10).toLocaleString('it-IT');
 
-  // Update HTML with additional data
-  document.getElementById('recent-overcrowding-rate').innerText = `e il reale tasso di sovraffollamento ${latestOvercrowdingRate}%.`;
-  document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, questi erano ${unavailablePlaces}`;
+
+
+  // // Update HTML with additional data
+  // document.getElementById('recent-overcrowding-rate').innerText = `e il reale tasso di sovraffollamento ${latestOvercrowdingRate}%.`;
+  // document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, questi erano ${unavailablePlaces}`;
+  document.getElementById('total-detainees').innerText = `Al ${formattedDate2}, in Italia ci sono ${totalDetainees} persone in condizione di detenzione a fronte di ${availablePlacesRecent} posti regolamentari. Di questi, però, ${unavailablePlaces} posti non sono, per un motivo o per l'altro, disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
 
   
 }

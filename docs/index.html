@@ -78,6 +78,10 @@
           padding: 2rem; /* Padding for the footer */
           text-align: center; /* Center footer text */
       }
+
+      .text-container {
+        font-size: x-large;
+      }
   </style>
   
   </head>
@@ -112,31 +116,36 @@
   <!-- Main Content Section -->
   <section class="section">
     <div class="text-container">
-      <span id="last-update" style="display: inline;"></span>
-      <span id="detainees-count" style="display: inline;"></span>
-      <span id="capacity-count" style="display: inline;"></span>
+      <span id="total-detainees" style="display: inline;"></span>
+      <!-- <span id="last-update" style="display: inline;"></span> -->
+      <!-- <span id="detainees-count" style="display: inline;"></span> -->
+      <!-- <span id="capacity-count" style="display: inline;"></span> -->
     </div>
     <br>
     <br>
 
     <div class="plot-container">
+      <div style="min-height:500px" id="datawrapper-vis-yCRHI"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/yCRHI/embed.js" charset="utf-8" data-target="#datawrapper-vis-yCRHI"></script><noscript><img src="https://datawrapper.dwcdn.net/yCRHI/full.png" alt="Popolazione detenuta, posti regolamentari e posti effettivi (al netto quindi dei posti non disponibili), a confronto." /></noscript></div>
+    </div>
+
+    <!-- <div class="plot-container"> -->
       <!-- Iframe Container 1 -->
-      <div style="min-height:455px" id="datawrapper-vis-DaecH">
+      <!-- <div style="min-height:455px" id="datawrapper-vis-DaecH">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DaecH/embed.js" charset="utf-8"
           data-target="#datawrapper-vis-DaecH"></script>
         <noscript><img src="https://datawrapper.dwcdn.net/DaecH/full.png"
             alt="A line chart showing the presence of inmates compared to regular capacity" /></noscript>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
     <br>
     <br>
-    <div class="text-container">
+    <!-- <div class="text-container">
       <p id="overcrowding-rate" style="display: inline;"></p>
       <p id="unavailable-places" style="display: inline;"></p>
       <p id="recent-overcrowding-rate" style="display: inline;"></p>
-    </div>
-    <br>
-    <br>
+    </div> -->
+    <!-- <br>
+    <br> -->
     <div class="plot-container">
       <div style="min-height:504px" id="datawrapper-vis-q7smz">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/q7smz/embed.js" charset="utf-8"
@@ -175,6 +184,11 @@
           data-target="#datawrapper-vis-AVjKa"></script>
         <noscript><img src="https://datawrapper.dwcdn.net/AVjKa/full.png" alt="" /></noscript>
       </div>
+    </div>
+    <br>
+    <br>
+    <div class="text-container">
+      <p>In alcuni centri di detenzione, al problema del sovraffollamento si somma il problema della carenza di personale. Il grafico che segue mostra i centri con una situazione di sovraffollamento pari o superiore al 120% e una carenza di personale penitenziario pari o superiore al 20%.</p>
     </div>
 
     <br>
