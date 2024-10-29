@@ -75,7 +75,7 @@ async function fetchData() {
   // Update HTML with highest overcrowding and prison count
   const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 0 });
   document.getElementById('highest-overcrowding').innerText = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
-  document.getElementById('overcrowded-prisons-count').innerText = `La realtà però è spesso peggiore. In ben ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
+  document.getElementById('overcrowded-prisons-count').innerText = `La realtà però è spesso peggiore. In ben ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili!).`;
   document.getElementById('last-update-istituti').innerText = `${formattedDate2}`;
 
   // Fetch second CSV (institutes_totals.csv)
