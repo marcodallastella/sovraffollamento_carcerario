@@ -94,7 +94,7 @@ async function fetchData() {
   // // Update HTML with additional data
   // document.getElementById('recent-overcrowding-rate').innerText = `e il reale tasso di sovraffollamento ${latestOvercrowdingRate}%.`;
   // document.getElementById('unavailable-places').innerText = `Ma si tratta di una stima al ribasso, poiché questo dato non tiene conto dei posti che, per un motivo o perl l'altro, non sono disponibili. Al ${formattedDate2}, questi erano ${unavailablePlaces}`;
-  document.getElementById('total-detainees').innerText = `Al ${formattedDate2}, in Italia ci sono ${totalDetainees} persone in condizione di detenzione a fronte di ${availablePlacesRecent} posti regolamentari. Di questi, però, ${unavailablePlaces} posti non sono, per un motivo o per l'altro, disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
+  document.getElementById('total-detainees').innerText = `Al ${formattedDate2}, in Italia sono ${totalDetainees} le persone detenute, a fronte di una capienza ufficiale di ${availablePlacesRecent} posti. Di questi, però, ${unavailablePlaces} posti non sono, per un motivo o per l'altro, disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
 
   
 }
