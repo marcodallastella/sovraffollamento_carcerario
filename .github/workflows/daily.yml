@@ -3,7 +3,7 @@ name: daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *' # Run daily at 8:00 AM EST
+    - cron: '0 9 * * *' # Run daily at 9:00 AM EST
 
 jobs:
   data_processing:
