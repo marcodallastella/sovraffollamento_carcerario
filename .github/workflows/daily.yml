@@ -22,8 +22,8 @@ jobs:
           pip install -r requirements.txt
           playwright install
 
-      - name: Look for prisons' data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_1_Info_scraper.ipynb"
+      # - name: Look for prisons' data
+      #   run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_1_Info_scraper.ipynb"
 
       - name: Look for new institutes' data
         run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Daily_scraper.ipynb"
