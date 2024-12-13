@@ -313,7 +313,7 @@
             const totalDetainees = parseInt(lastInstituteRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
             const availablePlacesRecent = parseInt(lastInstituteRow[headers2.indexOf('posti regolamentari')], 10).toLocaleString('it-IT');
 
-            document.getElementById('total-detainees').textContent = `Al ${formattedDate2}, in Italia sono ${totalDetainees} le persone detenute, a fronte di una capienza ufficiale di ${availablePlacesRecent} posti. Di questi, però, ${unavailablePlaces} posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
+            document.getElementById('total-detainees').textContent = `Al ${formattedDate2}, in Italia sono ${totalDetainees} le persone detenute, a fronte di una capienza regolamentare di ${availablePlacesRecent} posti. Di questi, però, ${unavailablePlaces} posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
         }
 
         window.onload = fetchData;
