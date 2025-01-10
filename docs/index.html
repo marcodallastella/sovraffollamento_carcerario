@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,7 @@
             background: white;
             padding: 3rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
@@ -51,7 +52,7 @@
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .section-title {
@@ -132,17 +133,18 @@
             .header {
                 padding: 2rem 1rem;
             }
-            
+
             .header h1 {
                 font-size: 2rem;
             }
-            
+
             .section {
                 padding: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <h1>Il Sovraffollamento Carcerario in Italia</h1>
@@ -156,7 +158,8 @@
 
         <section class="section">
             <h2 class="section-title">Informazioni</h2>
-            <p>Questa pagina è un progetto di <a href="https://www.marcodallastella.github.io">Marco Dalla Stella</a>, giornalista specializzato in dati. La pagina si aggiorna quotidianamente grazie a un programma (tecnicamente uno scraper) open source, il cui codice è disponibile <a href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>. I dati provengono dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di trasparenza degli istituti penitenziari italiani</a>, che vengono aggiornate con maggiore frequenza rispetto ai <a href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini mensili</a> e, inoltre, contengono informazioni aggiuntive, come ad esempio i posti non disponibili, che permettono di calcolare il sovraffollamento reale. Al momento del lancio (ottobre 2024), lo scraper estrae con successo i dati, che sono stati verificati a campione.</p>
+            <p>Questa pagina è un progetto di <a href="https://www.marcodallastella.github.io">Marco Dalla Stella</a>, giornalista specializzato in dati.<br> La pagina viene aggiornata quotidianamente grazie a un programma (tecnicamente uno scraper), il cui codice è disponibile <a href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>. I dati provengono dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di trasparenza degli istituti penitenziari italiani</a>, che vengono aggiornate con maggiore frequenza rispetto ai <a href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini mensili</a> e contengono informazioni aggiuntive, come i posti non disponibili, che consentono di calcolare il sovraffollamento reale. Al momento del lancio (ottobre 2024), lo scraper estrae con successo i dati, che sono stati verificati a campione. Tuttavia, trattandosi di un processo automatico, potrebbero verificarsi errori, soprattutto qualora il Ministero modifichi il codice delle pagine contenenti le informazioni o aggiorni i dati in modo non uniforme. In caso di significativi scostamenti rispetto ai dati precedenti, si consiglia di esercitare cautela. Prima di utilizzarli, è sempre una buona prassi controllare i dati e effettuare verifiche a campione per garantirne l'integrità.<br>Se i grafici non fossero aggiornati all'ultima data di aggiornamento (indicato sotto al titolo), ciò potrebbe dipendere dai server di Datawrapper, dove sono ospitati i grafici. Purtroppo, al momento non ho trovato una soluzione automatica e l'aggiornamento richiede un passaggio manuale. Tuttavia, i link ai dataset in fondo alla pagina contengono sempre i dati aggiornati all'ultima data disponibile.</p>
+            
         </section>
 
         <section class="section">
@@ -167,14 +170,17 @@
         <section class="section">
             <h2 class="section-title">Popolazione Carceraria e Capacità</h2>
             <div class="chart-container">
-                <iframe title="Popolazione detenuta e capienza regolamentare" aria-label="Grafico" id="datawrapper-chart-yCRHI" src="https://datawrapper.dwcdn.net/yCRHI" scrolling="no" frameborder="0"></iframe>
+                <iframe title="Popolazione detenuta e capienza regolamentare" aria-label="Grafico"
+                    id="datawrapper-chart-yCRHI" src="https://datawrapper.dwcdn.net/yCRHI" scrolling="no"
+                    frameborder="0"></iframe>
             </div>
         </section>
 
         <section class="section">
             <h2 class="section-title">Tasso di Affollamento</h2>
             <div class="chart-container">
-                <iframe title="Tasso di affollamento" aria-label="Grafico" id="datawrapper-chart-q7smz" src="https://datawrapper.dwcdn.net/q7smz/13/" scrolling="no" frameborder="0"></iframe>
+                <iframe title="Tasso di affollamento" aria-label="Grafico" id="datawrapper-chart-q7smz"
+                    src="https://datawrapper.dwcdn.net/q7smz/13/" scrolling="no" frameborder="0"></iframe>
             </div>
         </section>
 
@@ -187,45 +193,61 @@
         <section class="section">
             <h2 class="section-title">Distribuzione Geografica</h2>
             <div class="chart-container">
-                <iframe title="L'affollamento carcerario in Italia" aria-label="Mappa" id="datawrapper-chart-LfHlU" src="https://datawrapper.dwcdn.net/LfHlU/13/" scrolling="no" frameborder="0"></iframe>
+                <iframe title="L'affollamento carcerario in Italia" aria-label="Mappa" id="datawrapper-chart-LfHlU"
+                    src="https://datawrapper.dwcdn.net/LfHlU/13/" scrolling="no" frameborder="0"></iframe>
             </div>
         </section>
 
 
         <section class="section">
             <h2 class="section-title">Carenza di Personale</h2>
-            <p> In diversi istituti penitenziari grafico il problema del sovraffollamento carcerario è reso peggiore dalla mancanza di personale di polizia penitenziaria, che esaspera e peggiora le condizioni all'interno dell'istituto. Il grafico seguente mostra le carceri con un'alto indice di sovraffollamento reale (> 130%) e un'alta carenza di personale (> 20 %).</p>
+            <p> In diversi istituti penitenziari grafico il problema del sovraffollamento carcerario è reso peggiore
+                dalla mancanza di personale di polizia penitenziaria, che esaspera e peggiora le condizioni all'interno
+                dell'istituto. Il grafico seguente mostra le carceri con un'alto indice di sovraffollamento reale (>
+                130%) e un'alta carenza di personale (> 20 %).</p>
         </section>
 
         <section class="section">
             <h2 class="section-title">Istituti sovraffollati e sotto organico.</h2>
             <div class="chart-container">
-                <iframe title="Sovraffollati e sotto organico" aria-label="Grafico a dispersione" id="datawrapper-chart-ZpY4p" src="https://datawrapper.dwcdn.net/ZpY4p/17/" scrolling="no" frameborder="0" style="border: none;" width="600" height="485" data-external="1"></iframe>
+                <iframe title="Sovraffollati e sotto organico" aria-label="Grafico a dispersione"
+                    id="datawrapper-chart-ZpY4p" src="https://datawrapper.dwcdn.net/ZpY4p/17/" scrolling="no"
+                    frameborder="0" style="border: none;" width="600" height="485" data-external="1"></iframe>
             </div>
         </section>
 
 
         <section class="section">
-          <h2 class="section-title">Consulta i dati</h2>
-          <div class="chart-container">
-            <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa" src="https://datawrapper.dwcdn.net/AVjKa/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="988" data-external="1"></iframe>
-          </div>
+            <h2 class="section-title">Consulta i dati</h2>
+            <div class="chart-container">
+                <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa"
+                    src="https://datawrapper.dwcdn.net/AVjKa/6/" scrolling="no" frameborder="0" style="border: none;"
+                    width="600" height="988" data-external="1"></iframe>
+            </div>
         </section>
         <section class="section">
-          <h2 class="section-title"></h2>
-          <div class="chart-container">
-            <iframe title="Mancanza di servizi" aria-label="Table" id="datawrapper-chart-asQNh" src="https://datawrapper.dwcdn.net/asQNh/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="1051" data-external="1"></iframe>
-          </div>
+            <h2 class="section-title"></h2>
+            <div class="chart-container">
+                <iframe title="Mancanza di servizi" aria-label="Table" id="datawrapper-chart-asQNh"
+                    src="https://datawrapper.dwcdn.net/asQNh/6/" scrolling="no" frameborder="0" style="border: none;"
+                    width="600" height="1051" data-external="1"></iframe>
+            </div>
         </section>
 
         <section class="section">
             <h2 class="section-title">Download dei Dati</h2>
             <div class="data-links">
                 <ul>
-                    <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv" target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
-                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv" target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5 ottobre 2024)</li>
-                    <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv" target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)</li>
-                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv" target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
+                    <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv"
+                            target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
+                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv"
+                            target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5
+                        ottobre 2024)</li>
+                    <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv"
+                            target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)
+                    </li>
+                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv"
+                            target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
                 </ul>
             </div>
         </section>
@@ -233,9 +255,12 @@
 
     <footer class="footer">
         <p>Progetto a cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a></p>
-        <p>Il codice è disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a></p>
-        <p>Per suggerimenti, critiche o osservazioni: <a href="mailto:mdallastella@proton.me">mdallastella@proton.me</a></p>
-        <p>Se pensi che questo progetto sia utile, considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a></p>
+        <p>Il codice è disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding"
+                target="_blank">GitHub</a></p>
+        <p>Per suggerimenti, critiche o osservazioni: <a href="mailto:mdallastella@proton.me">mdallastella@proton.me</a>
+        </p>
+        <p>Se pensi che questo progetto sia utile, considera la possibilità di <a
+                href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a></p>
     </footer>
 
     <script>
@@ -256,7 +281,7 @@
         }
 
         // Handle Datawrapper iframe resizing
-        window.addEventListener("message", function(event) {
+        window.addEventListener("message", function (event) {
             if (typeof event.data["datawrapper-height"] !== "undefined") {
                 var iframes = document.querySelectorAll("iframe");
                 for (var key in event.data["datawrapper-height"]) {
@@ -297,7 +322,7 @@
             }
 
             const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 0 });
-            
+
             // Update the DOM
             document.getElementById('last-update-istituti').textContent = formattedDate2;
             document.getElementById('highest-overcrowding').textContent = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
@@ -307,7 +332,7 @@
             const institutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
             const headers2 = institutesRows[0].split(',');
             const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
-            
+
             const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
             const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
             const totalDetainees = parseInt(lastInstituteRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
@@ -319,4 +344,5 @@
         window.onload = fetchData;
     </script>
 </body>
+
 </html>
