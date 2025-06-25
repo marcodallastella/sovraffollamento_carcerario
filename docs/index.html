@@ -308,11 +308,6 @@
         </section>
 
 
-        <!-- <section class="section">
-            <h2 class="section-title">Panoramica Attuale</h2>
-            <p class="key-stat" id="total-detainees"></p>
-        </section> -->
-
         <section class="section">
             <h2 class="section-title">Popolazione Carceraria e Capacità</h2>
             <div class="chart-container">
@@ -411,6 +406,7 @@
         async function fetchCSV(url) {
             const response = await fetch(url);
             const data = await response.text();
+            // Filter out empty rows to prevent issues with last line
             return data.split('\n').map(row => row.trim()).filter(row => row !== '');
         }
 
@@ -419,9 +415,20 @@
                 console.error('Invalid date string:', dateString);
                 return '';
             }
-            const [year, month, day] = dateString.split('-');
-            const date = new Date(year, month - 1, day);
-            return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+            // Use a try-catch block for robust date parsing, especially if format varies
+            try {
+                const [year, month, day] = dateString.split('-');
+                const date = new Date(year, month - 1, day);
+                // Check if date is valid
+                if (isNaN(date.getTime())) {
+                    console.error('Parsed date is invalid:', dateString);
+                    return '';
+                }
+                return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+            } catch (error) {
+                console.error('Error formatting date:', dateString, error);
+                return '';
+            }
         }
 
         // Handle Datawrapper iframe resizing
@@ -442,7 +449,8 @@
             // Fetch institutes_most_recent.csv for general updates and highest overcrowding
             const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
             const headers3 = recentInstitutesRows[0].split(',');
-            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(','); // Assuming last row might be empty, so -2
+            // Ensure we get the last actual data row, not an empty line
+            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 1].split(','); 
 
             const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('dati aggiornati al')];
             const formattedDate2 = formatDate(lastUpdateInstitutes);
@@ -451,16 +459,16 @@
             let highestAffollamentoNome = '';
             let overcrowdedPrisonCount = 0;
 
-            for (let i = 1; i < recentInstitutesRows.length - 1; i++) {
+            for (let i = 1; i < recentInstitutesRows.length; i++) { // Changed loop limit to `length` because `filter` removes empty rows
                 const row = recentInstitutesRows[i].split(',');
                 const currentAffollamento = parseFloat(row[headers3.indexOf('tasso di affollamento')].replace(',', '.'));
 
-                if (currentAffollamento > highestAffollamento) {
+                if (!isNaN(currentAffollamento) && currentAffollamento > highestAffollamento) { // Add NaN check
                     highestAffollamento = currentAffollamento;
                     highestAffollamentoNome = row[headers3.indexOf('nome istituto')];
                 }
 
-                if (currentAffollamento >= 150) {
+                if (!isNaN(currentAffollamento) && currentAffollamento >= 150) { // Add NaN check
                     overcrowdedPrisonCount++;
                 }
             }
@@ -476,33 +484,53 @@
             // Fetch institutes_totals.csv for "Panoramica Attuale" and "Riepilogo Dati Chiave" table
             const institutesTotalsRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
             const headers2 = institutesTotalsRows[0].split(',');
-            const lastInstituteTotalRow = institutesTotalsRows[institutesTotalsRows.length - 1].split(','); // Assuming last row is the latest total
+            // Ensure we get the last actual data row, not an empty line
+            const lastInstituteTotalRow = institutesTotalsRows[institutesTotalsRows.length - 1].split(','); 
 
             // Extract values for "Panoramica Attuale" AND "Riepilogo Dati Chiave" table
-            const latestOvercrowdingRate = parseFloat(lastInstituteTotalRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
-            const unavailablePlaces = parseInt(lastInstituteTotalRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
-            const totalDetainees = parseInt(lastInstituteTotalRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
-            const availablePlacesRecent = parseInt(lastInstituteTotalRow[headers2.indexOf('posti regolamentari')], 10).toLocaleString('it-IT');
-            const availablePlaces = parseInt(lastInstituteTotalRow[headers2.indexOf('posti disponibili')], 10).toLocaleString('it-IT'); // New: Extract 'posti disponibili'
+            // Use a helper function for robust parsing and formatting
+            const getParsedValue = (row, headers, columnName, type = 'string', decimalPlaces = 0) => {
+                const index = headers.indexOf(columnName);
+                if (index === -1 || !row[index]) {
+                    console.warn(`Column '${columnName}' not found or empty in row.`);
+                    return ''; // Return empty string or a default like 'N/A'
+                }
+                let value = row[index].replace(',', '.'); // Handle comma as decimal separator
 
-            const datiAggiornatiAl = lastInstituteTotalRow[headers2.indexOf('dati aggiornati al')];
+                if (type === 'float') {
+                    value = parseFloat(value);
+                    if (isNaN(value)) return '';
+                    return value.toLocaleString('it-IT', { minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces });
+                } else if (type === 'int') {
+                    value = parseInt(value, 10);
+                    if (isNaN(value)) return '';
+                    return value.toLocaleString('it-IT');
+                }
+                return row[index]; // Return as string if no specific type
+            };
+
+            const latestOvercrowdingRate = getParsedValue(lastInstituteTotalRow, headers2, 'tasso di affollamento', 'float', 0);
+            const unavailablePlaces = getParsedValue(lastInstituteTotalRow, headers2, 'posti non disponibili', 'int');
+            const totalDetainees = getParsedValue(lastInstituteTotalRow, headers2, 'totale detenuti', 'int');
+            const availablePlacesRecent = getParsedValue(lastInstituteTotalRow, headers2, 'posti regolamentari', 'int');
+            const availablePlaces = getParsedValue(lastInstituteTotalRow, headers2, 'posti disponibili', 'int');
+
+            const datiAggiornatiAl = getParsedValue(lastInstituteTotalRow, headers2, 'dati aggiornati al', 'string');
             const formattedDatiAggiornatiAl = formatDate(datiAggiornatiAl);
 
 
-            // Update "Panoramica Attuale"
-            document.getElementById('total-detainees').innerHTML = `Al <strong>${formattedDatiAggiornatiAl}</strong>, in Italia sono <strong>${totalDetainees}</strong> le persone detenute, a fronte di una capienza regolamentare di <strong>${availablePlacesRecent}</strong> posti. Di questi, però, <strong>${unavailablePlaces}</strong> posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del <strong>${latestOvercrowdingRate}%</strong>.`;
+            // // Update "Panoramica Attuale"
+            // document.getElementById('total-detainees').innerHTML = `Al <strong>${formattedDatiAggiornatiAl}</strong>, in Italia sono <strong>${totalDetainees}</strong> le persone detenute, a fronte di una capienza regolamentare di <strong>${availablePlacesRecent}</strong> posti. Di questi, però, <strong>${unavailablePlaces}</strong> posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del <strong>${latestOvercrowdingRate}%</strong>.`;
 
             // --- Update the "Riepilogo Dati Chiave" table in the DOM ---
             document.getElementById('table-tasso-affollamento').innerHTML = `<b>${latestOvercrowdingRate}%</b>`;
             document.getElementById('table-totale-detenuti').textContent = totalDetainees;
             document.getElementById('table-posti-regolamentari').textContent = availablePlacesRecent;
-            document.getElementById('table-posti-disponibili').textContent = availablePlaces; // Populate new field
-            document.getElementById('table-posti-non-disponibili').textContent = unavailablePlaces; // Populate new field
+            document.getElementById('table-posti-disponibili').textContent = availablePlaces;
+            document.getElementById('table-posti-non-disponibili').textContent = unavailablePlaces;
 
             // Update the last update date for the table
             document.getElementById('last-update-popolazione').textContent = formattedDatiAggiornatiAl;
-            // Removed: document.getElementById('last-update-personale').textContent = formattedTablePersonalePoliziaPenitenziariaAggiornatoAl;
-            // Removed: tablePoliziaPenitenziariaMancantePercentuale, _Previsti, _Mancante as they are not sourced from institutes_totals.csv
         }
 
         window.onload = fetchData;
