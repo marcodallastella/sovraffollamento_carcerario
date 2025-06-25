@@ -509,7 +509,7 @@
                 return row[index]; // Return as string if no specific type
             };
 
-            const latestOvercrowdingRate = getParsedValue(lastInstituteTotalRow, headers2, 'tasso di affollamento', 'float', 0);
+            const latestOvercrowdingRate = getParsedValue(lastInstituteTotalRow, headers2, 'tasso di affollamento', 'float', 2);
             const unavailablePlaces = getParsedValue(lastInstituteTotalRow, headers2, 'posti non disponibili', 'int');
             const totalDetainees = getParsedValue(lastInstituteTotalRow, headers2, 'totale detenuti', 'int');
             const availablePlacesRecent = getParsedValue(lastInstituteTotalRow, headers2, 'posti regolamentari', 'int');
