@@ -7,6 +7,22 @@
     <title>Sovraffollamento Carcerario in Italia | Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
+        .responsive-iframe-container {
+            position: relative;
+            height: 400px;
+            /* Adjust to fit your carousel */
+            overflow: hidden;
+        }
+
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         :root {
             --primary-color: #2C3E50;
             --background-color: #f8f9fa;
@@ -158,8 +174,33 @@
 
         <section class="section">
             <h2 class="section-title">Informazioni</h2>
-            <p>Questa pagina è un progetto di <a href="https://www.marcodallastella.github.io">Marco Dalla Stella</a>, giornalista specializzato in dati.<br> La pagina viene aggiornata quotidianamente grazie a un programma (tecnicamente uno scraper), il cui codice è disponibile <a href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>. I dati provengono dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di trasparenza degli istituti penitenziari italiani</a>, che vengono aggiornate con maggiore frequenza rispetto ai <a href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini mensili</a> e contengono informazioni aggiuntive, come i posti non disponibili, che consentono di calcolare il sovraffollamento reale. Al momento del lancio (ottobre 2024), lo scraper estrae con successo i dati, che sono stati verificati a campione. Tuttavia, trattandosi di un processo automatico, potrebbero verificarsi errori, soprattutto qualora il Ministero modifichi il codice delle pagine contenenti le informazioni o aggiorni i dati in modo non uniforme. In caso di significativi scostamenti, si consiglia di esercitare cautela. Prima di utilizzarli poi è sempre una buona prassi  e effettuare verifiche a campione per garantirne l'integrità.<br>Se i grafici non fossero aggiornati all'ultima data disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla pagina si trovano i link ai dataset, questi sì costantemente aggiornati.</p>
-            
+            <p>Questa pagina è un progetto di <a href="https://www.marcodallastella.github.io">Marco Dalla Stella</a>,
+                giornalista specializzato in dati.<br> La pagina viene aggiornata quotidianamente grazie a un programma
+                (tecnicamente uno scraper), il cui codice è disponibile <a
+                    href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>. I dati provengono
+                dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di
+                    trasparenza degli istituti penitenziari italiani</a>, che vengono aggiornate con maggiore frequenza
+                rispetto ai <a
+                    href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini
+                    mensili</a> e contengono informazioni aggiuntive, come i posti non disponibili, che consentono di
+                calcolare il sovraffollamento reale. Al momento del lancio (ottobre 2024), lo scraper estrae con
+                successo i dati, che sono stati verificati a campione. Tuttavia, trattandosi di un processo automatico,
+                potrebbero verificarsi errori, soprattutto qualora il Ministero modifichi il codice delle pagine
+                contenenti le informazioni o aggiorni i dati in modo non uniforme. In caso di significativi scostamenti,
+                si consiglia di esercitare cautela. Prima di utilizzarli poi è sempre una buona prassi e effettuare
+                verifiche a campione per garantirne l'integrità.<br>Se i grafici non fossero aggiornati all'ultima data
+                disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla
+                pagina si trovano i link ai dataset, questi sì costantemente aggiornati.</p>
+
+        </section>
+
+        <section class="section">
+            <div class="responsive-iframe-container">
+                <iframe src="carusel.html" frameborder="0" scrolling="no" height="400"></iframe>
+
+
+
+            </div>
         </section>
 
         <section class="section">
