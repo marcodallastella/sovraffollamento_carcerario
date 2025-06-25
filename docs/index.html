@@ -6,107 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sovraffollamento Carcerario in Italia | Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .responsive-iframe-container {
-            position: relative;
-            height: 400px;
-            /* Adjust to fit your carousel */
-            overflow: hidden;
-        }
-
-        .responsive-iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
+        /* General NYT-inspired variables */
         :root {
-            --primary-color: #2C3E50;
-            --background-color: #f8f9fa;
-            --text-color: #2d3748;
-            --border-color: #e2e8f0;
+            --nyt-blue: #1a437c; /* A deep blue for accents */
+            --nyt-text-dark: #333;
+            --nyt-text-light: #666;
+            --nyt-background: #fdfdfc; /* Off-white, slightly warmer */
+            --nyt-border: #e0e0e0; /* Lighter border color */
+            --nyt-font-serif: 'Georgia', serif;
+            --nyt-font-sans-serif: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+            /* Using Libre Franklin for body/headlines as a good open-source alternative to Franklin Gothic */
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: var(--nyt-font-serif); /* Serif for body text */
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            color: var(--nyt-text-dark);
+            background-color: var(--nyt-background);
             margin: 0;
         }
 
         .header {
             background: white;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem; /* More vertical padding */
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid var(--nyt-border); /* Subtle header separator */
+            box-shadow: none; /* Remove harsh shadow */
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
+            font-family: var(--nyt-font-sans-serif); /* Sans-serif for main headline */
+            font-weight: 700; /* Bold */
+            font-size: 3.2rem; /* Larger headline */
+            margin-bottom: 0.8rem;
+            color: var(--nyt-text-dark);
+            line-height: 1.1; /* Tighter line height for headlines */
         }
 
         .header p {
-            font-size: 1.2rem;
-            color: #666;
+            font-family: var(--nyt-font-sans-serif); /* Sans-serif for sub-headline */
+            font-size: 1.25rem; /* Slightly larger sub-headline */
+            color: var(--nyt-text-light);
             margin: 0;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px; /* Slightly narrower for a more article-like column */
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem; /* More padding */
         }
 
+        /* --- Section Styling: No more boxes --- */
         .section {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            background: none; /* Remove background color */
+            border-radius: 0; /* Remove border-radius */
+            padding: 2.5rem 0; /* Keep horizontal padding, adjust vertical */
+            margin-bottom: 2.5rem; /* Space between sections */
+            box-shadow: none; /* Remove shadow */
+            border-bottom: 1px solid var(--nyt-border); /* Subtle separator for each section */
         }
+
+        /* Remove bottom border from the last section to avoid double border with footer */
+        .section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0; /* Adjust margin if last section should not have extra space */
+        }
+        /* --- End Section Styling --- */
+
 
         .section-title {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin: 0 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #eee;
+            font-family: var(--nyt-font-sans-serif); /* Sans-serif for section titles */
+            font-weight: 700;
+            font-size: 1.8rem; /* Larger section titles */
+            color: var(--nyt-blue); /* NYT blue for titles */
+            margin: 0 0 1.8rem 0;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--nyt-border); /* More pronounced separator */
         }
 
         .chart-container {
             position: relative;
             width: 100%;
             margin: 2rem 0;
+            background: #f8f8f8; /* Slight background for charts */
+            padding: 1rem; /* Padding around charts */
+            box-sizing: border-box; /* Include padding in width */
         }
 
         .chart-container iframe {
             width: 1px;
             min-width: 100%;
             border: none;
+            height: 450px; /* Standardize iframe height a bit more */
         }
 
         .key-stat {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            font-family: var(--nyt-font-serif); /* Changed to serif for readability in body text */
+            font-size: 1.2rem; /* Slightly larger key stats */
+            line-height: 1.7;
+            margin-bottom: 1.8rem;
+            font-weight: 400;
         }
+        .key-stat strong {
+            font-weight: 700; /* Bold for emphasis within key stats */
+            color: var(--nyt-blue);
+        }
+
 
         .footer {
             background: white;
-            padding: 2rem;
+            padding: 3rem; /* More padding */
             text-align: center;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border-color);
+            margin-top: 5rem; /* More space before footer */
+            border-top: 1px solid var(--nyt-border);
+            color: var(--nyt-text-light);
+            font-size: 0.95rem;
         }
 
         .footer a {
-            color: var(--primary-color);
+            color: var(--nyt-blue);
             text-decoration: none;
         }
 
@@ -116,6 +136,7 @@
 
         .data-links {
             padding: 1rem 0;
+            font-family: var(--nyt-font-sans-serif); /* Sans-serif for links */
         }
 
         .data-links ul {
@@ -129,33 +150,99 @@
         }
 
         .data-links a {
-            color: var(--primary-color);
+            color: var(--nyt-blue);
             text-decoration: none;
             display: inline-block;
             padding: 0.5rem 0;
+            font-weight: 700; /* Make data links stand out */
         }
 
         .data-links a:hover {
-            text-decoration: underline;
+            text_decoration: underline;
         }
 
         .update-info {
-            color: #666;
+            font-family: var(--nyt-font-sans-serif);
+            color: var(--nyt-text-light);
             font-style: italic;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+
+        /* Specific styles for the "Informazioni" section text */
+        .section p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Adjustments for the info table you previously had, assuming it's dynamic */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-family: var(--nyt-font-serif); /* Match body text */
+        }
+
+        table td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--nyt-border);
+            font-size: 1.05rem;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table td:first-child {
+            font-weight: 700; /* Bold for labels in the table */
+            color: var(--nyt-text-dark);
+            width: 60%; /* Give more space to the label */
+        }
+        table td:last-child {
+            text-align: right; /* Align values to the right */
+        }
+        table b {
+            font-weight: 700;
+            color: var(--nyt-blue);
         }
 
         @media (max-width: 768px) {
             .header {
-                padding: 2rem 1rem;
+                padding: 2.5rem 1rem;
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
             }
 
             .section {
-                padding: 1.5rem;
+                padding: 1.5rem 0; /* Adjust padding for mobile */
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .key-stat {
+                font-size: 1.05rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .chart-container iframe {
+                height: 350px; /* Adjust height for smaller screens */
+            }
+
+            .footer {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -167,8 +254,6 @@
         <p>Un'analisi dei dati del Ministero della Giustizia</p>
         <p class="update-info">Ultimo aggiornamento: <span id="last-update-istituti"></span></p>
     </header>
-
-
 
     <main class="container">
 
@@ -190,23 +275,43 @@
                 si consiglia di esercitare cautela. Prima di utilizzarli poi è sempre una buona prassi e effettuare
                 verifiche a campione per garantirne l'integrità.<br>Se i grafici non fossero aggiornati all'ultima data
                 disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla
-                pagina si trovano i link ai dataset, questi sì costantemente aggiornati.</p>
+                pagina si trovano i link ai dataset, questi sì, costantemente aggiornati.</p>
 
         </section>
-
-        <!-- <section class="section">
-            <div class="responsive-iframe-container">
-                <iframe src="carusel.html" frameborder="0" scrolling="no" height="400"></iframe>
-
-
-
-            </div>
-        </section> -->
 
         <section class="section">
-            <h2 class="section-title">Panoramica Attuale</h2>
-            <div class="key-stat" id="total-detainees"></div>
+            <h2 class="section-title">Riepilogo Dati Chiave</h2>
+            <table>
+                <tr>
+                    <td>Tasso di affollamento:</td>
+                    <td id="table-tasso-affollamento"><b></b></td>
+                </tr>
+                <tr>
+                    <td>Totale detenuti:</td>
+                    <td id="table-totale-detenuti"></td>
+                </tr>
+                <tr>
+                    <td>Posti regolamentari:</td>
+                    <td id="table-posti-regolamentari"></td>
+                </tr>
+                <tr>
+                    <td>Posti disponibili:</td>
+                    <td id="table-posti-disponibili"></td>
+                </tr>
+                <tr>
+                    <td>Posti non disponibili:</td>
+                    <td id="table-posti-non-disponibili"></td>
+                </tr>
+            </table>
+            <br>
+            <p class="update-info">Ultimo aggiornamento popolazione carceraria: <span id="last-update-popolazione"></span></p>
         </section>
+
+
+        <!-- <section class="section">
+            <h2 class="section-title">Panoramica Attuale</h2>
+            <p class="key-stat" id="total-detainees"></p>
+        </section> -->
 
         <section class="section">
             <h2 class="section-title">Popolazione Carceraria e Capacità</h2>
@@ -227,8 +332,8 @@
 
         <section class="section">
             <h2 class="section-title">Situazione Critica</h2>
-            <div class="key-stat" id="overcrowded-prisons-count"></div>
-            <div class="key-stat" id="highest-overcrowding"></div>
+            <p class="key-stat" id="overcrowded-prisons-count"></p>
+            <p class="key-stat" id="highest-overcrowding"></p>
         </section>
 
         <section class="section">
@@ -239,17 +344,16 @@
             </div>
         </section>
 
-
         <section class="section">
             <h2 class="section-title">Carenza di Personale</h2>
-            <p> In diversi istituti penitenziari grafico il problema del sovraffollamento carcerario è reso peggiore
+            <p> In diversi istituti penitenziari il problema del sovraffollamento carcerario è reso peggiore
                 dalla mancanza di personale di polizia penitenziaria, che esaspera e peggiora le condizioni all'interno
                 dell'istituto. Il grafico seguente mostra le carceri con un'alto indice di sovraffollamento reale (>
-                130%) e un'alta carenza di personale (> 20 %).</p>
+                120%) e un'alta carenza di personale (> 20 %).</p>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Istituti sovraffollati e sotto organico.</h2>
+            <h2 class="section-title">Istituti sovraffollati e sotto organico</h2>
             <div class="chart-container">
                 <iframe title="Sovraffollati e sotto organico" aria-label="Grafico a dispersione"
                     id="datawrapper-chart-ZpY4p" src="https://datawrapper.dwcdn.net/ZpY4p/17/" scrolling="no"
@@ -257,9 +361,8 @@
             </div>
         </section>
 
-
         <section class="section">
-            <h2 class="section-title">Consulta i dati</h2>
+            <h2 class="section-title">Consulta i dati: Le Carceri più Sovraffollate d'Italia</h2>
             <div class="chart-container">
                 <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa"
                     src="https://datawrapper.dwcdn.net/AVjKa/6/" scrolling="no" frameborder="0" style="border: none;"
@@ -267,7 +370,7 @@
             </div>
         </section>
         <section class="section">
-            <h2 class="section-title"></h2>
+            <h2 class="section-title">Consulta i dati: Mancanza di servizi</h2>
             <div class="chart-container">
                 <iframe title="Mancanza di servizi" aria-label="Table" id="datawrapper-chart-asQNh"
                     src="https://datawrapper.dwcdn.net/asQNh/6/" scrolling="no" frameborder="0" style="border: none;"
@@ -336,10 +439,10 @@
         });
 
         async function fetchData() {
-            // Your existing fetchData function remains the same
+            // Fetch institutes_most_recent.csv for general updates and highest overcrowding
             const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
             const headers3 = recentInstitutesRows[0].split(',');
-            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(',');
+            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 2].split(','); // Assuming last row might be empty, so -2
 
             const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('dati aggiornati al')];
             const formattedDate2 = formatDate(lastUpdateInstitutes);
@@ -364,22 +467,42 @@
 
             const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 0 });
 
-            // Update the DOM
+            // Update the DOM for header and "Situazione Critica" section
             document.getElementById('last-update-istituti').textContent = formattedDate2;
-            document.getElementById('highest-overcrowding').textContent = `La situazione più grave si registra a ${highestAffollamentoNome}, dove il sovraffollamento è del ${formattedHighestAffollamento}%.`;
-            document.getElementById('overcrowded-prisons-count').textContent = `In ${overcrowdedPrisonCount} istituti penitenziari il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
+            document.getElementById('highest-overcrowding').innerHTML = `La situazione più grave si registra a <strong>${highestAffollamentoNome}</strong>, dove il sovraffollamento è del <strong>${formattedHighestAffollamento}%</strong>.`;
+            document.getElementById('overcrowded-prisons-count').innerHTML = `In <strong>${overcrowdedPrisonCount} istituti penitenziari</strong> il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
 
-            // Fetch institutes totals
-            const institutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
-            const headers2 = institutesRows[0].split(',');
-            const lastInstituteRow = institutesRows[institutesRows.length - 1].split(',');
 
-            const latestOvercrowdingRate = parseFloat(lastInstituteRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
-            const unavailablePlaces = parseInt(lastInstituteRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
-            const totalDetainees = parseInt(lastInstituteRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
-            const availablePlacesRecent = parseInt(lastInstituteRow[headers2.indexOf('posti regolamentari')], 10).toLocaleString('it-IT');
+            // Fetch institutes_totals.csv for "Panoramica Attuale" and "Riepilogo Dati Chiave" table
+            const institutesTotalsRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
+            const headers2 = institutesTotalsRows[0].split(',');
+            const lastInstituteTotalRow = institutesTotalsRows[institutesTotalsRows.length - 1].split(','); // Assuming last row is the latest total
 
-            document.getElementById('total-detainees').textContent = `Al ${formattedDate2}, in Italia sono ${totalDetainees} le persone detenute, a fronte di una capienza regolamentare di ${availablePlacesRecent} posti. Di questi, però, ${unavailablePlaces} posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del ${latestOvercrowdingRate}%.`;
+            // Extract values for "Panoramica Attuale" AND "Riepilogo Dati Chiave" table
+            const latestOvercrowdingRate = parseFloat(lastInstituteTotalRow[headers2.indexOf('tasso di affollamento')]).toLocaleString('it-IT', { minimumFractionDigits: 0 });
+            const unavailablePlaces = parseInt(lastInstituteTotalRow[headers2.indexOf('posti non disponibili')], 10).toLocaleString('it-IT');
+            const totalDetainees = parseInt(lastInstituteTotalRow[headers2.indexOf('totale detenuti')], 10).toLocaleString('it-IT');
+            const availablePlacesRecent = parseInt(lastInstituteTotalRow[headers2.indexOf('posti regolamentari')], 10).toLocaleString('it-IT');
+            const availablePlaces = parseInt(lastInstituteTotalRow[headers2.indexOf('posti disponibili')], 10).toLocaleString('it-IT'); // New: Extract 'posti disponibili'
+
+            const datiAggiornatiAl = lastInstituteTotalRow[headers2.indexOf('dati aggiornati al')];
+            const formattedDatiAggiornatiAl = formatDate(datiAggiornatiAl);
+
+
+            // Update "Panoramica Attuale"
+            document.getElementById('total-detainees').innerHTML = `Al <strong>${formattedDatiAggiornatiAl}</strong>, in Italia sono <strong>${totalDetainees}</strong> le persone detenute, a fronte di una capienza regolamentare di <strong>${availablePlacesRecent}</strong> posti. Di questi, però, <strong>${unavailablePlaces}</strong> posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del <strong>${latestOvercrowdingRate}%</strong>.`;
+
+            // --- Update the "Riepilogo Dati Chiave" table in the DOM ---
+            document.getElementById('table-tasso-affollamento').innerHTML = `<b>${latestOvercrowdingRate}%</b>`;
+            document.getElementById('table-totale-detenuti').textContent = totalDetainees;
+            document.getElementById('table-posti-regolamentari').textContent = availablePlacesRecent;
+            document.getElementById('table-posti-disponibili').textContent = availablePlaces; // Populate new field
+            document.getElementById('table-posti-non-disponibili').textContent = unavailablePlaces; // Populate new field
+
+            // Update the last update date for the table
+            document.getElementById('last-update-popolazione').textContent = formattedDatiAggiornatiAl;
+            // Removed: document.getElementById('last-update-personale').textContent = formattedTablePersonalePoliziaPenitenziariaAggiornatoAl;
+            // Removed: tablePoliziaPenitenziariaMancantePercentuale, _Previsti, _Mancante as they are not sourced from institutes_totals.csv
         }
 
         window.onload = fetchData;
