@@ -265,17 +265,17 @@
             position: relative;
             width: 100%;
             margin: 2rem 0;
-            background: white;
-            border: 1px solid rgba(0,0,0,0.06);
-            border-radius: 3px;
+            background: transparent;
+            border: none;
+            border-radius: 0;
             overflow: hidden;
         }
 
         .chart-container::before {
             content: '';
             display: block;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--alert));
+            height: 2px;
+            background: var(--paper-warm);
         }
 
         .chart-container iframe {
@@ -619,6 +619,7 @@
                 <p>Se i grafici non fossero aggiornati all'ultima data
                     disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla
                     pagina si trovano i link ai dataset, questi sì, costantemente aggiornati.</p>
+                <p>Se trovi che questo progetto sia utile, considera la possibilità di <a href="https://www.buymeacoffee.com/marcodallastella">offrirmi un caffè.</a></p>
             </div>
         </section>
 
