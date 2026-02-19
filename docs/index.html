@@ -6,244 +6,534 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sovraffollamento Carcerario in Italia | Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* General NYT-inspired variables */
         :root {
-            --nyt-blue: #1a437c; /* A deep blue for accents */
-            --nyt-text-dark: #333;
-            --nyt-text-light: #666;
-            --nyt-background: #fdfdfc; /* Off-white, slightly warmer */
-            --nyt-border: #e0e0e0; /* Lighter border color */
-            --nyt-font-serif: 'Georgia', serif;
-            --nyt-font-sans-serif: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
-            /* Using Libre Franklin for body/headlines as a good open-source alternative to Franklin Gothic */
+            --ink: #0a0a0f;
+            --ink-soft: #1a1a24;
+            --ink-muted: #2a2a38;
+            --slate: #8a8a9a;
+            --silver: #b8b8c8;
+            --paper: #f0efe8;
+            --paper-warm: #e8e7e0;
+            --cream: #faf9f4;
+            --alert: #c0392b;
+            --alert-light: #e74c3c;
+            --alert-bg: rgba(192, 57, 43, 0.08);
+            --accent: #1a5276;
+            --accent-light: #2980b9;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
         }
+
+        * { box-sizing: border-box; }
 
         body {
-            font-family: var(--nyt-font-serif); /* Serif for body text */
-            line-height: 1.6;
-            color: var(--nyt-text-dark);
-            background-color: var(--nyt-background);
+            font-family: var(--font-body);
+            line-height: 1.65;
+            color: var(--ink);
+            background-color: var(--cream);
             margin: 0;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .header {
-            background: white;
-            padding: 4rem 1rem; /* More vertical padding */
-            text-align: center;
-            border-bottom: 1px solid var(--nyt-border); /* Subtle header separator */
-            box-shadow: none; /* Remove harsh shadow */
+        /* ─── HERO ─── */
+        .hero {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 5rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .header h1 {
-            font-family: var(--nyt-font-sans-serif); /* Sans-serif for main headline */
-            font-weight: 700; /* Bold */
-            font-size: 3.2rem; /* Larger headline */
-            margin-bottom: 0.8rem;
-            color: var(--nyt-text-dark);
-            line-height: 1.1; /* Tighter line height for headlines */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    rgba(255,255,255,0.02) 39px,
+                    rgba(255,255,255,0.02) 40px
+                );
+            pointer-events: none;
         }
 
-        .header p {
-            font-family: var(--nyt-font-sans-serif); /* Sans-serif for sub-headline */
-            font-size: 1.25rem; /* Slightly larger sub-headline */
-            color: var(--nyt-text-light);
-            margin: 0;
-        }
-
-        .container {
-            max-width: 900px; /* Slightly narrower for a more article-like column */
+        .hero-inner {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 3rem 1.5rem; /* More padding */
+            position: relative;
+            z-index: 1;
         }
 
-        /* --- Section Styling: No more boxes --- */
+        .hero-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--alert-light);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .hero-label::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--alert);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            line-height: 1.1;
+            margin: 0 0 1.2rem 0;
+            color: white;
+            max-width: 700px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--silver);
+            margin: 0 0 2.5rem 0;
+            max-width: 550px;
+            line-height: 1.6;
+        }
+
+        .hero-meta {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--slate);
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* ─── STAT STRIP ─── */
+        .stat-strip {
+            background: var(--ink-soft);
+            border-top: 1px solid var(--ink-muted);
+            padding: 0 2rem;
+        }
+
+        .stat-strip-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0;
+        }
+
+        .stat-card {
+            padding: 2rem 1.5rem;
+            border-right: 1px solid var(--ink-muted);
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeUp 0.5s ease forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .stat-card:last-child { border-right: none; }
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+        .stat-card:nth-child(4) { animation-delay: 0.4s; }
+        .stat-card:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stat-label {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 0.5rem;
+            min-height: 2.2em;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 1.9rem;
+            color: white;
+            line-height: 1.1;
+            margin-top: auto;
+        }
+
+        .stat-value.alert {
+            color: var(--alert-light);
+        }
+
+        .stat-update {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0.8rem 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--slate);
+            border-top: 1px solid var(--ink-muted);
+        }
+
+        /* ─── MAIN CONTENT ─── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ─── SECTIONS ─── */
         .section {
-            background: none; /* Remove background color */
-            border-radius: 0; /* Remove border-radius */
-            padding: 2.5rem 0; /* Keep horizontal padding, adjust vertical */
-            margin-bottom: 2.5rem; /* Space between sections */
-            box-shadow: none; /* Remove shadow */
-            border-bottom: 1px solid var(--nyt-border); /* Subtle separator for each section */
+            padding: 3.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
         }
 
-        /* Remove bottom border from the last section to avoid double border with footer */
         .section:last-of-type {
             border-bottom: none;
-            margin-bottom: 0; /* Adjust margin if last section should not have extra space */
         }
-        /* --- End Section Styling --- */
 
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-number {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            color: var(--slate);
+            flex-shrink: 0;
+        }
 
         .section-title {
-            font-family: var(--nyt-font-sans-serif); /* Sans-serif for section titles */
-            font-weight: 700;
-            font-size: 1.8rem; /* Larger section titles */
-            color: var(--nyt-blue); /* NYT blue for titles */
-            margin: 0 0 1.8rem 0;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid var(--nyt-border); /* More pronounced separator */
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin: 0;
+            line-height: 1.2;
         }
 
+        .section p {
+            font-size: 1rem;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            max-width: 680px;
+        }
+
+        .section p a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-light);
+            transition: border-color 0.2s;
+        }
+
+        .section p a:hover {
+            border-bottom-color: var(--alert);
+            color: var(--alert);
+        }
+
+        /* ─── CHART CONTAINERS ─── */
         .chart-container {
             position: relative;
             width: 100%;
             margin: 2rem 0;
-            background: #f8f8f8; /* Slight background for charts */
-            padding: 1rem; /* Padding around charts */
-            box-sizing: border-box; /* Include padding in width */
+            background: white;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chart-container::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--alert));
         }
 
         .chart-container iframe {
             width: 1px;
             min-width: 100%;
             border: none;
-            height: 450px; /* Standardize iframe height a bit more */
+            height: 450px;
+            display: block;
         }
 
-        .key-stat {
-            font-family: var(--nyt-font-serif); /* Changed to serif for readability in body text */
-            font-size: 1.2rem; /* Slightly larger key stats */
+        /* ─── CRITICAL SITUATION CALLOUT ─── */
+        .callout {
+            background: var(--alert-bg);
+            border-left: 3px solid var(--alert);
+            padding: 2rem 2rem 2rem 2.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            font-size: 1.05rem;
             line-height: 1.7;
-            margin-bottom: 1.8rem;
-            font-weight: 400;
-        }
-        .key-stat strong {
-            font-weight: 700; /* Bold for emphasis within key stats */
-            color: var(--nyt-blue);
+            margin: 0 0 1rem 0;
+            color: var(--ink);
+            max-width: none;
         }
 
+        .callout p:last-child { margin-bottom: 0; }
 
-        .footer {
-            background: white;
-            padding: 3rem; /* More padding */
-            text-align: center;
-            margin-top: 5rem; /* More space before footer */
-            border-top: 1px solid var(--nyt-border);
-            color: var(--nyt-text-light);
-            font-size: 0.95rem;
+        .callout strong {
+            color: var(--alert);
+            font-weight: 600;
         }
 
-        .footer a {
-            color: var(--nyt-blue);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .data-links {
-            padding: 1rem 0;
-            font-family: var(--nyt-font-sans-serif); /* Sans-serif for links */
-        }
-
-        .data-links ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .data-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .data-links a {
-            color: var(--nyt-blue);
-            text-decoration: none;
-            display: inline-block;
-            padding: 0.5rem 0;
-            font-weight: 700; /* Make data links stand out */
-        }
-
-        .data-links a:hover {
-            text_decoration: underline;
-        }
-
-        .update-info {
-            font-family: var(--nyt-font-sans-serif);
-            color: var(--nyt-text-light);
-            font-style: italic;
+        /* ─── DATA LINKS ─── */
+        .download-grid {
+            display: grid;
+            gap: 1rem;
             margin-top: 1.5rem;
-            font-size: 1rem;
         }
 
-        /* Specific styles for the "Informazioni" section text */
-        .section p {
+        .download-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 3px;
+            text-decoration: none;
+            color: var(--ink);
+            transition: all 0.2s ease;
+        }
+
+        .download-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transform: translateY(-1px);
+        }
+
+        .download-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--ink);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .download-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .download-text {
+            flex: 1;
+        }
+
+        .download-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .download-desc {
+            font-size: 0.75rem;
+            color: var(--slate);
+            font-family: var(--font-mono);
+        }
+
+        /* ─── INFO TOGGLE ─── */
+        .info-toggle {
+            background: none;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 3px;
+            padding: 0.7rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
             margin-bottom: 1.5rem;
         }
 
-        /* Adjustments for the info table you previously had, assuming it's dynamic */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-            font-family: var(--nyt-font-serif); /* Match body text */
+        .info-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
-        table td {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--nyt-border);
-            font-size: 1.05rem;
+        .info-toggle .arrow {
+            transition: transform 0.3s;
+            font-size: 0.7rem;
         }
 
-        table tr:last-child td {
-            border-bottom: none;
+        .info-toggle.open .arrow {
+            transform: rotate(180deg);
         }
 
-        table td:first-child {
-            font-weight: 700; /* Bold for labels in the table */
-            color: var(--nyt-text-dark);
-            width: 60%; /* Give more space to the label */
-        }
-        table td:last-child {
-            text-align: right; /* Align values to the right */
-        }
-        table b {
-            font-weight: 700;
-            color: var(--nyt-blue);
+        .info-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
         }
 
+        .info-content.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        .info-content p {
+            font-size: 0.9rem;
+            color: var(--slate);
+            line-height: 1.8;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background: var(--ink);
+            color: var(--slate);
+            padding: 3.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--paper);
+            margin-bottom: 0.8rem;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin: 0.3rem 0;
+        }
+
+        .footer a {
+            color: var(--silver);
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink-muted);
+            transition: all 0.2s;
+        }
+
+        .footer a:hover {
+            color: white;
+            border-bottom-color: var(--silver);
+        }
+
+        .footer-support {
+            text-align: right;
+        }
+
+        .coffee-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--ink-muted);
+            border-radius: 3px;
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: var(--font-body);
+            transition: all 0.2s;
+        }
+
+        .coffee-btn:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--silver);
+            color: white;
+        }
+
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 768px) {
-            .header {
-                padding: 2.5rem 1rem;
+            .hero { padding: 3.5rem 1.5rem 3rem; }
+            .hero h1 { font-size: 2.2rem; }
+
+            .stat-strip-inner {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .header h1 {
-                font-size: 2.5rem;
+            .stat-card {
+                padding: 1.2rem 1rem;
             }
 
-            .header p {
-                font-size: 1.1rem;
+            .stat-card:nth-child(odd) { border-right: 1px solid var(--ink-muted); }
+            .stat-card:nth-child(even) { border-right: none; }
+            .stat-card:nth-child(5) { border-right: none; }
+
+            .stat-value { font-size: 1.5rem; }
+
+            .container { padding: 0 1.5rem; }
+            .section { padding: 2.5rem 0; }
+            .section-title { font-size: 1.4rem; }
+
+            .chart-container iframe { height: 350px; }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
             }
 
-            .container {
-                padding: 2rem 1rem;
+            .footer-support { text-align: left; }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-strip-inner {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .section {
-                padding: 1.5rem 0; /* Adjust padding for mobile */
-                margin-bottom: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .key-stat {
-                font-size: 1.05rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .chart-container iframe {
-                height: 350px; /* Adjust height for smaller screens */
-            }
-
-            .footer {
-                padding: 2rem 1rem;
-            }
+            .stat-card { padding: 1rem 0.8rem; }
+            .stat-value { font-size: 1.3rem; }
+            .stat-label { font-size: 0.55rem; }
         }
     </style>
 </head>
@@ -253,71 +543,103 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MSZ7RZTEBS');
 </script>
 <body>
-    <header class="header">
-        <h1>Il Sovraffollamento Carcerario in Italia</h1>
-        <p>Un'analisi dei dati del Ministero della Giustizia</p>
-        <p class="update-info">Ultimo aggiornamento: <span id="last-update-istituti"></span></p>
+
+    <!-- ─── HERO ─── -->
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-label">Monitoraggio in tempo reale</div>
+            <h1>Il Sovraffollamento Carcerario in Italia</h1>
+            <p class="hero-subtitle">Un'analisi quotidiana dei dati del Ministero della Giustizia sulle condizioni di detenzione negli istituti penitenziari italiani.</p>
+            <div class="hero-meta">
+                <span>Dati aggiornati al: <strong id="last-update-istituti" style="color:var(--silver)"></strong></span>
+                <span>Fonte: Ministero della Giustizia</span>
+            </div>
+        </div>
     </header>
 
+    <!-- ─── STAT STRIP ─── -->
+    <div class="stat-strip">
+        <div class="stat-strip-inner">
+            <div class="stat-card">
+                <div class="stat-label">Tasso di affollamento</div>
+                <div class="stat-value alert" id="stat-tasso"></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Totale detenuti</div>
+                <div class="stat-value" id="stat-detenuti"></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Posti regolamentari</div>
+                <div class="stat-value" id="stat-regolamentari"></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Posti disponibili</div>
+                <div class="stat-value" id="stat-disponibili"></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Posti non disponibili</div>
+                <div class="stat-value" id="stat-non-disponibili"></div>
+            </div>
+        </div>
+        <div class="stat-update">
+            Ultimo aggiornamento popolazione carceraria: <span id="last-update-popolazione"></span>
+        </div>
+    </div>
+
+    <!-- ─── MAIN CONTENT ─── -->
     <main class="container">
 
+        <!-- ABOUT / INFO (collapsible) -->
         <section class="section">
-            <h2 class="section-title">Informazioni</h2>
-            <p>Questa pagina è un progetto di <a href="www.marcodallastella.com">Marco Dalla Stella</a>,
-                giornalista specializzato in dati.<br> La pagina viene aggiornata quotidianamente grazie a un programma
-                (tecnicamente uno scraper), il cui codice è disponibile <a
-                    href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>. I dati provengono
-                dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di
+            <div class="section-header">
+                <span class="section-number">00</span>
+                <h2 class="section-title">Informazioni</h2>
+            </div>
+            <button class="info-toggle" onclick="toggleInfo()" id="info-btn">
+                Metodologia e fonti <span class="arrow">▼</span>
+            </button>
+            <div class="info-content" id="info-content">
+                <p>Questa pagina è un progetto di <a href="https://marcodallastella.github.io/">Marco Dalla Stella</a>,
+                    giornalista specializzato in dati. La pagina viene aggiornata quotidianamente grazie a un programma
+                    (tecnicamente uno scraper), il cui codice è disponibile <a
+                        href="https://github.com/marcodallastella/sovraffollamento_carcerario">qui</a>.</p>
+                <p>I dati provengono dalle 190 <a href="https://www.giustizia.it/giustizia/page/it/istituti_penitenziari">schede di
                     trasparenza degli istituti penitenziari italiani</a>, che vengono aggiornate con maggiore frequenza
-                rispetto ai <a
-                    href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini
+                    rispetto ai <a href="https://www.giustizia.it/giustizia/it/mg_1_14_1.page?contentId=SST1428284">bollettini
                     mensili</a> e contengono informazioni aggiuntive, come i posti non disponibili, che consentono di
-                calcolare il sovraffollamento reale. Al momento del lancio (ottobre 2024), lo scraper estrae con
-                successo i dati, che sono stati verificati a campione. Tuttavia, trattandosi di un processo automatico,
-                potrebbero verificarsi errori, soprattutto qualora il Ministero modifichi il codice delle pagine
-                contenenti le informazioni o aggiorni i dati in modo non uniforme. In caso di significativi scostamenti,
-                si consiglia di esercitare cautela. Prima di utilizzarli poi è sempre una buona prassi e effettuare
-                verifiche a campione per garantirne l'integrità.<br>Se i grafici non fossero aggiornati all'ultima data
-                disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla
-                pagina si trovano i link ai dataset, questi sì, costantemente aggiornati.</p>
-
+                    calcolare il sovraffollamento reale.</p>
+                <p>Al momento del lancio (ottobre 2024), lo scraper estrae con
+                    successo i dati, che sono stati verificati a campione. Tuttavia, trattandosi di un processo automatico,
+                    potrebbero verificarsi errori, soprattutto qualora il Ministero modifichi il codice delle pagine
+                    contenenti le informazioni o aggiorni i dati in modo non uniforme. In caso di significativi scostamenti,
+                    si consiglia di esercitare cautela.</p>
+                <p>Se i grafici non fossero aggiornati all'ultima data
+                    disponibile, ciò potrebbe dipendere dai server di Datawrapper dove questi sono ospitati. In fondo alla
+                    pagina si trovano i link ai dataset, questi sì, costantemente aggiornati.</p>
+            </div>
         </section>
 
+        <!-- CRITICAL SITUATION -->
         <section class="section">
-            <h2 class="section-title">Riepilogo Dati Chiave</h2>
-            <table>
-                <tr>
-                    <td>Tasso di affollamento:</td>
-                    <td id="table-tasso-affollamento"><b></b></td>
-                </tr>
-                <tr>
-                    <td>Totale detenuti:</td>
-                    <td id="table-totale-detenuti"></td>
-                </tr>
-                <tr>
-                    <td>Posti regolamentari:</td>
-                    <td id="table-posti-regolamentari"></td>
-                </tr>
-                <tr>
-                    <td>Posti disponibili:</td>
-                    <td id="table-posti-disponibili"></td>
-                </tr>
-                <tr>
-                    <td>Posti non disponibili:</td>
-                    <td id="table-posti-non-disponibili"></td>
-                </tr>
-            </table>
-            <br>
-            <p class="update-info">Ultimo aggiornamento popolazione carceraria: <span id="last-update-popolazione"></span></p>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Situazione Critica</h2>
+            </div>
+            <div class="callout">
+                <p id="overcrowded-prisons-count"></p>
+                <p id="highest-overcrowding"></p>
+            </div>
         </section>
 
-
+        <!-- POPULATION & CAPACITY -->
         <section class="section">
-            <h2 class="section-title">Popolazione Carceraria e Capacità</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Popolazione Carceraria e Capacità</h2>
+            </div>
             <div class="chart-container">
                 <iframe title="Popolazione detenuta e capienza regolamentare" aria-label="Grafico"
                     id="datawrapper-chart-yCRHI" src="https://datawrapper.dwcdn.net/yCRHI" scrolling="no"
@@ -325,38 +647,38 @@
             </div>
         </section>
 
+        <!-- OVERCROWDING RATE -->
         <section class="section">
-            <h2 class="section-title">Tasso di Affollamento</h2>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Tasso di Affollamento</h2>
+            </div>
             <div class="chart-container">
                 <iframe title="Tasso di affollamento" aria-label="Grafico" id="datawrapper-chart-q7smz"
                     src="https://datawrapper.dwcdn.net/q7smz/13/" scrolling="no" frameborder="0"></iframe>
             </div>
         </section>
 
+        <!-- GEOGRAPHIC DISTRIBUTION -->
         <section class="section">
-            <h2 class="section-title">Situazione Critica</h2>
-            <p class="key-stat" id="overcrowded-prisons-count"></p>
-            <p class="key-stat" id="highest-overcrowding"></p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Distribuzione Geografica</h2>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Distribuzione Geografica</h2>
+            </div>
             <div class="chart-container">
                 <iframe title="L'affollamento carcerario in Italia" aria-label="Mappa" id="datawrapper-chart-LfHlU"
                     src="https://datawrapper.dwcdn.net/LfHlU/13/" scrolling="no" frameborder="0"></iframe>
             </div>
         </section>
 
+        <!-- STAFFING -->
         <section class="section">
-            <h2 class="section-title">Carenza di Personale</h2>
-            <p> In diversi istituti penitenziari il problema del sovraffollamento carcerario è reso peggiore
-                dalla mancanza di personale di polizia penitenziaria, che esaspera e peggiora le condizioni all'interno
-                dell'istituto. Il grafico seguente mostra le carceri con un'alto indice di sovraffollamento reale (>
-                120%) e un'alta carenza di personale (> 20 %).</p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Istituti sovraffollati e sotto organico</h2>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Sovraffollati e sotto organico</h2>
+            </div>
+            <p>In diversi istituti penitenziari il problema del sovraffollamento è reso peggiore
+                dalla mancanza di personale di polizia penitenziaria. Il grafico seguente mostra le carceri con un alto indice di sovraffollamento reale (&gt; 120%) e un'alta carenza di personale (&gt; 20%).</p>
             <div class="chart-container">
                 <iframe title="Sovraffollati e sotto organico" aria-label="Grafico a dispersione"
                     id="datawrapper-chart-ZpY4p" src="https://datawrapper.dwcdn.net/ZpY4p/17/" scrolling="no"
@@ -364,16 +686,24 @@
             </div>
         </section>
 
+        <!-- DATA TABLES -->
         <section class="section">
-            <h2 class="section-title">Consulta i dati: Le Carceri più Sovraffollate d'Italia</h2>
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Le Carceri più Sovraffollate d'Italia</h2>
+            </div>
             <div class="chart-container">
                 <iframe title="Le Carceri più Sovraffollate d'Italia" aria-label="Tabella" id="datawrapper-chart-AVjKa"
                     src="https://datawrapper.dwcdn.net/AVjKa/6/" scrolling="no" frameborder="0" style="border: none;"
                     width="600" height="988" data-external="1"></iframe>
             </div>
         </section>
+
         <section class="section">
-            <h2 class="section-title">Consulta i dati: Mancanza di servizi</h2>
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Mancanza di Servizi</h2>
+            </div>
             <div class="chart-container">
                 <iframe title="Mancanza di servizi" aria-label="Table" id="datawrapper-chart-asQNh"
                     src="https://datawrapper.dwcdn.net/asQNh/6/" scrolling="no" frameborder="0" style="border: none;"
@@ -381,57 +711,75 @@
             </div>
         </section>
 
+        <!-- DOWNLOAD -->
         <section class="section">
-            <h2 class="section-title">Download dei Dati</h2>
-            <div class="data-links">
-                <ul>
-                    <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv"
-                            target="_blank">Dati schede trasparenza istituti penitenziari</a> (da 5 ottobre 2024)</li>
-                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv"
-                            target="_blank">Dati schede trasparenza istituti penitenziari, totali giornalieri</a> (da 5
-                        ottobre 2024)</li>
-                    <!-- <li><a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/bulletines.csv"
-                            target="_blank">Dati bollettini mensili, per istituto penitenziario</a> (da gennaio 2019)
-                    </li>
-                    <li><a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/bulletines_totals.csv"
-                            target="_blank">Dati bollettini mensili, totali mensili</a> (da gennaio 2019)</li>
-                </ul> -->
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Download dei Dati</h2>
+            </div>
+            <div class="download-grid">
+                <a href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv"
+                    target="_blank" class="download-item">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div class="download-text">
+                        <div class="download-title">Schede trasparenza istituti penitenziari</div>
+                        <div class="download-desc">CSV · Da 5 ottobre 2024</div>
+                    </div>
+                </a>
+                <a href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/viz/institutes_totals.csv"
+                    target="_blank" class="download-item">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div class="download-text">
+                        <div class="download-title">Totali giornalieri</div>
+                        <div class="download-desc">CSV · Da 5 ottobre 2024</div>
+                    </div>
+                </a>
             </div>
         </section>
+
     </main>
 
+    <!-- ─── FOOTER ─── -->
     <footer class="footer">
-        <p>Progetto a cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a></p>
-        <p>Il codice è disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding"
-                target="_blank">GitHub</a></p>
-        <p>Per suggerimenti, critiche o osservazioni: <a href="mailto:mdallastella@proton.me">mdallastella@proton.me</a>
-        </p>
-        <p>Se pensi che questo progetto sia utile, considera la possibilità di <a
-                href="https://www.buymeacoffee.com/marcodallastella" target="_blank">offrirmi un caffè</a></p>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">Sovraffollamento Carcerario</div>
+                <p>Progetto a cura di <a href="https://marcodallastella.github.io/" target="_blank">Marco Dalla Stella</a></p>
+                <p>Codice disponibile su <a href="https://github.com/marcodallastella/prison_overcrowding" target="_blank">GitHub</a></p>
+                <p>Contatto: <a href="mailto:mdallastella@proton.me">mdallastella@proton.me</a></p>
+            </div>
+            <div class="footer-support">
+                <a href="https://www.buymeacoffee.com/marcodallastella" target="_blank" class="coffee-btn">
+                    ☕ Offrimi un caffè
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script>
+        function toggleInfo() {
+            const content = document.getElementById('info-content');
+            const btn = document.getElementById('info-btn');
+            content.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
         async function fetchCSV(url) {
             const response = await fetch(url);
             const data = await response.text();
-            // Filter out empty rows to prevent issues with last line
             return data.split('\n').map(row => row.trim()).filter(row => row !== '');
         }
 
         function formatDate(dateString, locale = 'it-IT') {
-            if (!dateString) {
-                console.error('Invalid date string:', dateString);
-                return '';
-            }
-            // Use a try-catch block for robust date parsing, especially if format varies
+            if (!dateString) return '';
             try {
                 const [year, month, day] = dateString.split('-');
                 const date = new Date(year, month - 1, day);
-                // Check if date is valid
-                if (isNaN(date.getTime())) {
-                    console.error('Parsed date is invalid:', dateString);
-                    return '';
-                }
+                if (isNaN(date.getTime())) return '';
                 return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
             } catch (error) {
                 console.error('Error formatting date:', dateString, error);
@@ -454,11 +802,10 @@
         });
 
         async function fetchData() {
-            // Fetch institutes_most_recent.csv for general updates and highest overcrowding
+            // Fetch institutes_most_recent.csv
             const recentInstitutesRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_most_recent.csv');
             const headers3 = recentInstitutesRows[0].split(',');
-            // Ensure we get the last actual data row, not an empty line
-            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 1].split(','); 
+            const lastRecentRow = recentInstitutesRows[recentInstitutesRows.length - 1].split(',');
 
             const lastUpdateInstitutes = lastRecentRow[headers3.indexOf('dati aggiornati al')];
             const formattedDate2 = formatDate(lastUpdateInstitutes);
@@ -467,44 +814,35 @@
             let highestAffollamentoNome = '';
             let overcrowdedPrisonCount = 0;
 
-            for (let i = 1; i < recentInstitutesRows.length; i++) { // Changed loop limit to `length` because `filter` removes empty rows
+            for (let i = 1; i < recentInstitutesRows.length; i++) {
                 const row = recentInstitutesRows[i].split(',');
                 const currentAffollamento = parseFloat(row[headers3.indexOf('tasso di affollamento')].replace(',', '.'));
 
-                if (!isNaN(currentAffollamento) && currentAffollamento > highestAffollamento) { // Add NaN check
+                if (!isNaN(currentAffollamento) && currentAffollamento > highestAffollamento) {
                     highestAffollamento = currentAffollamento;
                     highestAffollamentoNome = row[headers3.indexOf('nome istituto')];
                 }
 
-                if (!isNaN(currentAffollamento) && currentAffollamento >= 150) { // Add NaN check
+                if (!isNaN(currentAffollamento) && currentAffollamento >= 150) {
                     overcrowdedPrisonCount++;
                 }
             }
 
             const formattedHighestAffollamento = highestAffollamento.toLocaleString('it-IT', { minimumFractionDigits: 0 });
 
-            // Update the DOM for header and "Situazione Critica" section
             document.getElementById('last-update-istituti').textContent = formattedDate2;
             document.getElementById('highest-overcrowding').innerHTML = `La situazione più grave si registra a <strong>${highestAffollamentoNome}</strong>, dove il sovraffollamento è del <strong>${formattedHighestAffollamento}%</strong>.`;
-            document.getElementById('overcrowded-prisons-count').innerHTML = `In <strong>${overcrowdedPrisonCount} istituti penitenziari</strong> il tasso di affollamento è pari o superiore al 150% (tre persone ogni due posti disponibili).`;
+            document.getElementById('overcrowded-prisons-count').innerHTML = `In <strong>${overcrowdedPrisonCount} istituti penitenziari</strong> il tasso di affollamento è pari o superiore al 150% — tre persone per ogni due posti disponibili.`;
 
-
-            // Fetch institutes_totals.csv for "Panoramica Attuale" and "Riepilogo Dati Chiave" table
+            // Fetch institutes_totals.csv
             const institutesTotalsRows = await fetchCSV('https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/institutes_totals.csv');
             const headers2 = institutesTotalsRows[0].split(',');
-            // Ensure we get the last actual data row, not an empty line
-            const lastInstituteTotalRow = institutesTotalsRows[institutesTotalsRows.length - 1].split(','); 
+            const lastInstituteTotalRow = institutesTotalsRows[institutesTotalsRows.length - 1].split(',');
 
-            // Extract values for "Panoramica Attuale" AND "Riepilogo Dati Chiave" table
-            // Use a helper function for robust parsing and formatting
             const getParsedValue = (row, headers, columnName, type = 'string', decimalPlaces = 0) => {
                 const index = headers.indexOf(columnName);
-                if (index === -1 || !row[index]) {
-                    console.warn(`Column '${columnName}' not found or empty in row.`);
-                    return ''; // Return empty string or a default like 'N/A'
-                }
-                let value = row[index].replace(',', '.'); // Handle comma as decimal separator
-
+                if (index === -1 || !row[index]) return '';
+                let value = row[index].replace(',', '.');
                 if (type === 'float') {
                     value = parseFloat(value);
                     if (isNaN(value)) return '';
@@ -514,7 +852,7 @@
                     if (isNaN(value)) return '';
                     return value.toLocaleString('it-IT');
                 }
-                return row[index]; // Return as string if no specific type
+                return row[index];
             };
 
             const latestOvercrowdingRate = getParsedValue(lastInstituteTotalRow, headers2, 'tasso di affollamento', 'float', 2);
@@ -526,18 +864,21 @@
             const datiAggiornatiAl = getParsedValue(lastInstituteTotalRow, headers2, 'dati aggiornati al', 'string');
             const formattedDatiAggiornatiAl = formatDate(datiAggiornatiAl);
 
+            // Helper to ensure proper Italian thousands formatting
+            function formatNumber(val) {
+                if (!val) return '';
+                const num = parseInt(String(val).replace(/\./g, '').replace(/,/g, '.').trim(), 10);
+                if (isNaN(num)) return val;
+                return num.toLocaleString('it-IT');
+            }
 
-            // // Update "Panoramica Attuale"
-            // document.getElementById('total-detainees').innerHTML = `Al <strong>${formattedDatiAggiornatiAl}</strong>, in Italia sono <strong>${totalDetainees}</strong> le persone detenute, a fronte di una capienza regolamentare di <strong>${availablePlacesRecent}</strong> posti. Di questi, però, <strong>${unavailablePlaces}</strong> posti non sono disponibili. Questo fa sì che il tasso di affollamento sia del <strong>${latestOvercrowdingRate}%</strong>.`;
+            // Update stat strip
+            document.getElementById('stat-tasso').textContent = latestOvercrowdingRate + '%';
+            document.getElementById('stat-detenuti').textContent = formatNumber(totalDetainees);
+            document.getElementById('stat-regolamentari').textContent = formatNumber(availablePlacesRecent);
+            document.getElementById('stat-disponibili').textContent = formatNumber(availablePlaces);
+            document.getElementById('stat-non-disponibili').textContent = formatNumber(unavailablePlaces);
 
-            // --- Update the "Riepilogo Dati Chiave" table in the DOM ---
-            document.getElementById('table-tasso-affollamento').innerHTML = `<b>${latestOvercrowdingRate}%</b>`;
-            document.getElementById('table-totale-detenuti').textContent = totalDetainees;
-            document.getElementById('table-posti-regolamentari').textContent = availablePlacesRecent;
-            document.getElementById('table-posti-disponibili').textContent = availablePlaces;
-            document.getElementById('table-posti-non-disponibili').textContent = unavailablePlaces;
-
-            // Update the last update date for the table
             document.getElementById('last-update-popolazione').textContent = formattedDatiAggiornatiAl;
         }
 
