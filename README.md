@@ -58,7 +58,7 @@ Since the data is collected via a scraper and the website structure may change o
 
 The daily and monthly GitHub Actions workflows run the scrapers, derive the visualization datasets, and validate the results with `npm test`. The dashboard is a static GitHub Pages site in `docs/`.
 
-At each successful run, `node scripts/publish-site-data.mjs` copies the three datasets needed by the dashboard into `docs/data/`. This means a published page loads a consistent local data snapshot; the browser only falls back to the canonical raw GitHub files if that snapshot is unavailable.
+At each successful run, `node scripts/publish-site-data.mjs` copies the dashboard datasets into `docs/data/` and derives a compact weekly per-institute history for the trajectories chart. This means a published page loads a consistent local data snapshot; the browser only falls back to the canonical raw GitHub files if a snapshot is unavailable.
 
 The configured canonical hostname is `www.sovraffollamentocarcerario.it`. Configure the apex domain to redirect to this hostname with the DNS or domain provider.
 

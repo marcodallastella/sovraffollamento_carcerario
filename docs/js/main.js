@@ -4,6 +4,7 @@
 import {
   loadAll, buildHeroSeries, latestPoint, deltaOneYear, latestTotals,
   parseInstitutes, criticalFacts,
+  parseInstituteHistory,
   fmtInt, fmtPct, fmtSigned, fmtDate, ageInDays,
 } from './data.js';
 import { initTheme } from './ui/theme.js';
@@ -15,6 +16,7 @@ import { renderInfographic } from './charts/infographic.js';
 import { renderMap } from './charts/map.js';
 import { renderRanking } from './charts/ranking.js';
 import { renderStaffing } from './charts/staffing.js';
+import { initInstituteTrends } from './charts/institute-trends.js';
 
 initTheme();
 initReveal();
@@ -96,6 +98,16 @@ section(() => {
 if (!data.institutes) {
   [$('ranking-chart'), $('map-chart'), $('staffing-chart')].forEach((el) => showError(el));
 }
+section(() => {
+  if (!data.history) throw new Error('serie storiche degli istituti mancanti');
+  initInstituteTrends($('trends-chart'), {
+    input: $('trends-search'),
+    options: $('trends-options'),
+    add: $('trends-add'),
+    selected: $('trends-selected'),
+    context: $('trends-context'),
+  }, parseInstituteHistory(data.history));
+}, $('trends-chart'));
 section(() => {
   if (!data.institutes) throw new Error('istituti mancanti');
   const institutes = parseInstitutes(data.institutes);

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import {
   parseCSV, toRecords, toNum, fmtInt, fmtPct, fmtSigned, fmtDate, parseISO, ageInDays,
   buildHeroSeries, latestPoint, deltaOneYear, recordHigh, latestTotals,
-  parseInstitutes, criticalFacts, officialInstituteUrl,
+  parseInstitutes, parseInstituteHistory, criticalFacts, officialInstituteUrl,
 } from '../docs/js/data.js';
 
 const local = (p) => fileURLToPath(new URL(p, import.meta.url));
@@ -72,6 +72,13 @@ test('recordHigh: latest of ties wins', () => {
   const mk = (iso, v) => ({ date: parseISO(iso), value: v });
   const rh = recordHigh([mk('2026-01-01', 5), mk('2026-02-01', 7), mk('2026-03-01', 7)]);
   assert.equal(rh.date.toISOString().slice(0, 10), '2026-03-01');
+});
+
+test('published institute history: weekly series are complete and ordered', async () => {
+  const history = parseInstituteHistory(toRecords(parseCSV(await readFile(local('../docs/data/institutes_history.csv'), 'utf8'))));
+  assert.ok(history.length > 180, `expected ~190 institute histories, got ${history.length}`);
+  assert.ok(history.every((series) => series.points.length > 80), 'each institute has a two-year weekly series');
+  assert.ok(history.every((series) => series.points.every((point, i, points) => i === 0 || point.date >= points[i - 1].date)), 'points are chronological');
 });
 
 test('real CSVs: hero series, totals, institutes', async () => {

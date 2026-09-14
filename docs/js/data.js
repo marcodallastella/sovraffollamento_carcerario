@@ -13,6 +13,7 @@ export const SOURCES = {
   tasso: [LOCAL_BASE + 'tasso_affollamento.csv', BASE + 'tasso_affollamento.csv'],
   totals: [LOCAL_BASE + 'institutes_totals.csv', BASE + 'institutes_totals.csv'],
   institutes: [LOCAL_BASE + 'institutes_most_recent.csv', BASE + 'institutes_most_recent.csv'],
+  history: [LOCAL_BASE + 'institutes_history.csv'],
 };
 
 /* ── CSV parsing ─────────────────────────────────────────────── */
@@ -211,6 +212,24 @@ export function parseInstitutes(records) {
       };
     })
     .filter((r) => r.nome);
+}
+
+// Weekly per-institute history, published specifically for the trajectories
+// chart. It is intentionally compact enough to load below the fold.
+export function parseInstituteHistory(records) {
+  const grouped = new Map();
+  for (const r of records) {
+    const id = r.id;
+    const name = r.nome;
+    const date = parseISO(r.data);
+    const rate = toNum(r.tasso);
+    if (!id || !name || !date || rate === null) continue;
+    if (!grouped.has(id)) grouped.set(id, { id, name, points: [] });
+    grouped.get(id).points.push({ date, value: rate });
+  }
+  return [...grouped.values()]
+    .map((series) => ({ ...series, points: series.points.sort((a, b) => a.date - b.date) }))
+    .filter((series) => series.points.length);
 }
 
 // "Situazione critica" facts.

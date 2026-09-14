@@ -1,6 +1,5 @@
-// Dark mode: follows prefers-color-scheme, manual override in localStorage.
-// The boot script in <head> applies the stored theme before first paint;
-// this module only wires the toggle.
+// The charcoal editorial theme is the default. The light alternative and a
+// visitor's explicit choice are retained in localStorage.
 
 export function initTheme() {
   const btn = document.getElementById('theme-toggle');
@@ -11,6 +10,7 @@ export function initTheme() {
     if (dark) document.documentElement.setAttribute('data-theme', 'dark');
     else document.documentElement.removeAttribute('data-theme');
     btn.setAttribute('aria-label', dark ? 'Attiva il tema chiaro' : 'Attiva il tema scuro');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101419' : '#ffffff');
   };
 
   apply(document.documentElement.getAttribute('data-theme') === 'dark');
@@ -19,11 +19,5 @@ export function initTheme() {
     const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
     apply(dark);
     try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch { /* private mode */ }
-  });
-
-  // Follow OS changes unless the user chose explicitly.
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    try { if (localStorage.getItem('theme')) return; } catch { /* ignore */ }
-    apply(e.matches);
   });
 }

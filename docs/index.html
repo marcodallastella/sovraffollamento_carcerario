@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101419">
   <title>Il sovraffollamento carcerario in Italia — monitoraggio quotidiano</title>
   <meta name="description" content="Quante persone vivono nelle carceri italiane e quanti posti ci sono davvero: l'indice di sovraffollamento reale, aggiornato ogni giorno con i dati del Ministero della Giustizia.">
   <link rel="canonical" href="https://www.sovraffollamentocarcerario.it/">
@@ -19,7 +20,9 @@
     (function () {
       try {
         var stored = localStorage.getItem('theme');
-        var dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        // The project opens in the serious editorial theme by default. A
+        // visitor's explicit preference is retained for later visits.
+        var dark = stored ? stored === 'dark' : true;
         if (dark) document.documentElement.setAttribute('data-theme', 'dark');
       } catch (e) { /* no-op */ }
     })();
@@ -50,6 +53,7 @@
       <a class="brand" href="/">Sovraffollamento carcerario</a>
       <nav class="site-nav" aria-label="Navigazione principale">
         <a href="#numeri">Situazione</a>
+        <a href="#andamenti">Andamenti</a>
         <a href="#mappa">Mappa</a>
         <a href="#classifica">Classifica</a>
         <a href="#metodo">Metodo</a>
@@ -136,6 +140,29 @@
       <div class="critical-callout">
         <p id="fact-over150"></p>
         <p id="fact-worst"></p>
+      </div>
+    </section>
+
+    <!-- ── Institute trajectories ───────────────────────────── -->
+    <section class="section container reveal" id="andamenti" aria-labelledby="andamenti-title">
+      <header class="section-header">
+        <p class="kicker">Le traiettorie</p>
+        <h2 id="andamenti-title">Ogni carcere segue una storia diversa</h2>
+        <p class="dek">Le linee sottili mostrano tutti gli istituti. Seleziona fino a cinque carceri per confrontarne l’evoluzione nel tempo con la soglia di capienza.</p>
+      </header>
+      <div class="card">
+        <div class="trends-controls">
+          <label for="trends-search">Confronta un istituto</label>
+          <div class="trends-add">
+            <input id="trends-search" list="trends-options" type="search" placeholder="Es. Roma Rebibbia" autocomplete="off">
+            <datalist id="trends-options"></datalist>
+            <button id="trends-add" type="button">Aggiungi</button>
+          </div>
+          <button class="trends-context" id="trends-context" type="button" aria-pressed="true">Nascondi tutte le traiettorie</button>
+        </div>
+        <div class="trends-selected" id="trends-selected" aria-live="polite"></div>
+        <div class="chart-mount" id="trends-chart"></div>
+        <p class="source-line">Ogni linea usa l’ultima rilevazione disponibile della settimana. La linea orizzontale al 100% indica un posto effettivamente disponibile per persona. Fonte: schede di trasparenza del Ministero della Giustizia.</p>
       </div>
     </section>
 
