@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import {
-  parseCSV, toRecords, toNum, fmtInt, fmtPct, fmtSigned, fmtDate, parseISO,
+  parseCSV, toRecords, toNum, fmtInt, fmtPct, fmtSigned, fmtDate, parseISO, ageInDays,
   buildHeroSeries, latestPoint, deltaOneYear, recordHigh, latestTotals,
   parseInstitutes, criticalFacts,
 } from '../docs/js/data.js';
@@ -47,6 +47,11 @@ test('formatters: it-IT output', () => {
   assert.equal(fmtInt(null), '—');
 });
 
+test('ageInDays: uses UTC calendar days', () => {
+  assert.equal(ageInDays('2026-07-09', new Date('2026-07-12T23:59:59Z')), 3);
+  assert.equal(ageInDays('invalid', new Date('2026-07-12T00:00:00Z')), null);
+});
+
 test('deltaOneYear: picks the point nearest 365 days back', () => {
   const mk = (iso, v) => ({ date: parseISO(iso), value: v });
   const series = [mk('2025-03-20', 133.0), mk('2025-07-08', 134.0), mk('2026-03-21', 137.9)];
@@ -79,15 +84,17 @@ test('real CSVs: hero series, totals, institutes', async () => {
   assert.ok(deltaOneYear(hero.real) !== null, 'one-year delta available');
 
   const t = latestTotals(toRecords(parseCSV(totals)));
-  assert.equal(t.date, '2026-03-21');
-  assert.equal(t.detenuti, 63925);
+  assert.match(t.date, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(t.detenuti > 0);
+  assert.ok(t.regolamentari > 0);
   assert.equal(t.regolamentari - t.nonDisponibili, t.disponibili);
 
   const institutes = parseInstitutes(toRecords(parseCSV(inst)));
   assert.ok(institutes.length > 180, `expected ~190 institutes, got ${institutes.length}`);
   assert.ok(institutes.every((i) => i.lat === null || (i.lat > 35 && i.lat < 48)), 'latitudes in Italy');
   const genova = institutes.find((i) => i.nome === 'Genova Marassi');
-  assert.equal(genova.tasso, 127.0);
+  assert.ok(genova, 'Genova Marassi is present');
+  assert.ok(Math.abs(genova.tasso - ((genova.detenuti / genova.disponibili) * 100)) < 0.5, 'rate agrees with population and effective capacity');
   assert.ok(genova.carenzaPolizia > 0);
 
   const { over150, worst } = criticalFacts(institutes);

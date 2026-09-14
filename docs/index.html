@@ -26,7 +26,7 @@
   </script>
 
   <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/tasso_affollamento.csv" as="fetch" crossorigin>
+  <link rel="preload" href="data/tasso_affollamento.csv" as="fetch">
   <link rel="stylesheet" href="css/main.css">
 
   <!-- Google tag (gtag.js) -->
@@ -48,6 +48,13 @@
   <header class="masthead">
     <div class="container masthead-inner">
       <a class="brand" href="/">Sovraffollamento carcerario</a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="#numeri">Situazione</a>
+        <a href="#mappa">Mappa</a>
+        <a href="#classifica">Classifica</a>
+        <a href="#metodo">Metodo</a>
+        <a href="#dati">Dati</a>
+      </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Attiva il tema scuro">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -62,13 +69,15 @@
       <p class="kicker">Monitoraggio quotidiano · Ministero della Giustizia</p>
       <h1 id="hero-title">Le carceri italiane sono sempre più affollate.</h1>
       <p class="dek">Ogni giorno questo progetto raccoglie i dati pubblicati dal Ministero della Giustizia per misurare quante persone vivono negli istituti penitenziari italiani — e quanti posti ci sono davvero.</p>
-      <p class="hero-meta">Dati aggiornati al <span id="hero-updated">…</span></p>
+      <p class="hero-meta">Dati aggiornati al <time id="hero-updated">…</time> <span class="data-status" id="data-status" role="status"></span></p>
 
       <div class="hero-figure">
         <span class="hero-figure-label">Indice di sovraffollamento reale</span>
         <span class="hero-value" id="hero-value">—</span>
         <span class="hero-delta" id="hero-delta"></span>
       </div>
+
+      <p class="hero-summary" id="hero-summary" hidden></p>
 
       <div class="chart-mount" id="hero-chart"></div>
 
@@ -211,7 +220,7 @@
         <p class="dek">I dataset completi, aggiornati quotidianamente, liberamente riutilizzabili citando la fonte.</p>
       </header>
       <div class="download-grid">
-        <a class="download-item" href="https://github.com/marcodallastella/prison_overcrowding/blob/main/outputs/clean/institutes.csv" target="_blank" rel="noopener">
+        <a class="download-item" href="https://github.com/marcodallastella/sovraffollamento_carcerario/blob/main/outputs/clean/institutes.csv" target="_blank" rel="noopener">
           <div class="download-title">Schede di trasparenza degli istituti</div>
           <div class="download-desc">CSV · serie completa dal 5 ottobre 2024</div>
         </a>

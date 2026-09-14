@@ -6,12 +6,13 @@
  * the backend pipeline that produces them is untouched.
  */
 
-export const BASE = 'https://raw.githubusercontent.com/marcodallastella/prison_overcrowding/refs/heads/main/outputs/viz/';
+export const BASE = 'https://raw.githubusercontent.com/marcodallastella/sovraffollamento_carcerario/refs/heads/main/outputs/viz/';
+export const LOCAL_BASE = 'data/';
 
 export const SOURCES = {
-  tasso: BASE + 'tasso_affollamento.csv',
-  totals: BASE + 'institutes_totals.csv',
-  institutes: BASE + 'institutes_most_recent.csv',
+  tasso: [LOCAL_BASE + 'tasso_affollamento.csv', BASE + 'tasso_affollamento.csv'],
+  totals: [LOCAL_BASE + 'institutes_totals.csv', BASE + 'institutes_totals.csv'],
+  institutes: [LOCAL_BASE + 'institutes_most_recent.csv', BASE + 'institutes_most_recent.csv'],
 };
 
 /* ── CSV parsing ─────────────────────────────────────────────── */
@@ -107,6 +108,15 @@ export function parseISO(iso) {
   const [y, m, d] = iso.slice(0, 10).split('-').map(Number);
   const date = new Date(Date.UTC(y, m - 1, d));
   return Number.isNaN(date.getTime()) ? null : date;
+}
+
+// Number of complete calendar days since an ISO date, evaluated in UTC so the
+// freshness label does not change with a visitor's local timezone.
+export function ageInDays(iso, now = new Date()) {
+  const date = parseISO(iso);
+  if (!date || Number.isNaN(now.getTime())) return null;
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  return Math.floor((today - date.getTime()) / 86400e3);
 }
 
 /* ── derived series & facts ──────────────────────────────────── */
@@ -223,13 +233,22 @@ export async function fetchCSV(url) {
   return toRecords(parseCSV(text));
 }
 
+async function fetchFirstAvailable(urls) {
+  let lastError;
+  for (const url of urls) {
+    try { return await fetchCSV(url); }
+    catch (err) { lastError = err; }
+  }
+  throw lastError || new Error('No data source configured');
+}
+
 // Fetch all sources in parallel. Failures are per-source (null), so one bad
 // fetch never blanks the whole page.
 export async function loadAll() {
   const entries = await Promise.all(
-    Object.entries(SOURCES).map(async ([key, url]) => {
+    Object.entries(SOURCES).map(async ([key, urls]) => {
       try {
-        return [key, await fetchCSV(url)];
+        return [key, await fetchFirstAvailable(urls)];
       } catch (err) {
         console.error(`Failed to load ${key}:`, err);
         return [key, null];

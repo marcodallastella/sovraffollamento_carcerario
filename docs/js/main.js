@@ -4,7 +4,7 @@
 import {
   loadAll, buildHeroSeries, latestPoint, deltaOneYear, latestTotals,
   parseInstitutes, criticalFacts,
-  fmtInt, fmtPct, fmtSigned, fmtDate,
+  fmtInt, fmtPct, fmtSigned, fmtDate, ageInDays,
 } from './data.js';
 import { initTheme } from './ui/theme.js';
 import { initReveal } from './ui/reveal.js';
@@ -54,7 +54,10 @@ section(() => {
   const delta = deltaOneYear(series.real);
 
   if (last) {
-    $('hero-updated').textContent = fmtDate(last.date.toISOString().slice(0, 10));
+    const updated = last.date.toISOString().slice(0, 10);
+    $('hero-updated').textContent = fmtDate(updated);
+    $('hero-updated').dateTime = updated;
+    setFreshness(updated);
     countUp($('hero-value'), last.value, (v) => fmtPct(v));
   }
   if (delta !== null) {
@@ -63,6 +66,13 @@ section(() => {
     const strong = document.createElement('strong');
     strong.textContent = `${delta >= 0 ? '▲' : '▼'} ${fmtSigned(delta)} punti`;
     el.replaceChildren(strong, document.createTextNode(' rispetto a un anno fa'));
+  }
+
+  if (last) {
+    const summary = $('hero-summary');
+    const point = delta === null ? '' : ` ${delta >= 0 ? 'È aumentato' : 'È diminuito'} di ${fmtSigned(delta)} punti in un anno.`;
+    summary.textContent = `L’indice misura le persone detenute rispetto ai posti effettivamente disponibili.${point}`;
+    summary.hidden = false;
   }
 
   initHero({ mount: $('hero-chart'), picker: $('range-picker'), series, annotations });
@@ -125,4 +135,13 @@ function strongOf(text) {
   const s = document.createElement('strong');
   s.textContent = text;
   return s;
+}
+
+function setFreshness(iso) {
+  const age = ageInDays(iso);
+  const el = $('data-status');
+  if (age === null) return;
+  const stale = age > 3;
+  el.classList.toggle('is-stale', stale);
+  el.textContent = age <= 0 ? 'aggiornati oggi' : age === 1 ? 'aggiornati ieri' : `aggiornati ${age} giorni fa`;
 }

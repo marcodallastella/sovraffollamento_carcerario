@@ -122,6 +122,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   text-transform: uppercase; text-decoration: none;
 }
 
+.site-nav { display: none; gap: 1.1rem; margin-left: auto; margin-right: 1.25rem; }
+.site-nav a { color: var(--ink-secondary); font-size: 0.8125rem; font-weight: 550; text-decoration: none; }
+.site-nav a:hover { color: var(--ink); }
+@media (min-width: 800px) { .site-nav { display: flex; } }
+
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
   width: 2.25rem; height: 2.25rem; border-radius: 50%;
@@ -173,6 +178,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero .dek { margin-bottom: 0.75rem; }
 
 .hero-meta { font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 2rem; }
+.data-status { display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.4rem; font-weight: 600; }
+.data-status::before { content: ''; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--delta-good); }
+.data-status.is-stale { color: var(--accent); }
+.data-status.is-stale::before { background: var(--accent); }
 
 .hero-figure { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.75rem 1.5rem; margin-bottom: 0.5rem; }
 
@@ -189,6 +198,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero-delta.is-down strong { color: var(--delta-good); }
 
 .hero-figure-label { width: 100%; order: -1; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.hero-summary { max-width: var(--measure); border-left: 3px solid var(--accent); color: var(--ink-secondary); font-size: 1rem; line-height: 1.6; margin: 1.5rem 0 0; padding-left: 1rem; }
 
 /* ── chart shells ─────────────────────────────────────────────── */
 

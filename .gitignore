@@ -11,6 +11,7 @@ fixit.ipynb
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+*.nbconvert.ipynb
 
 # IPython
 profile_default/

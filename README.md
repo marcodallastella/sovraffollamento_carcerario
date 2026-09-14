@@ -54,4 +54,12 @@ For visualizations, the cleaned datasets can be easily imported into tools like 
 
 Since the data is collected via a scraper and the website structure may change over time, it is recommended to manually verify the data if possible to ensure its accuracy.
 
+## Automated updates and deployment
+
+The daily and monthly GitHub Actions workflows run the scrapers, derive the visualization datasets, and validate the results with `npm test`. The dashboard is a static GitHub Pages site in `docs/`.
+
+At each successful run, `node scripts/publish-site-data.mjs` copies the three datasets needed by the dashboard into `docs/data/`. This means a published page loads a consistent local data snapshot; the browser only falls back to the canonical raw GitHub files if that snapshot is unavailable.
+
+The configured canonical hostname is `www.sovraffollamentocarcerario.it`. Configure the apex domain to redirect to this hostname with the DNS or domain provider.
+
 If this dataset is used, please attribute it to **Marco Dalla Stella**.

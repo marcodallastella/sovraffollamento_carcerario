@@ -3,33 +3,47 @@ name: daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * *' # Run daily at 9:00 AM EST
+    - cron: '0 9 * * *' # 09:00 UTC (GitHub Actions schedules are always UTC)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-processing
+  cancel-in-progress: false
 
 jobs:
   data_processing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
+          cache: pip
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          playwright install
+          playwright install --with-deps chromium
 
       # - name: Look for prisons' data
       #   run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_1_Info_scraper.ipynb"
 
       - name: Look for new institutes' data
-        run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_2_Daily_scraper.ipynb"
+        run: jupyter nbconvert --to notebook --execute --output-dir /tmp/executed-notebooks "notebooks/2_Institutes_2_Daily_scraper.ipynb"
 
       - name: Analyze the data
-        run: jupyter nbconvert --to notebook --execute "notebooks/3_Institutes_3_Analysis.ipynb"        
+        run: jupyter nbconvert --to notebook --execute --output-dir /tmp/executed-notebooks "notebooks/3_Institutes_3_Analysis.ipynb"
+
+      - name: Publish data snapshot with the static site
+        run: node scripts/publish-site-data.mjs
+
+      - name: Validate derived data and dashboard logic
+        run: npm test
 
       - name: Commit and push changes
         env:
@@ -37,6 +51,7 @@ jobs:
         run: |
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
-          git add .
+          git add outputs/clean outputs/raw outputs/viz docs/data
+          git diff --cached --quiet && exit 0
           git commit -m "Automated data processing"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
