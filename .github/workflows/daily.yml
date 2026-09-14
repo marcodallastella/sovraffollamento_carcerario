@@ -42,6 +42,9 @@ jobs:
       - name: Publish data snapshot with the static site
         run: node scripts/publish-site-data.mjs
 
+      - name: Debug - list tests dir
+        run: ls -la tests/ || echo "tests/ MISSING"
+
       - name: Validate derived data and dashboard logic
         run: npm test
 
