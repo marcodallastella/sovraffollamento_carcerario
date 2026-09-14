@@ -110,7 +110,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ── masthead ─────────────────────────────────────────────────── */
 
-.masthead { border-bottom: 1px solid var(--border-soft); }
+.masthead { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--border-soft); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(12px); }
 
 .masthead-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -122,10 +122,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
   text-transform: uppercase; text-decoration: none;
 }
 
-.site-nav { display: none; gap: 1.1rem; margin-left: auto; margin-right: 1.25rem; }
+.site-nav { display: flex; gap: 1.1rem; margin-left: auto; margin-right: 1.25rem; }
 .site-nav a { color: var(--ink-secondary); font-size: 0.8125rem; font-weight: 550; text-decoration: none; }
 .site-nav a:hover { color: var(--ink); }
-@media (min-width: 800px) { .site-nav { display: flex; } }
+@media (max-width: 799px) {
+  .masthead-inner { flex-wrap: wrap; gap: 0.65rem 0; }
+  .site-nav { order: 3; width: 100%; margin: 0; overflow-x: auto; padding-bottom: 0.1rem; white-space: nowrap; }
+}
 
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -154,7 +157,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .source-line { font-size: 0.8125rem; color: var(--ink-muted); margin-top: 0.75rem; }
 
-.section { padding: 4.5rem 0 0; }
+.section { padding: 4.5rem 0 0; scroll-margin-top: 7rem; }
 @media (min-width: 768px) { .section { padding: 6.5rem 0 0; } }
 
 .section-header { margin-bottom: 2rem; max-width: var(--measure); }
@@ -206,9 +209,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .chart-legend .key { display: inline-flex; align-items: center; gap: 0.5rem; }
 .chart-legend .swatch-line { width: 1.25rem; height: 0; border-top: 2.5px solid; border-radius: 2px; }
 .chart-legend .swatch-dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; }
+.map-controls { align-items: center; display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: flex-end; margin: 0.75rem 0 -0.25rem; }
+.map-controls span { color: var(--ink-muted); font-size: 0.75rem; margin-right: 0.25rem; }
+.map-controls button { background: none; border: 1px solid var(--border); border-radius: 999px; font-size: 0.8125rem; font-weight: 600; line-height: 1; min-width: 2rem; padding: 0.45rem 0.65rem; }
+.map-controls button:hover { border-color: var(--ink-muted); }
 
 .chart-mount { position: relative; width: 100%; }
 .chart-mount svg { display: block; width: 100%; height: auto; font-family: var(--font); }
+#map-chart svg { cursor: grab; touch-action: none; }
+#map-chart svg:active { cursor: grabbing; }
 
 #hero-chart { min-height: 320px; }
 
@@ -311,6 +320,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .search-input::placeholder { color: var(--ink-muted); }
 
 .table-count { font-size: 0.8125rem; color: var(--ink-muted); }
+.table-sort-hint { color: var(--ink-muted); font-size: 0.8125rem; margin: -0.45rem 0 1rem; }
 
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
@@ -321,11 +331,16 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
+.data-table th button { appearance: none; border: 0; background: none; color: inherit; cursor: pointer; font: inherit; font-weight: inherit; letter-spacing: inherit; padding: 0; text-align: inherit; text-transform: inherit; white-space: inherit; }
+.data-table th button::after { content: '↕'; color: var(--ink-muted); font-size: 0.8em; margin-left: 0.3rem; }
+.data-table th[aria-sort='ascending'] button::after { content: '↑'; color: var(--ink); }
+.data-table th[aria-sort='descending'] button::after { content: '↓'; color: var(--ink); }
 .data-table td { padding: 0.55rem 0.75rem 0.55rem 0; border-bottom: 1px solid var(--border-soft); vertical-align: baseline; }
 .data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .data-table td.num.hot { color: var(--accent); font-weight: 650; }
 .data-table .cell-name { font-weight: 550; }
 .data-table .cell-type { color: var(--ink-muted); font-size: 0.8125rem; }
+.data-table .official-link { color: var(--ink-secondary); display: inline-block; font-size: 0.75rem; margin-top: 0.15rem; }
 
 @media (max-width: 640px) {
   /* keep the index visible on small screens; the update date stays in the CSV/desktop */
@@ -333,11 +348,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .data-table th, .data-table td { padding-right: 0.5rem; }
 }
 
-.show-all {
-  margin-top: 1rem; border: 1px solid var(--border); background: none;
-  border-radius: 999px; padding: 0.45rem 1.2rem; font-size: 0.875rem; font-weight: 550;
+.table-pagination { align-items: center; display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1rem; }
+.table-pagination button {
+  border: 1px solid var(--border); background: none; border-radius: 999px;
+  padding: 0.45rem 1rem; font-size: 0.8125rem; font-weight: 550;
 }
-.show-all:hover { border-color: var(--ink-muted); }
+.table-pagination button:hover:not(:disabled) { border-color: var(--ink-muted); }
+.table-pagination button:disabled { color: var(--ink-muted); cursor: not-allowed; opacity: 0.6; }
+.table-pagination span { color: var(--ink-muted); font-size: 0.8125rem; }
+@media (max-width: 480px) { .table-pagination { justify-content: space-between; gap: 0.35rem; } .table-pagination button { padding: 0.4rem 0.65rem; } }
 
 /* ── downloads ───────────────────────────────────────────────── */
 

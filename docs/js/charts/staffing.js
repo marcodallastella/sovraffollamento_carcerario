@@ -2,19 +2,24 @@
 // Emphasis form: all institutes gray; the critical quadrant (>120% and >20%)
 // wears the accent and is direct-labeled.
 
-import { fmtInt, fmtPct } from '../data.js';
+import { fmtDate, fmtInt, fmtPct } from '../data.js';
 import { CSS, makeSvg, mountWidth, yGrid, makeTooltip } from './util.js';
 
 const X_THRESH = 120;
 const Y_THRESH = 20;
 
-export function renderStaffing(mount, institutes) {
+export function renderStaffing(mount, institutes, datesEl) {
   mount.replaceChildren();
   // The story is staff shortage: heavily overstaffed outliers (carenza < −25%)
   // would stretch the axis and are left to the table view.
   const pts = institutes.filter((i) => i.tasso !== null && i.carenzaPolizia !== null && i.carenzaPolizia >= -25);
   if (!pts.length) return;
   const critical = pts.filter((d) => d.tasso > X_THRESH && d.carenzaPolizia > Y_THRESH);
+  if (datesEl) {
+    const occupancyDate = latestDate(pts.map((d) => d.aggiornato));
+    const staffDate = latestDate(pts.map((d) => d.personaleAggiornato));
+    datesEl.textContent = `Dati più recenti: affollamento ${occupancyDate ? fmtDate(occupancyDate) : 'non disponibile'} · personale ${staffDate ? fmtDate(staffDate) : 'non disponibile'}.`;
+  }
 
   const w = mountWidth(mount);
   const mobile = w < 560;
@@ -104,6 +109,8 @@ export function renderStaffing(mount, institutes) {
       { label: 'Sovraffollamento', color: isCritical(d) ? CSS.accent : CSS.context, value: fmtPct(d.tasso) },
       { label: 'Carenza personale', color: 'transparent', value: fmtPct(d.carenzaPolizia) },
       { label: 'Detenuti', color: 'transparent', value: fmtInt(d.detenuti) },
+      { label: 'Affollamento rilevato', color: 'transparent', value: d.aggiornato ? fmtDate(d.aggiornato) : '—' },
+      { label: 'Personale rilevato', color: 'transparent', value: d.personaleAggiornato ? fmtDate(d.personaleAggiornato) : '—' },
     ]);
   }).on('pointerleave', clear);
 
@@ -111,4 +118,8 @@ export function renderStaffing(mount, institutes) {
     tooltip.hide();
     dots.attr('opacity', (d) => (isCritical(d) ? 1 : 0.55));
   }
+}
+
+function latestDate(dates) {
+  return dates.filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d || '')).sort().at(-1) || null;
 }

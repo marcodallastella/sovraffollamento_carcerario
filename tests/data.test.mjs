@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import {
   parseCSV, toRecords, toNum, fmtInt, fmtPct, fmtSigned, fmtDate, parseISO, ageInDays,
   buildHeroSeries, latestPoint, deltaOneYear, recordHigh, latestTotals,
-  parseInstitutes, criticalFacts,
+  parseInstitutes, criticalFacts, officialInstituteUrl,
 } from '../docs/js/data.js';
 
 const local = (p) => fileURLToPath(new URL(p, import.meta.url));
@@ -52,6 +52,11 @@ test('ageInDays: uses UTC calendar days', () => {
   assert.equal(ageInDays('invalid', new Date('2026-07-12T00:00:00Z')), null);
 });
 
+test('officialInstituteUrl: accepts only official Ministry HTTPS links', () => {
+  assert.equal(officialInstituteUrl('<a href="https://www.giustizia.it/giustizia/page/it/dettaglio?s=1">Vai</a>'), 'https://www.giustizia.it/giustizia/page/it/dettaglio?s=1');
+  assert.equal(officialInstituteUrl('<a href="https://example.org">No</a>'), null);
+});
+
 test('deltaOneYear: picks the point nearest 365 days back', () => {
   const mk = (iso, v) => ({ date: parseISO(iso), value: v });
   const series = [mk('2025-03-20', 133.0), mk('2025-07-08', 134.0), mk('2026-03-21', 137.9)];
@@ -96,6 +101,8 @@ test('real CSVs: hero series, totals, institutes', async () => {
   assert.ok(genova, 'Genova Marassi is present');
   assert.ok(Math.abs(genova.tasso - ((genova.detenuti / genova.disponibili) * 100)) < 0.5, 'rate agrees with population and effective capacity');
   assert.ok(genova.carenzaPolizia > 0);
+  assert.match(genova.fonte, /^https:\/\/www\.giustizia\.it\//);
+  assert.match(genova.personaleAggiornato, /^\d{4}-\d{2}-\d{2}$/);
 
   const { over150, worst } = criticalFacts(institutes);
   assert.ok(over150 > 0 && worst.tasso >= 150);

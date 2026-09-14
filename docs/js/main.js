@@ -124,10 +124,16 @@ section(() => {
     table: $('institutes-table'),
     search: $('table-search'),
     count: $('table-count'),
-    showAll: $('show-all'),
+    previous: $('table-prev'),
+    next: $('table-next'),
+    page: $('table-page'),
   }, institutes), null);
-  section(() => renderStaffing($('staffing-chart'), institutes), $('staffing-chart'));
-  renderMap($('map-chart'), $('map-legend'), institutes)
+  section(() => renderStaffing($('staffing-chart'), institutes, $('staffing-dates')), $('staffing-chart'));
+  renderMap($('map-chart'), $('map-legend'), institutes, {
+    zoomIn: $('map-zoom-in'),
+    zoomOut: $('map-zoom-out'),
+    reset: $('map-zoom-reset'),
+  })
     .catch((err) => { console.error(err); showError($('map-chart')); });
 }, $('ranking-chart'));
 

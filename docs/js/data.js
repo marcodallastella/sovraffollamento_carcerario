@@ -176,6 +176,15 @@ export function latestTotals(records) {
   };
 }
 
+export function officialInstituteUrl(value) {
+  const match = String(value || '').match(/href\s*=\s*["']([^"']+)["']/i);
+  if (!match) return null;
+  try {
+    const url = new URL(match[1]);
+    return url.protocol === 'https:' && url.hostname === 'www.giustizia.it' ? url.href : null;
+  } catch { return null; }
+}
+
 // Per-institute records with parsed fields the charts need.
 export function parseInstitutes(records) {
   return records
@@ -192,6 +201,8 @@ export function parseInstitutes(records) {
         disponibili: toNum(r['posti disponibili']),
         detenuti: toNum(r['totale detenuti']),
         aggiornato: r['dati aggiornati al'],
+        personaleAggiornato: r['personale polizia penitenziaria aggiornato al'],
+        fonte: officialInstituteUrl(r['scheda istituto']),
         lat: toNum(r['latitudine']),
         lon: toNum(r['longitude']),
         carenzaPolizia: previsti && effettivi !== null && previsti > 0
