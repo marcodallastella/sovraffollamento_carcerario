@@ -28,8 +28,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          playwright install --with-deps chromium
-          playwright install --with-deps firefox
+          playwright install --with-deps chromium firefox
 
       # - name: Look for prisons' data
       #   run: jupyter nbconvert --to notebook --execute "notebooks/2_Institutes_1_Info_scraper.ipynb"
